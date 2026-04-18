@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vending Machine Terminal Technology — Lightning + Credit Card — Shanepedia</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <script>
+    (function() {
+      var saved = window.localStorage.getItem('shanepedia-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="/index.html">Shanepedia</a>
+      <small>Founder wiki &amp; operator system</small>
+    </div>
+    <div class="header-controls">
+      <nav class="header-nav">
+        <a href="/index.html">Main page</a>
+        <a href="/ops/shanepedia-agent-runtime.html">Runtime</a>
+        <a href="/ops/elsalkb-automation-status.html">Lane status</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle site theme">Dark mode</button>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <input id="search" class="searchbox" placeholder="Search wiki...">
+      <div id="searchmeta" class="searchmeta"></div>
+      <div id="results" class="results"></div>
+      <section class="nav-group">
+<div class="nav-label"><h3>Main</h3><span class="badge">4</span></div>
+<ul>
+<li><a href="/00_overview.html">Overview</a></li>
+<li><a href="/SCHEMA.html">Schema</a></li>
+<li><a href="/START_HERE.html">Start Here</a></li>
+<li><a href="/log.html">Log</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Dashboards</h3><span class="badge">3</span></div>
+<ul>
+<li><a href="/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
+<li><a href="/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
+<li><a href="/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Entities</h3><span class="badge">6</span></div>
+<ul>
+<li><a href="/entities/el-zonte.html">El Zonte</a></li>
+<li><a href="/entities/los-cobanos.html">Los Cobanos</a></li>
+<li><a href="/entities/punta-mango.html">Punta Mango</a></li>
+<li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta De Las Flores Highlands</a></li>
+<li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
+<li><a href="/entities/victor-los-cobanos.html">Victor Los Cobanos</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Maps</h3><span class="badge">3</span></div>
+<ul>
+<li><a href="/maps/founder-map.html">Founder Map</a></li>
+<li><a href="/maps/ops-map.html">Ops Map</a></li>
+<li><a href="/maps/project-map.html">Project Map</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Ops</h3><span class="badge">11</span></div>
+<ul>
+<li><a href="/ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian Llm Wiki Loop</a></li>
+<li><a href="/ops/elsalkb-automation-status.html">Elsalkb Automation Status</a></li>
+<li><a href="/ops/family-fun-tracker.html">Family Fun Tracker</a></li>
+<li><a href="/ops/future-el-salvador-trip-program.html">Future El Salvador Trip Program</a></li>
+<li><a href="/ops/obsidian-workflow.html">Obsidian Workflow</a></li>
+<li><a href="/ops/photo-ingest-execution-loop.html">Photo Ingest Execution Loop</a></li>
+<li><a href="/ops/shanepedia-agent-runtime.html">Shanepedia Agent Runtime</a></li>
+<li><a href="/ops/shanepedia-founder-portfolio-system.html">Shanepedia Founder Portfolio System</a></li>
+<li><a href="/ops/shanepedia-research-flywheel.html">Shanepedia Research Flywheel</a></li>
+<li><a href="/ops/shanepedia-roadmap.html">Shanepedia Roadmap</a></li>
+<li><a href="/ops/source-ingest-pipeline.html">Source Ingest Pipeline</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Projects</h3><span class="badge">3</span></div>
+<ul>
+<li><a href="/projects/elsalkb.html">Elsalkb</a></li>
+<li><a href="/projects/operator-site-rescue.html">Operator Site Rescue</a></li>
+<li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Sources</h3><span class="badge">7</span></div>
+<ul>
+<li><a href="/sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia Ideation 2026 04 05</a></li>
+<li><a href="/sources/llm-wiki-pattern-2026-04-10.html">Llm Wiki Pattern 2026 04 10</a></li>
+<li><a href="/sources/los-cobanos_tours_site.html">Los Cobanos Tours Site</a></li>
+<li><a href="/sources/shane_san_salvador_trip_corpus.html">Shane San Salvador Trip Corpus</a></li>
+<li><a href="/sources/shaneneeley_site.html">Shaneneeley Site</a></li>
+<li><a href="/sources/stayatbitcoinbeach_homepage.html">Stayatbitcoinbeach Homepage</a></li>
+<li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram Photo Batches 2026 04 04</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Topics</h3><span class="badge">21</span></div>
+<ul>
+<li><a href="/topics/agentic-business-studio.html">Agentic Business Studio</a></li>
+<li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy Portland</a></li>
+<li><a href="/topics/bitcoin-commerce-map.html">Bitcoin Commerce Map</a></li>
+<li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin Travel Onboarding</a></li>
+<li><a href="/topics/coffee-route-agritourism-products.html">Coffee Route Agritourism Products</a></li>
+<li><a href="/topics/dual-audience-offer-design.html">Dual Audience Offer Design</a></li>
+<li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador Business Idea Lanes</a></li>
+<li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador Tourism Landscape 2026</a></li>
+<li><a href="/topics/founder-archetypes-and-needs.html">Founder Archetypes And Needs</a></li>
+<li><a href="/topics/home-recipes.html">Home Recipes</a></li>
+<li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
+<li><a href="/topics/kids-activities-and-places.html">Kids Activities And Places</a></li>
+<li><a href="/topics/llm-wiki-pattern.html">Llm Wiki Pattern</a></li>
+<li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos Marine Products</a></li>
+<li><a href="/topics/micro-site-factory.html">Micro Site Factory</a></li>
+<li><a href="/topics/niche-experience-products.html">Niche Experience Products</a></li>
+<li><a href="/topics/shane-design-and-ux-taste.html">Shane Design And Ux Taste</a></li>
+<li><a href="/topics/shane-founder-operating-principles.html">Shane Founder Operating Principles</a></li>
+<li><a href="/topics/shane-trip-preferences.html">Shane Trip Preferences</a></li>
+<li><a href="/topics/vending-machine-terminal-tech.html">Vending Machine Terminal Tech</a></li>
+<li><a href="/topics/whatsapp-booking-funnels.html">Whatsapp Booking Funnels</a></li>
+</ul></section>
+<section class="nav-group">
+<div class="nav-label"><h3>Travel</h3><span class="badge">1</span></div>
+<ul>
+<li><a href="/travel/oregon-coast-memorial-day-2026-stays.html">Oregon Coast Memorial Day 2026 Stays</a></li>
+</ul></section>
+    </aside>
+    <main class="content">
+      <div class="meta-row"><span class="badge">page</span></div><header><p class="eyebrow">page</p><h1>Vending Machine Terminal Technology — Lightning + Credit Card</h1></header>
+<p>How to build or retrofit a vending machine to accept Bitcoin Lightning and credit card payments, display QR codes, and trigger dispensing on payment confirmation.</p>
+<h2>Recommended first stack</h2>
+<p>The cleanest path is staged, not perfect on day one:</p>
+<ol>
+<li>Start with the easiest live checkout path: card payments plus a Bitcoin-friendly option that can ship fast.</li>
+<li>Add a Raspberry Pi / tablet layer that shows Lightning invoices and confirms payment.</li>
+<li>Integrate MDB only after checkout and venue placement are proven.</li>
+</ol>
+<p>For Shane&#x27;s current lane, the right bias is &quot;get one machine live&quot; before optimizing for maximum sovereignty.</p>
+<h2>The Core Architecture</h2>
+<pre><code>[Customer selects product]
+        ↓
+[Payment terminal shows QR code / tap NFC / card swipe]
+        ↓
+[Payment confirmed (Lightning instant / card ~2s)]
+        ↓
+[Raspberry Pi / ESP32 sends MDB dispense command]
+        ↓
+[Vending machine releases product]</code></pre>
+<h2>MDB Protocol — The Key to Vending Hardware</h2>
+<p><strong>MDB (Multi-Drop Bus)</strong> is the industry standard protocol for vending machine peripherals. Nearly all modern vending machines have an MDB port. To add a custom payment terminal:</p>
+<ol>
+<li>Your device presents itself as an MDB &quot;cashless payment device&quot;</li>
+<li>Customer pays via your terminal</li>
+<li>Your device tells the VMC (Vending Machine Controller) to vend</li>
+<li>VMC releases the product</li>
+</ol>
+<p><strong>MDB Adapters (plug-and-play)</strong>:</p>
+<ul>
+<li><strong>Qibixx MDB-Pi</strong> (~$150–200): Raspberry Pi hat that talks MDB. Easiest path. <a href="https://qibixx.com/">Qibixx.com</a></li>
+<li><strong>ESP32 MDB Cashless</strong> (open source): <a href="https://github.com/nodestark/mdb-esp32-cashless">nodestark/mdb-esp32-cashless on GitHub</a> — DIY, cheaper</li>
+<li><strong>RS232-MDB converters</strong>: <a href="http://www.rs232-mdb.com/">rs232-mdb.com</a> — bridges MDB to serial for any computer</li>
+</ul>
+<h2>Payment Terminal Hardware Stack</h2>
+<h3>Option A: Raspberry Pi + BTCPay + Stripe Terminal (Recommended for MVP)</h3>
+<p><strong>Components:</strong> | Part | Cost | Purpose | |---|---|---| | Raspberry Pi 4 (2GB) | ~$45 | Main computer | | 7&quot; touch display | ~$70 | QR code + UI | | Qibixx MDB adapter | ~$150 | Talks to vending machine | | Stripe Terminal M2 reader | ~$59 | Credit card swipe/tap | | Case + power supply | ~$30 | Enclosure | | <strong>Total</strong> | <strong>~$354</strong> | |</p>
+<p><strong>Software stack:</strong></p>
+<ul>
+<li>BTCPay Server (self-hosted on Pi or VPS) — generates Lightning invoices</li>
+<li>Custom web UI on Pi (runs locally, shows QR + payment status)</li>
+<li>Stripe Terminal SDK — handles card payments</li>
+<li>Python script bridges payment confirmation → MDB dispense command</li>
+</ul>
+<p><strong>Flow (Lightning):</strong></p>
+<ol>
+<li>Customer taps product on touchscreen</li>
+<li>Pi generates Lightning invoice via BTCPay API, displays QR</li>
+<li>Customer scans with Lightning wallet (Phoenix, Wallet of Satoshi, etc.)</li>
+<li>BTCPay webhook fires → Pi confirms payment → MDB dispense command sent</li>
+<li>Machine vends</li>
+</ol>
+<p><strong>Flow (Credit card):</strong></p>
+<ol>
+<li>Customer taps product</li>
+<li>Stripe Terminal prompts card tap/swipe</li>
+<li>Stripe confirms → Pi sends MDB dispense</li>
+</ol>
+<h3>Option B: ESP32 + LNBits (Ultra-Cheap DIY)</h3>
+<p><strong>Components (~$80 total):</strong></p>
+<ul>
+<li>ESP32 dev board (~$8)</li>
+<li>Small TFT display (~$15)</li>
+<li>MDB-ESP32 cashless firmware (<a href="https://github.com/nodestark/mdb-esp32-cashless">GitHub</a>)</li>
+<li>LNBits instance (free, self-hosted) for Lightning invoices</li>
+</ul>
+<p>No credit card support without adding a card reader, but suitable for a bitcoin-only machine.</p>
+<h3>Option C: Tablet + Existing VMC Cashless Port</h3>
+<p>Some newer vending machines have a built-in cashless device port (MDB ready). You can mount a tablet running:</p>
+<ul>
+<li><strong>BTCPay Server POS app</strong> — generates Lightning QR</li>
+<li><strong>Square POS</strong> — handles card, has Cash App (Lightning) integration</li>
+<li><strong>OpenNode terminal</strong> — managed Lightning, simpler setup</li>
+</ul>
+<p>No hardware hacking required — just mount tablet and connect to MDB port.</p>
+<h2>Reference Implementations (Open Source)</h2>
+<h3>Jellybean Vending Machine</h3>
+<ul>
+<li>GitHub: <a href="https://github.com/elaineo/Jellybean">elaineo/Jellybean</a></li>
+<li>Raspberry Pi + Lightning node + GPIO pin triggers</li>
+<li>Works without MDB — uses direct GPIO to control the vend mechanism</li>
+<li>Good starting point for custom-built smaller machines</li>
+</ul>
+<h3>Ricardo Reis — Coke Machine + Lightning</h3>
+<ul>
+<li><a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Hackster.io project</a></li>
+<li>Raspberry Pi 3 + 7&quot; display + BTCPay Server + PUSHER for real-time payment notification</li>
+<li>PHP web server generates invoices, PUSHER webhook confirms, Pi triggers vend</li>
+<li>Complete writeup with wiring diagrams</li>
+</ul>
+<h3>CryptoVend Tablet UI (Devpost)</h3>
+<ul>
+<li><a href="https://devpost.com/software/cryptovend-tablet-ui">devpost.com/software/cryptovend-tablet-ui</a></li>
+<li>Tablet UI for Lightning vending machine — polished UX reference</li>
+</ul>
+<h3>Payment-for-Vending-Machine (GitHub)</h3>
+<ul>
+<li><a href="https://github.com/iZnd/Payment-for-Vending-Machine">iZnd/Payment-for-Vending-Machine</a></li>
+<li>QR code payment trigger system for existing machines</li>
+</ul>
+<h2>NFC / Bolt Card Support</h2>
+<p>Beyond QR codes, <a href="https://www.boltcard.org/">Bolt Card</a> lets customers tap an NFC card to pay Lightning instantly — no phone needed, no QR scan. The card holds a Lightning address and deducts from it on tap.</p>
+<p><strong>Hardware needed</strong>: NFC reader module (~$15, ACR122U or PN532) + Bolt Card NFC server</p>
+<p>This is the slickest UX for repeat customers — like an Orca card but for hot sauce.</p>
+<h2>Connectivity Requirements</h2>
+<p>The terminal needs internet to confirm Lightning payments (and card payments). Options:</p>
+<ul>
+<li><strong>WiFi</strong> from the food cart pod (negotiate with operator — usually easy)</li>
+<li><strong>LTE hotspot</strong> (reliable backup, ~$20/month)</li>
+<li><strong>Starlink</strong> if you&#x27;re ambitious and the pod is outdoors</li>
+</ul>
+<p>For Lightning: payment confirmation typically arrives in &lt;2 seconds on a good connection.</p>
+<h2>Build Priority for Hot Sauce Machine</h2>
+<p>| Phase | What | Why | |---|---|---| | Phase 1 (MVP) | Tablet + Square Terminal + Cash App Pay | Zero hardware hacking, live in days | | Phase 2 | Add Raspberry Pi + BTCPay QR display | Real Lightning, self-sovereign | | Phase 3 | Add Qibixx MDB adapter | Full vending machine integration | | Phase 4 | Add Bolt Card NFC reader | Premium UX for regulars |</p>
+<h2>References</h2>
+<ul>
+<li><a href="https://qibixx.com/how-to-easily-accept-cashless-payments-via-mdb-on-a-raspberry/">Qibixx MDB Adapter</a></li>
+<li><a href="https://github.com/elaineo/Jellybean">Jellybean — GitHub</a></li>
+<li><a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Ricardo Reis Lightning Coke Machine — Hackster.io</a></li>
+<li><a href="https://github.com/nodestark/mdb-esp32-cashless">ESP32 MDB Cashless — GitHub</a></li>
+<li><a href="https://btcpayserver.org/">BTCPay Server</a></li>
+<li><a href="https://www.boltcard.org/">Bolt Card</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multi-Drop_Bus_/_Internal_Communication_Protocol">MDB Protocol — Wikipedia</a></li>
+</ul>
+    </main>
+  </div>
+  <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
+  <script src="/assets/search.js"></script>
+</body>
+</html>

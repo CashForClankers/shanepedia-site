@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Obsidian Workflow — Shanepedia</title>
+  <title>Bitcoin Circular Economy — Portland / Gresham / Happy Valley — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -134,153 +134,135 @@
 </ul></section>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">ops</span><span class="meta-note">Updated 2026-04-10</span></div><section class="related"><h2>Related</h2><ul><li><a href="../START_HERE.html">START_HERE</a></li><li><a href="shanepedia-agent-runtime.html">shanepedia-agent-runtime</a></li><li><a href="codex-obsidian-llm-wiki-loop.html">codex-obsidian-llm-wiki-loop</a></li><li><a href="shanepedia-roadmap.html">shanepedia-roadmap</a></li><li><a href="../maps/ops-map.html">ops-map</a></li></ul></section><header><p class="eyebrow">ops</p><h1>Obsidian Workflow</h1></header>
-<p>This page defines the best Obsidian setup for Shanepedia as a dual-use system: fast for Shane, legible for agents.</p>
-<h2>Design goals</h2>
+      <div class="meta-row"><span class="badge">page</span></div><header><p class="eyebrow">page</p><h1>Bitcoin Circular Economy — Portland / Gresham / Happy Valley</h1></header>
+<p>Goal: find businesses in Gresham, Portland, and Happy Valley that accept Bitcoin / Lightning, so Shane can spend sats locally and support a circular bitcoin economy in the area.</p>
+<h2>April 18 operating direction</h2>
+<p>This lane is not just a merchant directory project. The working thesis is:</p>
 <ul>
-<li>frictionless capture</li>
-<li>obvious navigation</li>
-<li>durable metadata</li>
-<li>low-maintenance dashboards</li>
-<li>safe automation boundaries</li>
+<li>Find existing local businesses that already accept Bitcoin or Lightning.</li>
+<li>Add an owned spend surface, starting with a vending machine that accepts Lightning and cards.</li>
+<li>Use that machine as a real node in the local circular economy, not just as a gimmick.</li>
+<li>Back the lane with lightweight field ops: stocking, maintenance, and in-person merchant verification.</li>
 </ul>
-<h2>Recommended plugin stack</h2>
-<h3>Tier 1, install first</h3>
-<ol>
-<li><strong>Dataview</strong></li>
-</ol>
+<p>The practical goal is to make local bitcoin spending habitual rather than theoretical.</p>
+<h2>Primary Maps to Query</h2>
+<h3>BTCMap.org (canonical source)</h3>
 <ul>
-<li>why: live tables and filtered views over notes with frontmatter</li>
-<li>use here: dashboards for projects, stale notes, open loops, recently updated pages</li>
-<li>source: official community plugin listing plus Dataview docs</li>
+<li><strong>URL</strong>: https://btcmap.org/map</li>
+<li>Open-source, community-maintained, powered by OpenStreetMap tags</li>
+<li>Coinmap.org shut down — BTCMap is now the standard</li>
+<li><strong>API</strong>: <code>https://api.btcmap.org/v2/elements?area=&amp;lt;area_id&amp;gt;</code> — returns merchants by area</li>
+<li>Filter: <code>payment:bitcoin=yes</code> or <code>payment:lightning=yes</code> on OSM nodes</li>
+<li>Search tip: zoom to Portland metro and filter by payment type</li>
+<li><strong>Community page</strong>: https://btcmap.org/communities — check if there&#x27;s a Portland/PNW community</li>
 </ul>
-<ol>
-<li><strong>Templater</strong></li>
-</ol>
+<h3>Bitcoin.com Map</h3>
 <ul>
-<li>why: stronger note creation templates with variables and automation</li>
-<li>use here: page scaffolds for entities, projects, topics, ops notes, and intake capture</li>
-<li>caution: it can run JS and system commands, so only use trusted local templates</li>
-<li>source: official repo docs</li>
+<li>URL: https://map.bitcoin.com/</li>
+<li>Broader (includes BCH), but covers Bitcoin Lightning merchants too</li>
+<li>Good secondary check</li>
 </ul>
-<ol>
-<li><strong>QuickAdd</strong></li>
-</ol>
+<h3>BTCAccepted.org</h3>
 <ul>
-<li>why: one-keystroke capture and note creation flows</li>
-<li>use here: fast capture into <code>wiki/inbox/</code>, create project/topic/entity notes from templates</li>
+<li>URL: https://btcaccepted.org/</li>
+<li>Directory format, searchable by location</li>
 </ul>
-<ol>
-<li><strong>Tasks</strong></li>
-</ol>
+<h3>Yelp / Google &quot;Bitcoin accepted&quot;</h3>
 <ul>
-<li>why: actionable checklists across the vault</li>
-<li>use here: open loops, next actions, project review pages</li>
+<li>Yelp: <a href="https://www.yelp.com/search?find_desc=Bitcoin&amp;find_loc=Portland,+OR">Bitcoin in Portland, OR</a></li>
+<li>Not authoritative but catches businesses that self-tag</li>
 </ul>
-<h3>Tier 2, high value after basics work</h3>
+<h2>BTCMap API — How to Query Portland Area</h2>
+<pre><code># Get area ID for Portland first (search BTCMap communities or use bounding box)
+# Then query merchants in that area
+curl &quot;https://api.btcmap.org/v2/elements?area=portland&quot; 2&gt;/dev/null | python3 -m json.tool | head -100
+
+# Or use bounding box for Portland/Gresham/Happy Valley metro
+# Approx bounding box: lat 45.40–45.60, lon -122.85 to -122.40
+curl &quot;https://api.btcmap.org/v2/elements&quot; \
+  --data-urlencode &quot;bbox=-122.85,45.40,-122.40,45.60&quot; 2&gt;/dev/null</code></pre>
+<h2>Spending Categories to Find</h2>
+<p>Priority order for circular economy impact:</p>
 <ol>
-<li><strong>Metadata Menu</strong></li>
+<li><strong>Food &amp; coffee</strong> — highest frequency spend, most valuable for habit-building</li>
+<li><strong>Local services</strong> — barbers, repair shops, local trades</li>
+<li><strong>Retail / hardware</strong> — everyday purchases</li>
+<li><strong>Entertainment</strong> — bars, events, music venues</li>
+<li><strong>Online-to-local bridges</strong> — local businesses that also sell online with BTC</li>
 </ol>
+<h2>Owned-machine wedge</h2>
+<p>The fastest way to strengthen a circular economy is not to wait for every merchant to adopt Bitcoin first. It is to own one or two local spend nodes and then use them as:</p>
 <ul>
-<li>why: easier editing of structured frontmatter without hand-editing YAML</li>
-<li>use here: consistent fields like <code>type</code>, <code>status</code>, <code>area</code>, <code>updated</code>, <code>owner</code>, <code>tags</code></li>
+<li>proof that Lightning checkout works in the local market</li>
+<li>a conversation starter with pod owners and nearby merchants</li>
+<li>a recurring place to spend sats on something real</li>
+<li>a testbed for product pricing, signage, and payment UX</li>
 </ul>
-<ol>
-<li><strong>Canvas / Bases / Graph</strong></li>
-</ol>
+<p>Initial candidates:</p>
 <ul>
-<li>why: spatial maps and visual review</li>
-<li>use here: founder map, lane map, opportunity clusters, trip planning boards</li>
-<li>note: prefer these for visual navigation, not as the only source of truth</li>
+<li>hot sauce vending machine at a food cart pod</li>
+<li>coffee or canned-drink machine with Lightning-first branding</li>
+<li>small countertop smart-locker format for low-footprint pilots</li>
 </ul>
+<h2>Skill: <code>bitcoin-local-map</code></h2>
+<p>A skill that:</p>
 <ol>
-<li><strong>Homepage</strong> or start-note flow</li>
+<li>Queries BTCMap API for Portland metro bounding box</li>
+<li>Filters for Lightning-capable merchants (highest priority)</li>
+<li>Groups by category (food, retail, services)</li>
+<li>Outputs a ranked list with name, address, payment methods, last verified date</li>
+<li>Optionally saves new discoveries to Shanepedia inbox</li>
 </ol>
+<p>See: <code>~/.openclaw/workspace/projects/shanepedia/skills/bitcoin-local-map/</code> (to be created)</p>
+<h3>MVP Script (manual query)</h3>
+<pre><code># Run this to get current Portland metro bitcoin merchants from BTCMap
+python3 - &lt;&lt;&#x27;PY&#x27;
+import urllib.request, json
+
+# Portland metro bounding box
+url = &quot;https://api.btcmap.org/v2/elements?limit=100&quot;
+try:
+    req = urllib.request.urlopen(url, timeout=10)
+    data = json.loads(req.read())
+    portland_elements = [
+        e for e in data
+        if isinstance(e.get(&#x27;osm_json&#x27;, {}).get(&#x27;tags&#x27;, {}), dict)
+        and &#x27;name&#x27; in e.get(&#x27;osm_json&#x27;, {}).get(&#x27;tags&#x27;, {})
+    ]
+    for e in portland_elements[:20]:
+        tags = e[&#x27;osm_json&#x27;][&#x27;tags&#x27;]
+        print(tags.get(&#x27;name&#x27;, &#x27;Unknown&#x27;), &#x27;|&#x27;, tags.get(&#x27;addr:city&#x27;, &#x27;&#x27;), &#x27;|&#x27;,
+              &#x27;LN&#x27; if tags.get(&#x27;payment:lightning&#x27;) == &#x27;yes&#x27; else &#x27;BTC-only&#x27;)
+except Exception as ex:
+    print(&#x27;Error:&#x27;, ex)
+PY</code></pre>
+<h2>Known / Suspected Portland Bitcoin-Friendly Businesses</h2>
+<p><em>(To be filled in as research continues — verify before visiting)</em></p>
+<p>| Business | Area | Accepts | Notes | |---|---|---|---| | BitcoinNW ATMs | Portland metro | BTC (ATM) | Buy/sell, not spend | | TBD | Gresham | — | Research needed | | TBD | Happy Valley | — | Research needed |</p>
+<p><strong>How to add</strong>: when you find a business, reply to Telegram with <code>btc-biz: [name] [area] [lightning/btc] [notes]</code> and I&#x27;ll log it here.</p>
+<h2>How to Get Listed on BTCMap (for the hot sauce vending machine)</h2>
+<p>Once the vending machine is live:</p>
+<ol>
+<li>Add it to OpenStreetMap with tags: <code>payment:bitcoin=yes</code>, <code>payment:lightning=yes</code>, <code>amenity=vending_machine</code></li>
+<li>It will appear on BTCMap automatically within a day or two</li>
+<li>Also submit to BTCAccepted.org and bitcoin.com/maps</li>
+</ol>
+<h2>Circular Economy Notes</h2>
 <ul>
-<li>why: open directly into <code>wiki/START_HERE.md</code></li>
-<li>use here: reduce startup friction</li>
+<li>Spending BTC locally keeps value in the bitcoin network rather than converting back to dollars</li>
+<li>Even small purchases (coffee, lunch) matter — they prove demand to merchants</li>
+<li>Lightning payments are instant and ~zero fee — better merchant experience than card</li>
+<li>If a business doesn&#x27;t accept BTC yet, asking is the first step — offer to show them BTCPay setup</li>
+<li>A field-service layer matters: someone still needs to stock machines, fix jams, and verify merchants in person</li>
 </ul>
-<h3>Tier 3, optional</h3>
-<ol>
-<li><strong>Commander</strong></li>
-</ol>
+<h2>References</h2>
 <ul>
-<li>add buttons/commands for common actions</li>
-</ul>
-<ol>
-<li><strong>Omnisearch</strong></li>
-</ol>
-<ul>
-<li>stronger search if built-in search feels weak</li>
-</ul>
-<ol>
-<li><strong>Kanban</strong></li>
-</ol>
-<ul>
-<li>only if project pages actually benefit from board views</li>
-</ul>
-<h2>Recommended metadata standard</h2>
-<p>Use frontmatter fields consistently:</p>
-<pre><code>title: Page Title
-type: topic
-status: active
-area: shanepedia
-last_updated: 2026-04-10
-tags:
-  - map
-  - founder
-related:
-  - &quot;[[../START_HERE.md]]&quot;</code></pre>
-<p>Preferred fields:</p>
-<ul>
-<li><code>title</code></li>
-<li><code>type</code></li>
-<li><code>status</code></li>
-<li><code>area</code></li>
-<li><code>last_updated</code></li>
-<li><code>tags</code></li>
-<li><code>related</code></li>
-</ul>
-<h2>Human workflow</h2>
-<ol>
-<li>open vault</li>
-<li>land on <code><a href="../START_HERE.html">START_HERE</a></code></li>
-<li>capture rough notes into <code>wiki/inbox/</code></li>
-<li>promote useful notes into real pages</li>
-<li>use maps and dashboards to review what matters now</li>
-</ol>
-<h2>Agent workflow</h2>
-<ol>
-<li>start with <code><a href="../START_HERE.html">START_HERE</a></code></li>
-<li>read the relevant map page</li>
-<li>use metadata and links to narrow scope fast</li>
-<li>write updates into the correct page class</li>
-<li>rebuild index and lint after meaningful edits</li>
-</ol>
-<h2>Safety and reliability</h2>
-<ul>
-<li>markdown pages remain the source of truth</li>
-<li>community plugins are helpers, not core storage</li>
-<li>avoid plugin lock-in for critical information</li>
-<li>avoid Templater scripts from untrusted sources</li>
-<li>prefer a small stable stack over plugin sprawl</li>
-</ul>
-<h2>Best next implementation steps</h2>
-<ol>
-<li>add metadata fields to key pages</li>
-<li>add Dataview dashboard notes</li>
-<li>add QuickAdd capture choices</li>
-<li>add a homepage/start-note behavior</li>
-<li>create one or two Canvas maps for founder and project navigation</li>
-</ol>
-<h2>Alignment with the LLM wiki pattern</h2>
-<p>This workflow matches the LLM wiki pattern closely:</p>
-<ul>
-<li>raw files are the immutable evidence layer</li>
-<li>the markdown wiki is the maintained synthesis layer</li>
-<li>dashboards, maps, and canvases are durable outputs from repeated questions</li>
-<li>agent rules should push good analysis back into the wiki instead of leaving it in chat</li>
-<li>Codex can act as the primary maintainer while Obsidian stays the human-facing IDE</li>
+<li><a href="https://btcmap.org/">BTCMap.org</a></li>
+<li><a href="https://wiki.btcmap.org/general/api">BTCMap API Docs</a></li>
+<li><a href="https://btcaccepted.org/">BTCAccepted.org</a></li>
+<li><a href="https://map.bitcoin.com/">Bitcoin.com Map</a></li>
+<li><a href="https://btcpayserver.org/">BTCPay Server (for merchants)</a></li>
+<li><a href="https://www.boltcard.org/">Bolt Card NFC</a></li>
 </ul>
     </main>
   </div>
