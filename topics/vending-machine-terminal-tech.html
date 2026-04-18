@@ -103,7 +103,7 @@
 <li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram Photo Batches 2026 04 04</a></li>
 </ul></section>
 <section class="nav-group">
-<div class="nav-label"><h3>Topics</h3><span class="badge">21</span></div>
+<div class="nav-label"><h3>Topics</h3><span class="badge">22</span></div>
 <ul>
 <li><a href="/topics/agentic-business-studio.html">Agentic Business Studio</a></li>
 <li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy Portland</a></li>
@@ -117,6 +117,7 @@
 <li><a href="/topics/home-recipes.html">Home Recipes</a></li>
 <li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
 <li><a href="/topics/kids-activities-and-places.html">Kids Activities And Places</a></li>
+<li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
 <li><a href="/topics/llm-wiki-pattern.html">Llm Wiki Pattern</a></li>
 <li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos Marine Products</a></li>
 <li><a href="/topics/micro-site-factory.html">Micro Site Factory</a></li>
@@ -144,6 +145,30 @@
 <li>Integrate MDB only after checkout and venue placement are proven.</li>
 </ol>
 <p>For Shane&#x27;s current lane, the right bias is &quot;get one machine live&quot; before optimizing for maximum sovereignty.</p>
+<h2>Settled stack as of 2026-04-18</h2>
+<p>After current-source review, the recommendation is:</p>
+<h3>Production recommendation</h3>
+<ul>
+<li><strong>Lightning</strong>: BTCPay Server</li>
+<li><strong>Card</strong>: Stripe Terminal</li>
+<li><strong>Self-service reader</strong>: Verifone UX700 if Stripe availability/cooperation is workable</li>
+<li><strong>Machine control</strong>: Qibixx MDB Pi Hat Plus or MDB-USB</li>
+<li><strong>Host</strong>: Raspberry Pi 5 or equivalent small Linux box</li>
+</ul>
+<p>Why:</p>
+<ul>
+<li>BTCPay already supports a web-based PoS app for brick-and-mortar usage and exposes a Greenfield API/webhook path for custom checkout logic.</li>
+<li>Stripe&#x27;s UX700 is explicitly positioned for self-service use and Stripe recommends the server-driven integration for it.</li>
+<li>Stripe Terminal supports offline card storage for supported card payments when connectivity drops.</li>
+<li>Qibixx now exposes a high-level serial interface and separate VMC / peripheral capabilities on the Plus hardware, reducing custom MDB risk.</li>
+</ul>
+<h3>Fast fallback if UX700 is too slow to obtain</h3>
+<ul>
+<li>Keep <strong>BTCPay Server</strong> for Lightning</li>
+<li>Keep <strong>Qibixx</strong> for MDB</li>
+<li>Use a more attended card-reader flow first, then upgrade the card side later</li>
+</ul>
+<p>This preserves the core architecture while avoiding getting blocked on self-service reader procurement.</p>
 <h2>The Core Architecture</h2>
 <pre><code>[Customer selects product]
         ↓
@@ -247,15 +272,30 @@
 </ul>
 <p>For Lightning: payment confirmation typically arrives in &lt;2 seconds on a good connection.</p>
 <h2>Build Priority for Hot Sauce Machine</h2>
-<p>| Phase | What | Why | |---|---|---| | Phase 1 (MVP) | Tablet + Square Terminal + Cash App Pay | Zero hardware hacking, live in days | | Phase 2 | Add Raspberry Pi + BTCPay QR display | Real Lightning, self-sovereign | | Phase 3 | Add Qibixx MDB adapter | Full vending machine integration | | Phase 4 | Add Bolt Card NFC reader | Premium UX for regulars |</p>
+<p>| Phase | What | Why | |---|---|---| | Phase 1 (MVP) | BTCPay + card checkout on an external UI | Validate pricing, placement, and payment demand | | Phase 2 | Add Qibixx MDB integration | Turn successful payment into real unattended vend control | | Phase 3 | Move to self-service card hardware such as UX700 | Cleaner production-grade kiosk flow | | Phase 4 | Add Bolt Card / NFC support | Best repeat-customer Lightning experience |</p>
+<h2>Kids / family variant</h2>
+<p>Do not force the adult vending stack onto the first kids experiment.</p>
+<p>For a kids sats-learning machine, the simpler recommendation is:</p>
+<ul>
+<li><strong>Wallet / accounts</strong>: LNbits</li>
+<li><strong>Kid payment object</strong>: NTAG216 NFC cards for tiny balances, later Bolt Cards for safer recurring use</li>
+<li><strong>Machine</strong>: token-based toy capsule machine</li>
+<li><strong>Reason</strong>: faster to deploy, lower breakage risk, easier to explain, still teaches &quot;sats buy things&quot;</li>
+</ul>
+<p>See <a href="kids-sats-toy-vending.html">kids-sats-toy-vending</a>.</p>
 <h2>References</h2>
 <ul>
 <li><a href="https://qibixx.com/how-to-easily-accept-cashless-payments-via-mdb-on-a-raspberry/">Qibixx MDB Adapter</a></li>
+<li><a href="https://docs.btcpayserver.org/Apps/">BTCPay Apps / PoS</a></li>
+<li><a href="https://docs.btcpayserver.org/CustomIntegration/">BTCPay Custom Integration</a></li>
 <li><a href="https://github.com/elaineo/Jellybean">Jellybean — GitHub</a></li>
 <li><a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Ricardo Reis Lightning Coke Machine — Hackster.io</a></li>
 <li><a href="https://github.com/nodestark/mdb-esp32-cashless">ESP32 MDB Cashless — GitHub</a></li>
 <li><a href="https://btcpayserver.org/">BTCPay Server</a></li>
 <li><a href="https://www.boltcard.org/">Bolt Card</a></li>
+<li><a href="https://docs.stripe.com/terminal/payments/setup-reader/ux700">Stripe UX700 Reader Setup</a></li>
+<li><a href="https://docs.stripe.com/terminal/features/operate-offline/overview">Stripe Offline Payments</a></li>
+<li><a href="https://squareup.com/help/us/en/article/7635-accept-payments-with-cash-app-pay">Square Cash App Pay</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Multi-Drop_Bus_/_Internal_Communication_Protocol">MDB Protocol — Wikipedia</a></li>
 </ul>
     </main>

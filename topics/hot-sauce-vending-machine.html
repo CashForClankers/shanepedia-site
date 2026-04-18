@@ -103,7 +103,7 @@
 <li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram Photo Batches 2026 04 04</a></li>
 </ul></section>
 <section class="nav-group">
-<div class="nav-label"><h3>Topics</h3><span class="badge">21</span></div>
+<div class="nav-label"><h3>Topics</h3><span class="badge">22</span></div>
 <ul>
 <li><a href="/topics/agentic-business-studio.html">Agentic Business Studio</a></li>
 <li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy Portland</a></li>
@@ -117,6 +117,7 @@
 <li><a href="/topics/home-recipes.html">Home Recipes</a></li>
 <li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
 <li><a href="/topics/kids-activities-and-places.html">Kids Activities And Places</a></li>
+<li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
 <li><a href="/topics/llm-wiki-pattern.html">Llm Wiki Pattern</a></li>
 <li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos Marine Products</a></li>
 <li><a href="/topics/micro-site-factory.html">Micro Site Factory</a></li>
@@ -186,6 +187,25 @@
 <li>No QR scan needed — slick UX, especially for regulars</li>
 <li>Worth supporting if going full bitcoin-native</li>
 </ul>
+<h2>Settled recommendation</h2>
+<p>After current-source review, the best first serious stack is:</p>
+<ol>
+<li><strong>BTCPay Server for Lightning</strong></li>
+<li><strong>Stripe Terminal for cards</strong></li>
+<li><strong>Qibixx MDB Pi Hat Plus or MDB-USB for vending control</strong></li>
+</ol>
+<p>Recommended card-reader choice:</p>
+<ul>
+<li><strong>Best unattended path</strong>: Stripe Verifone UX700 if available, because Stripe positions it for self-service and recommends server-driven integration for it.</li>
+<li><strong>Fallback faster-to-start path</strong>: a more attended tablet + reader setup before moving to a fully self-service reader enclosure.</li>
+</ul>
+<p>Why this wins over the earlier menu of options:</p>
+<ul>
+<li>It keeps Lightning on an open, self-hosted stack.</li>
+<li>It gives a realistic card path for normal customers instead of forcing Bitcoin-only behavior too early.</li>
+<li>It avoids writing raw MDB protocol from scratch because Qibixx now exposes a higher-level interface.</li>
+<li>It leaves room for future NFC/Bolt Card support without making that the Day 1 blocker.</li>
+</ul>
 <h2>Hardware Options</h2>
 <h3>Off-the-Shelf Vending Machine</h3>
 <ul>
@@ -243,14 +263,20 @@
 </ul>
 <h2>MVP Build Path</h2>
 <ol>
-<li>Source a used snack vending machine (eBay/Craigslist, ~$800–1,200)</li>
-<li>Set up BTCPay Server (VPS or Raspberry Pi, free)</li>
-<li>Add Stripe Terminal card reader (~$300)</li>
+<li>Source a used snack vending machine with MDB support</li>
+<li>Set up BTCPay Server store + PoS / API flow for Lightning invoices</li>
+<li>Use Stripe Terminal for card acceptance</li>
+<li>Add Qibixx MDB interface so successful payment can trigger vend approval</li>
 <li>Load with friend&#x27;s hot sauce</li>
 <li>Negotiate placement at 1 food cart pod</li>
-<li>Run for 60 days, track sales and Bitcoin vs credit card split</li>
-<li>Decide: expand, upgrade hardware, or pivot format</li>
+<li>Run for 60 days and track sales mix: Lightning vs card, top SKUs, failure modes, service burden</li>
+<li>Decide whether to:</li>
 </ol>
+<ul>
+<li>keep scaling hot sauce</li>
+<li>add coffee / drinks</li>
+<li>or spawn a kid-friendly toy capsule variant</li>
+</ul>
 <h2>Open Questions</h2>
 <ul>
 <li>Does the friend want to be involved operationally, or pure product supply?</li>
@@ -265,6 +291,10 @@
 <li><a href="https://btcpayserver.org/">BTCPay Server</a></li>
 <li><a href="https://www.boltcard.org/">Bolt Card (NFC Lightning)</a></li>
 <li><a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Lightning Vending Machine — Hackster.io</a></li>
+<li><a href="https://docs.btcpayserver.org/Apps/">BTCPay Point of Sale App</a></li>
+<li><a href="https://docs.stripe.com/terminal/payments/setup-reader/ux700">Stripe UX700 Reader</a></li>
+<li><a href="https://docs.stripe.com/terminal/features/operate-offline/overview">Stripe Offline Payments</a></li>
+<li><a href="https://docs.qibixx.com/released/mdb-products/mdb-pi-hat">Qibixx MDB Pi Hat Plus</a></li>
 <li><a href="https://www.travelportland.com/food-carts/pods/">Portland Food Cart Pods Guide</a></li>
 <li><a href="https://www.portland.gov/ppd/small-business-permits/vending-carts-private-property">Portland Private Property Vending Rules</a></li>
 </ul>

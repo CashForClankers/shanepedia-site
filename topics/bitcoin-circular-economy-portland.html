@@ -103,7 +103,7 @@
 <li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram Photo Batches 2026 04 04</a></li>
 </ul></section>
 <section class="nav-group">
-<div class="nav-label"><h3>Topics</h3><span class="badge">21</span></div>
+<div class="nav-label"><h3>Topics</h3><span class="badge">22</span></div>
 <ul>
 <li><a href="/topics/agentic-business-studio.html">Agentic Business Studio</a></li>
 <li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy Portland</a></li>
@@ -117,6 +117,7 @@
 <li><a href="/topics/home-recipes.html">Home Recipes</a></li>
 <li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
 <li><a href="/topics/kids-activities-and-places.html">Kids Activities And Places</a></li>
+<li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
 <li><a href="/topics/llm-wiki-pattern.html">Llm Wiki Pattern</a></li>
 <li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos Marine Products</a></li>
 <li><a href="/topics/micro-site-factory.html">Micro Site Factory</a></li>
@@ -204,6 +205,37 @@ curl &quot;https://api.btcmap.org/v2/elements&quot; \
 <li>coffee or canned-drink machine with Lightning-first branding</li>
 <li>small countertop smart-locker format for low-footprint pilots</li>
 </ul>
+<h2>Settled direction as of 2026-04-18</h2>
+<p>After current-source review, the lane should split into two practical tracks:</p>
+<h3>Track A: real local spend node</h3>
+<p>Build one adult-facing machine that accepts:</p>
+<ul>
+<li><strong>Lightning via BTCPay Server</strong></li>
+<li><strong>card payments via Stripe Terminal</strong></li>
+<li><strong>MDB vending control via Qibixx</strong></li>
+</ul>
+<p>Why this stack won:</p>
+<ul>
+<li>BTCPay already has a web-based Point of Sale app for physical stores and a headless API/webhook path for custom flows.</li>
+<li>Stripe now has a self-service reader path through the Verifone UX700, and Stripe explicitly recommends the server-driven integration for it.</li>
+<li>Qibixx now exposes a higher-level MDB interface instead of forcing full low-level MDB implementation from scratch.</li>
+</ul>
+<p>That combination is the best balance of:</p>
+<ul>
+<li>real self-service hardware</li>
+<li>open Lightning control</li>
+<li>low enough engineering risk for a first machine</li>
+</ul>
+<h3>Track B: family / education node</h3>
+<p>Build a simpler kids-facing toy machine that teaches:</p>
+<ul>
+<li>receiving sats</li>
+<li>sharing sats</li>
+<li>tapping or scanning to pay</li>
+<li>the feeling that sats buy a real thing</li>
+</ul>
+<p>See <a href="kids-sats-toy-vending.html">kids-sats-toy-vending</a>.</p>
+<p>The point is not just commerce. It is habit formation: sats feel more real when they buy hot sauce, toys, or tiny rewards in everyday life.</p>
 <h2>Skill: <code>bitcoin-local-map</code></h2>
 <p>A skill that:</p>
 <ol>
@@ -254,6 +286,7 @@ PY</code></pre>
 <li>Lightning payments are instant and ~zero fee — better merchant experience than card</li>
 <li>If a business doesn&#x27;t accept BTC yet, asking is the first step — offer to show them BTCPay setup</li>
 <li>A field-service layer matters: someone still needs to stock machines, fix jams, and verify merchants in person</li>
+<li>Kids and families are a valid wedge. A toy machine or rewards dispenser can teach Lightning faster than a lecture because the feedback loop is immediate</li>
 </ul>
 <h2>References</h2>
 <ul>
@@ -263,6 +296,9 @@ PY</code></pre>
 <li><a href="https://map.bitcoin.com/">Bitcoin.com Map</a></li>
 <li><a href="https://btcpayserver.org/">BTCPay Server (for merchants)</a></li>
 <li><a href="https://www.boltcard.org/">Bolt Card NFC</a></li>
+<li><a href="https://docs.stripe.com/terminal/payments/setup-reader/ux700">Stripe UX700</a></li>
+<li><a href="https://docs.qibixx.com/released/mdb-products/mdb-pi-hat">Qibixx MDB Pi Hat Plus</a></li>
+<li><a href="https://docs.lnbits.org/guide/faq.html">LNbits NFC FAQ</a></li>
 </ul>
     </main>
   </div>
