@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Micro-site factory — Shanepedia</title>
+  <title>Inspiration and aesthetic — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -186,84 +186,85 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">Updated 2026-04-05</span></div><section class="related"><h2>Related</h2><ul><li><a href="agentic-business-studio.html">Agentic business studio</a></li><li><a href="../projects/operator-site-rescue.html">Operator site rescue (first business)</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Micro-site factory</h1></header>
-<p>The micro-site factory is the production system behind operator site rescue and future product launches. It is not a website builder — it is an agent-assisted pipeline that turns operator information into live, fast, beautiful single-page sites.</p>
-<h2>How it works</h2>
-<h3>Input</h3>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">topic</span><span class="tag-pill">design</span><span class="tag-pill">taste</span><span class="tag-pill">reference</span></div><section class="related"><h2>Related</h2><ul><li><a href="../entities/shane-neeley.html">Shane Neeley</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="shane-founder-operating-principles.html">Shane founder operating principles</a></li><li><a href="agent-personality-design.html">Agent Personality Design</a></li><li><a href="../projects/shanepedia-public-site.html">Shanepedia Public Site</a></li><li><a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Inspiration and aesthetic</h1></header>
+<p>This is the reference page for what Shane&#x27;s eye is actually drawn to and why. It exists so that any agent or collaborator building a Shane-facing surface — a microsite, a dashboard, a Telegram reply, a CLI tool, a slide deck — can ground design choices in a concrete taste profile rather than guessing.</p>
+<h2>The core preference: things that boot instantly</h2>
+<p>The single most consistent signal across the <a href="../entities/shane-neeley.html">Shane Neeley</a> entity, the <a href="shane-design-and-ux-taste.html">Shane design and UX taste</a> page, and the public site corpus is a preference for products that load fast, do one thing clearly, and respect the user&#x27;s attention. &quot;Simple sites that boot instantly&quot; is repeated almost verbatim in multiple sources, and it is not a stylistic flourish — it is a decision-making rule.</p>
+<p>The corollary is a strong dislike of:</p>
 <ul>
-<li>Operator photos (from Telegram, WhatsApp, or in-person)</li>
-<li>Basic info: what they offer, pricing, location, contact</li>
-<li>Language: Spanish primary, English translation by agent</li>
+<li>splash screens, intro animations, scroll-jacking</li>
+<li>generic startup gradients and SaaS-template hero sections</li>
+<li>overloaded navigation trees that hide the actual content</li>
+<li>cookie banners and modal stacks</li>
+<li>copy that promises &quot;platforms&quot; instead of describing outcomes</li>
 </ul>
-<h3>Processing</h3>
+<p>If a site fails the boot-instantly test, no amount of subsequent good design recovers it.</p>
+<h2>Reference set: products Shane likely admires</h2>
+<p>Inferred from the corpus and the explicit &quot;high-signal minimalism&quot; framing:</p>
 <ul>
-<li>Agent generates HTML from a template library</li>
-<li>Agent writes bilingual copy from operator input</li>
-<li>Agent selects and crops best photos</li>
-<li>Agent generates WhatsApp deep link with pre-filled message</li>
-<li>Agent validates mobile rendering and load time</li>
+<li><strong>Stripe docs and the Stripe Press site</strong> — long the gold standard for typography-first, content-dense, fast technical reading.</li>
+<li><strong>Linear</strong> — fast keyboard-driven app, restrained palette, opinionated motion design that gets out of the way.</li>
+<li><strong>Vercel and Vercel&#x27;s docs</strong> — fast, dark-mode native, monospace accents in the right places.</li>
+<li><strong>Lobsters</strong> — proof that a community site can be taste-coded with almost no chrome.</li>
+<li><strong>Hacker News</strong> — the canonical &quot;ugly but instant&quot; reference; Shane&#x27;s preference is more refined but operates on the same boot-time discipline.</li>
+<li><strong>Pinboard, the original</strong> — &quot;antisocial bookmarking&quot; pricing page as a tone reference: direct, confident, no startup voice.</li>
+<li><strong>Are.na</strong> — editorial layout, generous whitespace, thoughtful typography for a knowledge-work surface.</li>
+<li><strong>Obsidian</strong> — the actual IDE for Shanepedia, locally-first, plain-text underneath, theme-able without becoming busy.</li>
+<li><strong>GitHub&#x27;s plain HTML rendering</strong> — the version of markdown that just works, no preview pane required.</li>
 </ul>
-<h3>Output</h3>
+<p>The pattern across all of those: text first, fast first, opinion first.</p>
+<h2>Inferred from the Shanepedia site itself</h2>
+<p>Reading <code>scripts/wiki/build_site.py</code>, the actual Shanepedia public site CSS resolves to a specific palette and type stack that should be treated as the canonical visual identity for any Shane-facing build:</p>
+<p><strong>Light mode:</strong></p>
 <ul>
-<li>Single HTML file, self-contained or with minimal assets</li>
-<li>Hosted on GitHub Pages (free, fast CDN)</li>
-<li>Custom domain optional ($10-15/year)</li>
-<li>WhatsApp Business quick-reply pack as companion deliverable</li>
+<li>background <code>#f7f4ee</code> — warm off-white, paper-tinted, not pure white</li>
+<li>paper <code>#ffffff</code> for surfaces that need to lift off the background</li>
+<li>ink <code>#201d1a</code> — soft near-black, not <code>#000</code></li>
+<li>muted text <code>#635a53</code> for secondary copy</li>
+<li>primary link <code>#0b6a6f</code> (deep teal) with hover <code>#084f53</code></li>
+<li>visited link <code>#8b4b3e</code> (oxidised brick)</li>
+<li>accents in a coordinated warm palette: <code>#c2410c</code> (burnt orange), <code>#0f766e</code> (teal), <code>#b7791f</code> (gold), <code>#2f6fb1</code> (sky), <code>#6d7f38</code> (olive)</li>
+<li>borders <code>#b5aba2</code> and <code>#ddd4cc</code> — soft, never harsh</li>
 </ul>
-<h2>Template library</h2>
-<p>Build 4-5 base templates covering common operator types:</p>
+<p><strong>Dark mode:</strong></p>
+<ul>
+<li>background <code>#11161d</code>, paper <code>#171d25</code> — true dark, slightly blue-shifted, not OLED black</li>
+<li>ink <code>#e8edf3</code>, muted <code>#aeb8c5</code></li>
+<li>accent shifts that preserve the same palette identity in low light (orange <code>#ff9b61</code>, teal <code>#54c2b7</code>, gold <code>#e6b15c</code>)</li>
+</ul>
+<p><strong>Type stack:</strong></p>
+<ul>
+<li>body: Inter, system fallback chain</li>
+<li>headings: Fraunces, with Linux Libertine and Georgia as serif fallbacks</li>
+<li>mono: JetBrains Mono, with SF Mono and Cascadia Code as fallbacks</li>
+</ul>
+<p>The combination — warm paper backgrounds, deep teal links, oxidised secondary accents, Fraunces for headings — is the identity. Anything Shane-facing that drifts into pure white backgrounds, electric-blue links, and Helvetica-only headings is off-brand even if technically clean.</p>
+<h2>Why minimal-and-fast wins for Shane specifically</h2>
+<p>Two reasons, both load-bearing:</p>
 <ol>
-<li><strong>Tour operator</strong> — hero photo, experience description, pricing table, seasonal info, WhatsApp CTA</li>
-<li><strong>Accommodation</strong> — room gallery, amenities, location map, booking CTA</li>
-<li><strong>Restaurant/cafe</strong> — menu highlights, atmosphere photos, hours, directions</li>
-<li><strong>Experience provider</strong> — what you&#x27;ll do, what&#x27;s included, difficulty level, group size, CTA</li>
-<li><strong>Multi-service</strong> — operator offering tours + stays + food as a package</li>
+<li><strong>He runs many lanes in parallel.</strong> Slow tools compound: a 1.5-second page load times a hundred page loads is the difference between a working day and a frustrated one. Fast tools are not a luxury; they are the only tools that survive the multi-lane workload.</li>
+<li><strong>He thinks in text.</strong> The Shanepedia stack — Obsidian, plain markdown, a static site, a CLI agent — is built around text-as-source-of-truth. Visual chrome that hides the text or makes it harder to grep is a real cost, not a stylistic preference.</li>
 </ol>
-<h2>Design standards</h2>
-<p>Every site from the factory follows Shane&#x27;s design taste:</p>
+<p>This is why most &quot;modern startup design&quot; languages do not fit. Glass-morphism, parallax scrolling, oversized hero videos, and animated illustration sets all impose visual weight without earning it for a text-first founder.</p>
+<h2>The agentic-but-warm tension</h2>
+<p>The hardest design problem in any Shane-facing interface is the tension between agentic and warm. An agent surface that is purely functional reads as cold and corporate; one that is purely warm reads as a chat toy and burns trust the first time it gets something wrong. The OpenClaw Telegram channel solves this by alternating registers: morning briefings are crisp and structured, the Saturday meme is loose and weird, error messages are direct, the heartbeat acks are short.</p>
+<p>The same tension applies to any visual surface. The Shanepedia site resolves it by pairing serif headings (Fraunces — warm, editorial) with monospace accents (JetBrains Mono — technical, precise) on a paper-warm background with deep-teal links. The combination signals &quot;field notebook with engineering discipline&quot; rather than &quot;SaaS dashboard&quot; or &quot;personal blog.&quot;</p>
+<p>When in doubt: warm typography on warm backgrounds, technical precision in the metadata and the controls, and zero ornamental decoration. See <a href="agent-personality-design.html">Agent Personality Design</a> for the corresponding voice rule on the agent side.</p>
+<h2>How to use this page</h2>
+<p>Anytime an agent or collaborator is building something Shane will see — a new microsite, a generated report, a Telegram surface, a slide, a card on the public site — open this page first. Confirm the palette, confirm the type stack, confirm the boot-time discipline, confirm the warm-but-precise voice. Then build.</p>
+<p>A short checklist for any Shane-facing surface:</p>
 <ul>
-<li>Loads in under 2 seconds</li>
-<li>Mobile-first (most tourists browse on phone)</li>
-<li>Clear hierarchy: what → why → how much → book now</li>
-<li>No stock photos — real operator photos only</li>
-<li>Bilingual without toggle complexity (Spanish sections + English sections)</li>
-<li>WhatsApp as primary CTA, not a form</li>
+<li>[ ] loads in under 1 second on a cold cache</li>
+<li>[ ] uses the warm-paper background, not pure white</li>
+<li>[ ] links use the deep-teal <code>#0b6a6f</code> (or its dark-mode equivalent)</li>
+<li>[ ] headings use Fraunces or a serif fallback, not the body font</li>
+<li>[ ] no startup gradients, no hero videos, no scroll-jacking</li>
+<li>[ ] copy says one specific thing, not a generic value-prop</li>
+<li>[ ] mobile layout is real, not a shrunken desktop</li>
+<li>[ ] there is a clear next action, not a wall of equally-weighted options</li>
 </ul>
-<h2>Agent automation depth</h2>
-<p>The factory should eventually run with minimal human input:</p>
-<ol>
-<li>Operator sends photos and info via WhatsApp or Telegram</li>
-<li>Agent drafts site and copy</li>
-<li>Shane reviews and approves (5 minutes)</li>
-<li>Agent deploys to GitHub Pages</li>
-<li>Agent sends operator the live link</li>
-</ol>
-<h2>Relationship to Shanepedia</h2>
-<p>The factory is a child project. Its templates, deployment scripts, and client list should be tracked as a project lane under Shanepedia. Operator research and learnings flow back into the wiki.</p>
-<h2>Business seed: August Booking Sprint</h2>
-<ul>
-<li>Seasonal offer for coastal operators before August booking windows, especially in Los Cobanos, El Tunco, and El Zonte where English-language web presence is still weak.</li>
-<li>Deliverable is a bilingual one-page site plus WhatsApp booking funnel, built from operator photos and pricing in the existing micro-site factory pipeline.</li>
-<li>Price as a fast-launch package, for example $350 setup plus $79/month for edits, hosting, and quick-reply maintenance during the season.</li>
-<li>Agents handle copy drafts, photo selection, translation, mobile QA, and deployment, leaving Shane with a short approval pass.</li>
-<li>Best first buyers are whale-season and experience operators who already sell over WhatsApp but miss foreign demand because they have no fast booking page.</li>
-</ul>
-<h2>Business seed: Operator Evidence Pack</h2>
-<ul>
-<li>Productized intake layer for the micro-site factory: agents turn raw WhatsApp photos, prices, FAQs, and voice notes into a clean bilingual operator asset packet.</li>
-<li>Best early buyers are El Salvador operators like Los Cóbanos tour providers who already sell over chat but lack reusable, trustworthy marketing inputs.</li>
-<li>Deliverables include approved copy blocks, captioned photo picks, a pricing/FAQ sheet, WhatsApp reply snippets, and a ready-to-deploy booking CTA.</li>
-<li>Price as $250 setup plus $79/month for seasonal edits, new photos, and English/Spanish refreshes before booking pushes.</li>
-<li>This fills a real wiki gap between relationship research and final launch pages: the reusable evidence layer that makes fast, tasteful sites possible.</li>
-</ul>
-<h2>Business seed: 48-Hour Booking Friction Brief</h2>
-<ul>
-<li>A paid intelligence brief built from the micro-site factory pipeline: agents audit an operator’s current WhatsApp booking flow, English visibility, and mobile trust signals in under 48 hours.</li>
-<li>Best first buyers are Los Cóbanos and El Tunco operators identified in the 2026 tourism landscape as high-demand but digitally under-tooled.</li>
-<li>Deliverable includes a 1-page friction scorecard, bilingual copy fixes, a recommended single-page layout, and ready-to-send WhatsApp reply scripts.</li>
-<li>Price at $199 one-time with a $79/month refresh option before seasonal demand spikes (including whale season packaging).</li>
-<li>Claude/Gemini/Codex can automate screenshot analysis, bilingual rewrite drafts, and first-pass page scaffolding, leaving only a short human approval pass.</li>
-</ul>
+<h2>Stance</h2>
+<p>Taste is a constraint, not a decoration. The Shanepedia palette and type stack exist because they have been chosen and tested; departing from them should require a real reason, and the default answer to &quot;should this be flashier?&quot; is no. The most distinctive thing about a Shane-facing interface is not what it adds — it is what it refuses to add.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>

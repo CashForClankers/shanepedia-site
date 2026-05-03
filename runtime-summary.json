@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T22:48:29Z",
+  "generated_at": "2026-05-03T23:01:03Z",
   "fresh_ideas": [
     {
       "title": "Whale Weekend Trust Funnel",
@@ -202,19 +202,19 @@
       "summary": ""
     },
     {
-      "path": "topics/kids-activities-and-places.md",
-      "title": "Kids activities and places",
-      "status": "active",
-      "lane": "",
-      "surface_date": "2026-04-14",
-      "stale_days": "19",
-      "summary": ""
-    },
-    {
       "path": "topics/bitcoin-circular-economy-portland.md",
       "title": "Bitcoin Circular Economy \u2014 Portland / Gresham / Happy Valley",
       "status": "active-research",
       "lane": "bitcoin-commerce-map",
+      "surface_date": "2026-04-18",
+      "stale_days": "15",
+      "summary": ""
+    },
+    {
+      "path": "topics/hot-sauce-vending-machine.md",
+      "title": "Hot Sauce Vending Machine",
+      "status": "research",
+      "lane": "product-hardware",
       "surface_date": "2026-04-18",
       "stale_days": "15",
       "summary": ""

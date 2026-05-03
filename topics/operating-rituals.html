@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Micro-site factory — Shanepedia</title>
+  <title>Operating rituals — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -186,84 +186,45 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">Updated 2026-04-05</span></div><section class="related"><h2>Related</h2><ul><li><a href="agentic-business-studio.html">Agentic business studio</a></li><li><a href="../projects/operator-site-rescue.html">Operator site rescue (first business)</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Micro-site factory</h1></header>
-<p>The micro-site factory is the production system behind operator site rescue and future product launches. It is not a website builder — it is an agent-assisted pipeline that turns operator information into live, fast, beautiful single-page sites.</p>
-<h2>How it works</h2>
-<h3>Input</h3>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">topic</span><span class="tag-pill">ops</span><span class="tag-pill">cadence</span><span class="tag-pill">founder-os</span></div><section class="related"><h2>Related</h2><ul><li><a href="../entities/shane-neeley.html">Shane Neeley</a></li><li><a href="../entities/openclaw.html">OpenClaw</a></li><li><a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li><li><a href="../ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li><li><a href="shane-founder-operating-principles.html">Shane founder operating principles</a></li><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Operating rituals</h1></header>
+<p>This is what an actually-running founder OS looks like in 2026 — not a productivity manifesto, not a pitch deck for the lifestyle. The actual rhythms in Shane&#x27;s week, sourced from the live OpenClaw cron schedule, the daily memory files, and the wiki maintenance loop.</p>
+<p>The point of writing this down is not aspirational. It is so that any future agent (or future Shane) can recover the rhythm if a machine dies, a config gets blown away, or a long trip resets the cadence. Rituals that survive contact with reality belong here. Aspirational rituals that look good in a journal but never actually run do not.</p>
+<h2>The morning briefing — 7:00 AM Pacific</h2>
+<p>Every weekday morning at 7:00 AM America/Los_Angeles, the OpenClaw cron job named &quot;Morning Briefing&quot; fires through the Telegram channel. It is a single agent run that pulls the previous day&#x27;s wiki log, the open loops dashboard, the bitcoin/El Salvador pulse, and any pending decisions from the active lanes, and delivers a short, scannable status to the phone before Shane is fully awake.</p>
+<p>Why 7:00 AM and not 6:30 or 8:00: because it has to land before the first cup of coffee, but after the household has started moving. A briefing that arrives during the kid wake-up window gets ignored. A briefing that arrives at the desk gets read. The 30-minute window matters.</p>
+<p>The briefing is intentionally short. Long briefings get skimmed; short briefings get acted on.</p>
+<h2>The heartbeat — every 2 hours, 7:30 AM to 11:00 PM</h2>
+<p>OpenClaw&#x27;s main agent runs a heartbeat every two hours during active hours (configured under <code>agents.defaults.heartbeat</code>, scoped to America/Los_Angeles, 07:30–23:00). The heartbeat is not &quot;are you alive&quot; monitoring — it is a lightweight, isolated context check-in that gives the agent a chance to surface anything worth flagging without waiting for Shane to ask.</p>
+<p>In practice the heartbeat catches: a long-running task that finished, a Telegram message Shane missed, a cron job that errored, a wiki page that was edited mid-conversation and needs a follow-up commit. Most heartbeats are no-ops. The 1-in-20 that catches a real thing is what justifies the cadence.</p>
+<h2>The daily memory file — <code>memory/YYYY-MM-DD.md</code></h2>
+<p>Each working day Shane (or an agent on his behalf) opens a fresh markdown file in <code>~/.openclaw/workspace/memory/</code> named for the date. It is the day&#x27;s working scratch — what got decided, what got shipped, what blocked, what to revisit. The format is loose on purpose: bullet lists, short sentences, links to wiki pages that got touched.</p>
+<p>This file is not a journal. It is the day&#x27;s commit log for the founder OS. At the end of the day (or first thing the next morning during the briefing) the agent scans the file for anything that should be promoted into the wiki — a durable insight, a new entity, a contact, a pattern — and writes it back as a real page rather than leaving it trapped in a dated note.</p>
+<p>The discipline is: nothing important stays only in the dated memory file. Either it gets promoted to the wiki or it does not matter.</p>
+<h2>The Saturday meme — 10:23 AM Pacific</h2>
+<p>Every Saturday at 10:23 AM the &quot;Weekly Meme Delivery&quot; cron fires and sends a generated meme to the Telegram channel via the meme-factory skill. The schedule is deliberately a few minutes off the round hour so it does not collide with the morning briefing pattern and so the timing feels human rather than corporate.</p>
+<p>This is the single most &quot;soft&quot; ritual on the schedule and probably the most important one. It is the explicit acknowledgement that an always-on AI gateway is allowed to be a little weird and a little warm — see <a href="agent-personality-design.html">Agent Personality Design</a>. A founder OS that only ever delivers tasks is exhausting; one that throws a meme into the chat once a week is operable for years.</p>
+<h2>The Sunday weekly reset — 8:00 PM Pacific</h2>
+<p>Sunday night at 8:00 PM the &quot;Weekly Reset Brief&quot; cron fires. It is a longer, more reflective agent run than the daily briefing. It reads:</p>
 <ul>
-<li>Operator photos (from Telegram, WhatsApp, or in-person)</li>
-<li>Basic info: what they offer, pricing, location, contact</li>
-<li>Language: Spanish primary, English translation by agent</li>
+<li>the past seven days of wiki log entries</li>
+<li>the open loops dashboard</li>
+<li>the projects dashboard</li>
+<li>any cron job error history</li>
+<li>the heartbeat trail for unanswered flags</li>
 </ul>
-<h3>Processing</h3>
-<ul>
-<li>Agent generates HTML from a template library</li>
-<li>Agent writes bilingual copy from operator input</li>
-<li>Agent selects and crops best photos</li>
-<li>Agent generates WhatsApp deep link with pre-filled message</li>
-<li>Agent validates mobile rendering and load time</li>
-</ul>
-<h3>Output</h3>
-<ul>
-<li>Single HTML file, self-contained or with minimal assets</li>
-<li>Hosted on GitHub Pages (free, fast CDN)</li>
-<li>Custom domain optional ($10-15/year)</li>
-<li>WhatsApp Business quick-reply pack as companion deliverable</li>
-</ul>
-<h2>Template library</h2>
-<p>Build 4-5 base templates covering common operator types:</p>
-<ol>
-<li><strong>Tour operator</strong> — hero photo, experience description, pricing table, seasonal info, WhatsApp CTA</li>
-<li><strong>Accommodation</strong> — room gallery, amenities, location map, booking CTA</li>
-<li><strong>Restaurant/cafe</strong> — menu highlights, atmosphere photos, hours, directions</li>
-<li><strong>Experience provider</strong> — what you&#x27;ll do, what&#x27;s included, difficulty level, group size, CTA</li>
-<li><strong>Multi-service</strong> — operator offering tours + stays + food as a package</li>
-</ol>
-<h2>Design standards</h2>
-<p>Every site from the factory follows Shane&#x27;s design taste:</p>
-<ul>
-<li>Loads in under 2 seconds</li>
-<li>Mobile-first (most tourists browse on phone)</li>
-<li>Clear hierarchy: what → why → how much → book now</li>
-<li>No stock photos — real operator photos only</li>
-<li>Bilingual without toggle complexity (Spanish sections + English sections)</li>
-<li>WhatsApp as primary CTA, not a form</li>
-</ul>
-<h2>Agent automation depth</h2>
-<p>The factory should eventually run with minimal human input:</p>
-<ol>
-<li>Operator sends photos and info via WhatsApp or Telegram</li>
-<li>Agent drafts site and copy</li>
-<li>Shane reviews and approves (5 minutes)</li>
-<li>Agent deploys to GitHub Pages</li>
-<li>Agent sends operator the live link</li>
-</ol>
-<h2>Relationship to Shanepedia</h2>
-<p>The factory is a child project. Its templates, deployment scripts, and client list should be tracked as a project lane under Shanepedia. Operator research and learnings flow back into the wiki.</p>
-<h2>Business seed: August Booking Sprint</h2>
-<ul>
-<li>Seasonal offer for coastal operators before August booking windows, especially in Los Cobanos, El Tunco, and El Zonte where English-language web presence is still weak.</li>
-<li>Deliverable is a bilingual one-page site plus WhatsApp booking funnel, built from operator photos and pricing in the existing micro-site factory pipeline.</li>
-<li>Price as a fast-launch package, for example $350 setup plus $79/month for edits, hosting, and quick-reply maintenance during the season.</li>
-<li>Agents handle copy drafts, photo selection, translation, mobile QA, and deployment, leaving Shane with a short approval pass.</li>
-<li>Best first buyers are whale-season and experience operators who already sell over WhatsApp but miss foreign demand because they have no fast booking page.</li>
-</ul>
-<h2>Business seed: Operator Evidence Pack</h2>
-<ul>
-<li>Productized intake layer for the micro-site factory: agents turn raw WhatsApp photos, prices, FAQs, and voice notes into a clean bilingual operator asset packet.</li>
-<li>Best early buyers are El Salvador operators like Los Cóbanos tour providers who already sell over chat but lack reusable, trustworthy marketing inputs.</li>
-<li>Deliverables include approved copy blocks, captioned photo picks, a pricing/FAQ sheet, WhatsApp reply snippets, and a ready-to-deploy booking CTA.</li>
-<li>Price as $250 setup plus $79/month for seasonal edits, new photos, and English/Spanish refreshes before booking pushes.</li>
-<li>This fills a real wiki gap between relationship research and final launch pages: the reusable evidence layer that makes fast, tasteful sites possible.</li>
-</ul>
-<h2>Business seed: 48-Hour Booking Friction Brief</h2>
-<ul>
-<li>A paid intelligence brief built from the micro-site factory pipeline: agents audit an operator’s current WhatsApp booking flow, English visibility, and mobile trust signals in under 48 hours.</li>
-<li>Best first buyers are Los Cóbanos and El Tunco operators identified in the 2026 tourism landscape as high-demand but digitally under-tooled.</li>
-<li>Deliverable includes a 1-page friction scorecard, bilingual copy fixes, a recommended single-page layout, and ready-to-send WhatsApp reply scripts.</li>
-<li>Price at $199 one-time with a $79/month refresh option before seasonal demand spikes (including whale season packaging).</li>
-<li>Claude/Gemini/Codex can automate screenshot analysis, bilingual rewrite drafts, and first-pass page scaffolding, leaving only a short human approval pass.</li>
-</ul>
+<p>…and produces a Sunday-night &quot;what shipped, what stalled, what to focus on next week&quot; message. The cadence matters: a Sunday reset is what turns a stack of days into a week with a shape. Without it, weeks blur into months.</p>
+<p>The reset is also when stale wiki pages get triaged. Anything with <code>last_updated</code> older than its own implied freshness contract gets queued for the Monday backlog.</p>
+<h2>The PinchBench review — Monday 8:45 AM Pacific</h2>
+<p>Monday morning at 8:45 AM the &quot;Weekly PinchBench + Stack Review&quot; cron fires. PinchBench is the lightweight benchmarking surface for model and skill performance across the OpenClaw agent stack. The Monday review checks: which models hit which fallbacks last week, which skills had unusual error rates, which cron jobs ran longer than their median, and whether any of it warrants a config change.</p>
+<p>This is the ritual that keeps the <a href="../entities/openclaw.html">OpenClaw</a> gateway from quietly degrading. Without a weekly stack review, the agent zoo accumulates silent breakage and configuration drift. With it, model swaps and skill updates ride a regular rhythm instead of always being reactive.</p>
+<h2>The Shanepedia research flywheel — daily, asynchronous</h2>
+<p>Layered on top of the cron-driven rituals is the asynchronous research flywheel described in <a href="../ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a>: ingest from active lanes, run the autoresearch goals, convert the best findings into wiki updates, rebuild index and lint, log it. This loop does not have a fixed clock time because it runs whenever new evidence lands — a Telegram photo, a saved YouTube link, a research session, a trip.</p>
+<p>The discipline is the same as the daily memory file: nothing stays in the lane runtime that should live in the parent wiki.</p>
+<h2>Why these rituals matter</h2>
+<p>A founder OS without rituals is just a pile of tools. Rituals are what turn the pile into a system that compounds. The OpenClaw cron schedule is essentially a contract Shane has made with future-Shane: the morning briefing will land, the Sunday reset will run, the Saturday meme will arrive, the heartbeat will check in. As long as those keep happening, the rest of the stack — wiki, skills, agents, channels — has a rhythm to attach to.</p>
+<p>The corollary is that adding a new ritual is a serious decision. Each one consumes a slot in the weekly attention budget, and a ritual that gets skipped twice in a row stops being a ritual and becomes a guilt trip. Better to run six rituals reliably than to design twelve and run none.</p>
+<h2>Stance</h2>
+<p>The right number of rituals is the smallest set that, if you ran them and nothing else, would still produce a coherent founder operation. Everything beyond that is optional. The current set — morning briefing, heartbeat, daily memory file, Saturday meme, Sunday reset, Monday PinchBench review, asynchronous research flywheel — is close to that minimum. Adding more should be hard. Removing one should require evidence.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>

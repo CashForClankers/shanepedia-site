@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Micro-site factory — Shanepedia</title>
+  <title>OpenClaw — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -186,84 +186,67 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">Updated 2026-04-05</span></div><section class="related"><h2>Related</h2><ul><li><a href="agentic-business-studio.html">Agentic business studio</a></li><li><a href="../projects/operator-site-rescue.html">Operator site rescue (first business)</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Micro-site factory</h1></header>
-<p>The micro-site factory is the production system behind operator site rescue and future product launches. It is not a website builder — it is an agent-assisted pipeline that turns operator information into live, fast, beautiful single-page sites.</p>
-<h2>How it works</h2>
-<h3>Input</h3>
+      <div class="meta-row"><span class="badge">entity</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">entity</span><span class="tag-pill">tool</span><span class="tag-pill">gateway</span><span class="tag-pill">agent-runtime</span><span class="tag-pill">founder-os</span></div><section class="related"><h2>Related</h2><ul><li><a href="shane-neeley.html">Shane Neeley</a></li><li><a href="../topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="../topics/operating-rituals.html">Operating rituals</a></li><li><a href="../topics/agent-personality-design.html">Agent Personality Design</a></li><li><a href="../topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="../topics/llm-wiki-pattern.html">LLM wiki pattern</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li></ul></section><header><p class="eyebrow">entity</p><h1>OpenClaw</h1></header>
+<p>OpenClaw is Shane&#x27;s primary AI surface. It is the multi-agent gateway that sits between him, the underlying model providers (OpenAI Codex, OpenRouter, Anthropic, Google), and every channel he uses to reach an agent — Telegram from the phone, the local terminal at the desk, the ACP and MCP protocols for tool integrations. There is a separate <a href="../topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a> topic that describes the gateway as a <em>concept</em>; this page treats OpenClaw as an <em>entity</em> with its own personality, its own daily behaviour, and its own role in Shane&#x27;s life.</p>
+<p>The distinction matters. From inside the system, OpenClaw is a config file at <code>~/.openclaw/openclaw.json</code>, a workspace directory at <code>~/.openclaw/workspace/</code>, a cron schedule at <code>~/.openclaw/cron/jobs.json</code>, and a collection of skills at <code>~/.openclaw/skills/</code>. From the outside, it is the thing Shane talks to when he wants to talk to an agent. That second framing is what this page is about.</p>
+<h2>What it is</h2>
+<p>OpenClaw is a self-hosted multi-agent gateway that runs locally on macOS, exposes a unified routing layer over multiple model providers, and connects to the outside world through Telegram, Discord (currently disabled), the Agent Communication Protocol (ACP), and the Model Context Protocol (MCP). It binds to a loopback gateway port (<code>18789</code>) for control, registers skills against the open Agent Skills standard, and uses kernel-enforced sandboxing via <code>nono</code> to keep agent file and network access bounded.</p>
+<p>Concretely, the live config exposes:</p>
 <ul>
-<li>Operator photos (from Telegram, WhatsApp, or in-person)</li>
-<li>Basic info: what they offer, pricing, location, contact</li>
-<li>Language: Spanish primary, English translation by agent</li>
+<li><strong>Multiple model providers wired through <code>auth.profiles</code>:</strong> an OpenAI Codex profile (used for the primary <code>gpt-5.4</code> and <code>gpt-5.3-codex</code> models that power most agent runs) and an OpenRouter profile (used for fallbacks, alternate model families, and specialty models).</li>
+<li><strong>A model alias map</strong> that lets agents reference models by short names — <code>gpt5</code>, <code>mini</code>, <code>sonnet</code>, <code>flash</code>, <code>haiku</code>, <code>codex</code>, <code>codex53</code>, <code>codex-mini</code>, <code>gpt54</code>, <code>qcoder</code>, <code>devstral</code>, <code>codestral</code>, <code>deepseek-code</code> — instead of full provider/model strings. The default primary is <code>openai-codex/gpt-5.4</code> with fallbacks to <code>openai-codex/gpt-5.3-codex</code> and <code>openrouter/google/gemini-3-flash-preview</code>.</li>
+<li><strong>The Telegram channel enabled, Discord disabled.</strong> Telegram is the one out-of-band control channel that actually carries production traffic.</li>
+<li><strong>A subagent budget</strong> of 2 concurrent and 2 spawn-depth max, governed by the same model defaults as the parent.</li>
 </ul>
-<h3>Processing</h3>
-<ul>
-<li>Agent generates HTML from a template library</li>
-<li>Agent writes bilingual copy from operator input</li>
-<li>Agent selects and crops best photos</li>
-<li>Agent generates WhatsApp deep link with pre-filled message</li>
-<li>Agent validates mobile rendering and load time</li>
-</ul>
-<h3>Output</h3>
-<ul>
-<li>Single HTML file, self-contained or with minimal assets</li>
-<li>Hosted on GitHub Pages (free, fast CDN)</li>
-<li>Custom domain optional ($10-15/year)</li>
-<li>WhatsApp Business quick-reply pack as companion deliverable</li>
-</ul>
-<h2>Template library</h2>
-<p>Build 4-5 base templates covering common operator types:</p>
+<h2>The agent zoo</h2>
+<p>OpenClaw runs four named agents in the live <code>agents.list</code> config:</p>
 <ol>
-<li><strong>Tour operator</strong> — hero photo, experience description, pricing table, seasonal info, WhatsApp CTA</li>
-<li><strong>Accommodation</strong> — room gallery, amenities, location map, booking CTA</li>
-<li><strong>Restaurant/cafe</strong> — menu highlights, atmosphere photos, hours, directions</li>
-<li><strong>Experience provider</strong> — what you&#x27;ll do, what&#x27;s included, difficulty level, group size, CTA</li>
-<li><strong>Multi-service</strong> — operator offering tours + stays + food as a package</li>
+<li><strong>Best Robot (Main Agent)</strong> — the default conversational agent. Inherits the global model defaults, talks to Shane through Telegram and the local terminal, and is the surface that the morning briefing and most ad-hoc requests land in.</li>
+<li><strong>Coder Agent</strong> — specialised for code work. Pinned to <code>openai-codex/gpt-5.4</code> primary with <code>gpt-5.3-codex</code> and <code>gpt-5.1-codex-mini</code> fallbacks. This is what gets invoked when a session is long-form engineering rather than conversational.</li>
+<li><strong>Trader GPT5 Agent</strong> — the dedicated trading-research agent on the <code>gpt-5.4</code> family. Lives on its own model line so its prompts and risk posture stay isolated from the main agent&#x27;s general-purpose context.</li>
+<li><strong>Trader GPT54 Agent</strong> — a parallel trading agent on the same primary model with the same fallback chain. Two trader agents exist because trading workflows benefit from running independent reasoning paths against the same evidence and comparing the outputs.</li>
 </ol>
-<h2>Design standards</h2>
-<p>Every site from the factory follows Shane&#x27;s design taste:</p>
+<p>Each agent has its own session scope and its own personality grounding (see below). They are not interchangeable; routing a coder request to the main agent or a trading question to the coder agent costs context and quality.</p>
+<h2>The personality stack</h2>
+<p>OpenClaw grounds every fresh agent run in three workspace files that live at <code>~/.openclaw/workspace/</code>:</p>
 <ul>
-<li>Loads in under 2 seconds</li>
-<li>Mobile-first (most tourists browse on phone)</li>
-<li>Clear hierarchy: what → why → how much → book now</li>
-<li>No stock photos — real operator photos only</li>
-<li>Bilingual without toggle complexity (Spanish sections + English sections)</li>
-<li>WhatsApp as primary CTA, not a form</li>
+<li><strong><code>SOUL.md</code></strong> — the underlying values and tone the agent should carry. The longest of the three (~480 words). This is what makes Best Robot read as Best Robot rather than a generic Claude or GPT. See <a href="../topics/agent-personality-design.html">Agent Personality Design</a> for the design discipline behind it.</li>
+<li><strong><code>IDENTITY.md</code></strong> — who the agent is, what it is allowed to claim about itself, what register it operates in. (~226 words.)</li>
+<li><strong><code>USER.md</code></strong> — who Shane is, what he is working on, what his preferences are. (~304 words.) This is the file that makes the agent useful on the first message of a fresh session instead of needing five rounds of warm-up.</li>
 </ul>
-<h2>Agent automation depth</h2>
-<p>The factory should eventually run with minimal human input:</p>
+<p>The three files together are about a thousand words of grounding that load before every meaningful agent interaction. They are also why a wiped session feels continuous — the next agent does not know the previous conversation, but it knows the same Shane, the same values, and the same operating context.</p>
+<p>Adjacent files in the same workspace — <code>HEARTBEAT.md</code>, <code>SHIELD.md</code>, <code>MEMORY.md</code>, <code>TOOLS.md</code>, <code>AGENTS.md</code>, <code>README.md</code> — extend the grounding for specific runtime modes (heartbeats, safety posture, persistent memory, tool usage, multi-agent coordination).</p>
+<h2>The cron-driven scheduled tasks</h2>
+<p>OpenClaw&#x27;s cron layer at <code>~/.openclaw/cron/jobs.json</code> is what turns the gateway from &quot;an agent you can talk to&quot; into a daily operating system. The currently-enabled jobs (as of 2026-05-03) include:</p>
+<ul>
+<li><strong>Morning Briefing</strong> — daily 7:00 AM Pacific</li>
+<li><strong>Weekly PinchBench + Stack Review</strong> — Monday 8:45 AM</li>
+<li><strong>Bitcoin + El Salvador Pulse</strong> — Mon/Wed/Fri 8:30 AM</li>
+<li><strong>ElSalKB Daily Randomized Refresh</strong> — daily 4:20 AM</li>
+<li><strong>Weekly Meme Delivery</strong> — Saturday 10:23 AM</li>
+<li><strong>Shanepedia One Bet</strong> — Tue/Thu/Sat 2:37 PM</li>
+<li><strong>Weekly Reset Brief</strong> — Sunday 8:00 PM</li>
+<li><strong>OpenCluck Weekly Hardware Spark</strong> — Wednesday 10:00 AM</li>
+<li><strong>Shanepedia Random Spark</strong> — daily 12:30 PM</li>
+<li><strong>Shanepedia Daily Page</strong> — daily 11:00 AM</li>
+</ul>
+<p>A handful of additional jobs are configured but disabled (the trip-window briefings, the OpenCluck daily lesson, several ElSalKB lane jobs). Disabled jobs stay in the file as documentation — the schedule contains the history of what has been tried.</p>
+<p>The cron rhythm is detailed in <a href="../topics/operating-rituals.html">Operating rituals</a>; this page just notes that it exists and that it is the difference between OpenClaw as infrastructure and OpenClaw as a partner.</p>
+<h2>How Shane uses it daily</h2>
+<p>Most days, the interaction sequence is:</p>
 <ol>
-<li>Operator sends photos and info via WhatsApp or Telegram</li>
-<li>Agent drafts site and copy</li>
-<li>Shane reviews and approves (5 minutes)</li>
-<li>Agent deploys to GitHub Pages</li>
-<li>Agent sends operator the live link</li>
+<li><strong>7:00 AM</strong> — the morning briefing lands in Telegram. Shane reads it on the phone before the desk session.</li>
+<li><strong>Through the day</strong> — ad-hoc Telegram messages from the phone, terminal sessions at the desk, agent runs from skills (<code>/wiki</code>, <code>/meme</code>, etc.).</li>
+<li><strong>Heartbeats every two hours</strong> — the main agent checks in if there is anything worth flagging.</li>
+<li><strong>Asynchronous research</strong> — the cron-driven Shanepedia and ElSalKB jobs feed the wiki without requiring direct supervision.</li>
+<li><strong>Sunday 8:00 PM</strong> — the weekly reset closes the loop and frames the following week.</li>
 </ol>
-<h2>Relationship to Shanepedia</h2>
-<p>The factory is a child project. Its templates, deployment scripts, and client list should be tracked as a project lane under Shanepedia. Operator research and learnings flow back into the wiki.</p>
-<h2>Business seed: August Booking Sprint</h2>
-<ul>
-<li>Seasonal offer for coastal operators before August booking windows, especially in Los Cobanos, El Tunco, and El Zonte where English-language web presence is still weak.</li>
-<li>Deliverable is a bilingual one-page site plus WhatsApp booking funnel, built from operator photos and pricing in the existing micro-site factory pipeline.</li>
-<li>Price as a fast-launch package, for example $350 setup plus $79/month for edits, hosting, and quick-reply maintenance during the season.</li>
-<li>Agents handle copy drafts, photo selection, translation, mobile QA, and deployment, leaving Shane with a short approval pass.</li>
-<li>Best first buyers are whale-season and experience operators who already sell over WhatsApp but miss foreign demand because they have no fast booking page.</li>
-</ul>
-<h2>Business seed: Operator Evidence Pack</h2>
-<ul>
-<li>Productized intake layer for the micro-site factory: agents turn raw WhatsApp photos, prices, FAQs, and voice notes into a clean bilingual operator asset packet.</li>
-<li>Best early buyers are El Salvador operators like Los Cóbanos tour providers who already sell over chat but lack reusable, trustworthy marketing inputs.</li>
-<li>Deliverables include approved copy blocks, captioned photo picks, a pricing/FAQ sheet, WhatsApp reply snippets, and a ready-to-deploy booking CTA.</li>
-<li>Price as $250 setup plus $79/month for seasonal edits, new photos, and English/Spanish refreshes before booking pushes.</li>
-<li>This fills a real wiki gap between relationship research and final launch pages: the reusable evidence layer that makes fast, tasteful sites possible.</li>
-</ul>
-<h2>Business seed: 48-Hour Booking Friction Brief</h2>
-<ul>
-<li>A paid intelligence brief built from the micro-site factory pipeline: agents audit an operator’s current WhatsApp booking flow, English visibility, and mobile trust signals in under 48 hours.</li>
-<li>Best first buyers are Los Cóbanos and El Tunco operators identified in the 2026 tourism landscape as high-demand but digitally under-tooled.</li>
-<li>Deliverable includes a 1-page friction scorecard, bilingual copy fixes, a recommended single-page layout, and ready-to-send WhatsApp reply scripts.</li>
-<li>Price at $199 one-time with a $79/month refresh option before seasonal demand spikes (including whale season packaging).</li>
-<li>Claude/Gemini/Codex can automate screenshot analysis, bilingual rewrite drafts, and first-pass page scaffolding, leaving only a short human approval pass.</li>
-</ul>
+<p>The intentional design is that OpenClaw is <em>always reachable but rarely demanding</em>. The gateway initiates contact at known cadences (morning, heartbeats, Saturday meme, Sunday reset) and otherwise waits to be addressed. That asymmetry is what makes a 24/7 AI surface tolerable for years instead of months.</p>
+<h2>Why this matters</h2>
+<p>OpenClaw is the foundational entity that almost every other lane in Shanepedia routes through. The <a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a> runs on its skills. The <a href="../topics/operating-rituals.html">Operating rituals</a> are scheduled in its cron. The <a href="../topics/agent-personality-design.html">Agent Personality Design</a> is implemented in its workspace files. The <a href="shane-neeley.html">Shane Neeley</a> entity&#x27;s daily operating mode is, in practice, a relationship with this system.</p>
+<p>If OpenClaw goes down, the wiki still exists as plain markdown and the projects still exist as files, but the <em>system that turns them into a daily operation</em> stops. That is what makes it an entity worth treating as a first-class part of Shanepedia rather than a footnote in a tooling page.</p>
+<h2>Stance</h2>
+<p>The right way to think about OpenClaw is not as a chatbot, not as a productivity tool, and not as an AI wrapper. It is a <em>primary AI surface</em> — the place where Shane and an agent meet, on a schedule, with shared grounding, across multiple channels and devices. Almost no one outside specialised research labs runs anything like this in 2026, and that is the point: OpenClaw is the proof that a single founder can operate a real multi-agent system locally, with kernel-enforced sandboxing, with model fallbacks, with cron-driven rituals, and with a personality stack that makes the system feel continuous across sessions. The lesson worth carrying forward — and the lesson the <a href="../topics/agentic-business-studio.html">Agentic business studio</a> offer should be built on — is that the gateway is the product, not the model.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
