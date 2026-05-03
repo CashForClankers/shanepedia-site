@@ -79,8 +79,9 @@
 <li><a href="/maps/project-map.html">Project Map</a></li>
 </ul></details>
 <details class="nav-group" data-group="topics">
-<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">41</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">43</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
+<li><a href="/topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li>
 <li><a href="/topics/agent-personality-design.html">Agent Personality Design</a></li>
 <li><a href="/topics/agentic-business-studio.html">Agentic business studio</a></li>
 <li><a href="/topics/anti-roadmap.html">Anti-Roadmap — Things Shane Should Not Build</a></li>
@@ -92,6 +93,7 @@
 <li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a></li>
 <li><a href="/topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li>
 <li><a href="/topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a></li>
+<li><a href="/topics/cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a></li>
 <li><a href="/topics/dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li>
 <li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a></li>
 <li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a></li>
@@ -132,7 +134,7 @@
 <li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
 </ul></details>
 <details class="nav-group" data-group="entities">
-<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">12</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">13</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/entities/cash-for-clankers.html">Cash for Clankers — GitHub Org</a></li>
 <li><a href="/entities/el-zonte.html">El Zonte</a></li>
@@ -145,6 +147,7 @@
 <li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a></li>
 <li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
 <li><a href="/entities/the-chickens.html">The Chickens</a></li>
+<li><a href="/entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li>
 <li><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a></li>
 </ul></details>
 <details class="nav-group" data-group="ops">
@@ -186,9 +189,10 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">agents</span><span class="tag-pill">personality</span><span class="tag-pill">soul</span><span class="tag-pill">identity</span><span class="tag-pill">openclaw</span><span class="tag-pill">ux</span><span class="tag-pill">voice</span></div><section class="related"><h2>Related</h2><ul><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="shane-founder-operating-principles.html">Shane founder operating principles</a></li><li><a href="../entities/shane-neeley.html">Shane Neeley</a></li><li><a href="../entities/cash-for-clankers.html">Cash for Clankers — GitHub Org</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Agent Personality Design</h1></header>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">agents</span><span class="tag-pill">personality</span><span class="tag-pill">soul</span><span class="tag-pill">identity</span><span class="tag-pill">openclaw</span><span class="tag-pill">ux</span><span class="tag-pill">voice</span></div><section class="related"><h2>Related</h2><ul><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="shane-founder-operating-principles.html">Shane founder operating principles</a></li><li><a href="voice-and-style.html">Voice and Style — How Shane Sounds</a></li><li><a href="../entities/shane-neeley.html">Shane Neeley</a></li><li><a href="../entities/cash-for-clankers.html">Cash for Clankers — GitHub Org</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Agent Personality Design</h1></header>
 <p>Most agent stacks have no personality. They have a system prompt that says &quot;you are a helpful assistant&quot; and inherit whatever default tone the model ships with — usually a hedging, over-explaining, mildly sycophantic register that reads as corporate by default. For a personal agent that talks to one operator dozens of times a day, that default is wrong. It wastes tokens, it wastes attention, and it never develops the trust gradient that makes an agent feel like a colleague instead of a chatbot.</p>
 <p>This page argues for treating personality as a first-class design surface, with concrete reference to the OpenClaw setup Shane runs.</p>
+<p>For the operator-facing voice contract — sentence shape, opening lines, what gets cut — the canonical reference is <code><a href="voice-and-style.html">Voice and Style — How Shane Sounds</a></code>. This page is the design argument; that page is the rulebook.</p>
 <h2>Voice: terse beats verbose, casual beats formal (for personal agents)</h2>
 <p>Two axes:</p>
 <ul>

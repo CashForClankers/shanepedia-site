@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLM wiki pattern — Shanepedia</title>
+  <title>The Shanepedia Cron System — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -189,55 +189,62 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-04-10</span></div><div class="tag-pills"><span class="tag-pill">topic</span><span class="tag-pill">llm-wiki</span><span class="tag-pill">methodology</span></div><section class="related"><h2>Related</h2><ul><li><a href="agentic-business-studio.html">Agentic business studio</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="../ops/obsidian-workflow.html">Obsidian Workflow</a></li><li><a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../projects/shanepedia-studio.html">Shanepedia Studio</a></li><li><a href="../sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a></li></ul></section><header><p class="eyebrow">topic</p><h1>LLM wiki pattern</h1></header>
-<p>The LLM wiki pattern is the idea that an LLM should maintain a persistent markdown wiki as an intermediate compiled knowledge layer between raw source documents and future queries.</p>
-<h2>Contrast with ordinary RAG</h2>
-<p>In ordinary RAG, the model repeatedly rediscovers relevant context from source fragments at query time. In an LLM wiki, the synthesis is compiled forward over time. The model updates pages, cross-references, summaries, and contradictions as new material arrives.</p>
-<h2>Structural layers</h2>
-<ol>
-<li>raw immutable source documents</li>
-<li>an LLM-maintained markdown wiki</li>
-<li>an instruction file that teaches the LLM how to ingest, update, query, and lint the system</li>
-</ol>
-<h2>Adapted for Shanepedia and Codex</h2>
-<p>In this environment the pattern becomes:</p>
-<ol>
-<li><code>raw/</code> as the evidence layer</li>
-<li><code>wiki/</code> as compiled founder/operator memory</li>
-<li>Obsidian as the human IDE for browsing the graph</li>
-<li>Codex as the primary maintainer writing durable updates</li>
-<li>OpenClaw child lanes as feeder systems that should improve the parent wiki</li>
-</ol>
-<p>That means good answers should usually leave a file behind. The system should gain pages, links, maps, dashboards, and clarified contradictions, not just terminal output.</p>
-<h2>Why the pattern is powerful</h2>
+      <div class="meta-row"><span class="badge">entity</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">shanepedia</span><span class="tag-pill">cron</span><span class="tag-pill">agents</span><span class="tag-pill">telegram</span><span class="tag-pill">openclaw</span><span class="tag-pill">runtime</span><span class="tag-pill">daily-page</span><span class="tag-pill">weekly-roundup</span></div><section class="related"><h2>Related</h2><ul><li><a href="../topics/cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a></li><li><a href="../topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li><li><a href="openclaw.html">OpenClaw</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li><li><a href="../topics/operating-rituals.html">Operating rituals</a></li></ul></section><header><p class="eyebrow">entity</p><h1>The Shanepedia Cron System</h1></header>
+<p>The Shanepedia-specific cron stack as it stands on 2026-05-03. Four jobs, four different shapes, all delivering to Telegram from <code>~/.openclaw/cron/jobs.json</code> via the OpenClaw gateway. Together they keep the wiki <em>alive in Shane&#x27;s head</em> without him having to open it.</p>
+<p>This page documents what each one does, why it exists at the time and shape it does, and what would cause it to be killed.</p>
+<h2>1. Shanepedia Daily Page</h2>
 <ul>
-<li>knowledge compounds instead of resetting every query</li>
-<li>useful analysis can be written back as durable pages</li>
-<li>cross-links and contradictions can be maintained incrementally</li>
-<li>the human gets a browsable system instead of a pile of uploads</li>
-<li>Obsidian becomes a real IDE for thought instead of just a note browser</li>
+<li><strong>Schedule:</strong> <code>0 11 <em> </em> *</code> — 11:00 daily, America/Los_Angeles.</li>
+<li><strong>Skill:</strong> <code>~/setup-mac/.agents/skills/shanepedia-daily-page/SKILL.md</code>.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code> (codex), light context, 180s timeout.</li>
+<li><strong>Job to be done:</strong> surface a random wiki page, pair it with one bounded Gemini-fetched YouTube find when available, and ask Shane whether to add, update, or ignore.</li>
+<li><strong>Why it exists:</strong> the wiki has ~100 pages. Without active surfacing, most of them go cold. The daily page rotation is the cheapest mechanism that keeps the corpus circulating in working memory.</li>
+<li><strong>What makes it different:</strong> the only Shanepedia cron that <em>reads from the wiki itself</em> as its primary input. The other three are forward-looking; this one is backward-looking maintenance pressure.</li>
+<li><strong>Kill signal:</strong> Shane starts saying &quot;ignore&quot; to it three days in a row. Means either the random selection is wrong (fix the picker) or the wiki itself isn&#x27;t producing anything worth surfacing (fix the wiki).</li>
 </ul>
-<h2>Shanepedia implication</h2>
-<p>Shanepedia should explicitly act like this pattern, not merely resemble it. That means every ingest, question, and synthesis should be treated as an opportunity to improve the compiled wiki itself.</p>
-<h2>Codex implication</h2>
-<p>Codex should behave less like an ephemeral assistant and more like a wiki maintainer:</p>
+<h2>2. Shanepedia Random Spark</h2>
 <ul>
-<li>parent wiki first</li>
-<li>child lane second</li>
-<li>raw source only when the compiled layer is missing or needs verification</li>
-<li>durable markdown output by default for reusable insight</li>
-<li>index, lint, and navigation upkeep as part of the task, not optional polish</li>
+<li><strong>Schedule:</strong> <code>30 12 <em> </em> *</code> — 12:30 daily, America/Los_Angeles.</li>
+<li><strong>Skill:</strong> runs inline from the cron prompt, calls <code>scripts/wiki/random_spark_candidates.py</code> with <code>--include-youtube --gemini-timeout 18</code>.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code>, light context, 150s timeout, no thinking.</li>
+<li><strong>Job to be done:</strong> broader cross-interest curiosity nudge. The candidate may be wiki-native or a public YouTube/Gemini-fetched item. One thing only, under 80 words, ends with one question (add / update / ignore).</li>
+<li><strong>Why it exists:</strong> the Daily Page is structured around the wiki <em>as it currently is</em>. The Random Spark is structured around what could <em>enter</em> the wiki next. It&#x27;s the input pipeline counterpart to the Daily Page&#x27;s maintenance pipeline.</li>
+<li><strong>What makes it different:</strong> explicitly grounded in the public web (Gemini + YouTube) rather than the wiki, while still routed through Shane&#x27;s actual interests via the runtime summary. It&#x27;s the most &quot;outward facing&quot; of the Shanepedia crons.</li>
+<li><strong>Kill signal:</strong> Gemini sparks stop landing as relevant — means the candidate-generation logic needs tightening, not that the slot is wrong.</li>
 </ul>
-<h2>Product implication</h2>
-<p>This is also one of Shanepedia Studio&#x27;s strongest possible offers: an agent-maintained founder wiki that compounds context over time and becomes a durable operating system for projects, relationships, travel, research, and decisions.</p>
-<h2>Business seed: Founder Pi Briefcase</h2>
+<h2>3. Shanepedia One Bet</h2>
 <ul>
-<li>A Raspberry Pi or local-docker founder console that turns the LLM wiki pattern into a daily control surface: latest notes, open decisions, relationship prompts, and one-tap capture.</li>
-<li>Fits Shane&#x27;s taste for fast, intentional interfaces: instant-boot screen, clear hierarchy, low chrome, and obvious next actions instead of dashboard sprawl.</li>
-<li>Agents maintain the markdown wiki, compile daily briefs, surface contradictions, and keep the founder memory layer durable without making the buyer learn a new system.</li>
-<li>Best first buyers are fast-moving founders with scattered chats, screenshots, and experiments who need a calm command center more than another SaaS tool.</li>
-<li>Can start as a setup + upkeep service, then expand into reusable hardware images, templates, and agent workflows across the founder OS lane.</li>
+<li><strong>Schedule:</strong> <code>37 14 <em> </em> 2,4,6</code> — 14:37 Tue/Thu/Sat, America/Los_Angeles.</li>
+<li><strong>Skill:</strong> runs inline from the cron prompt, reads <code>state/ideation/ideation-log.jsonl</code>, <code>state/ideation/preferences.jsonl</code>, the roadmap, and the topic index.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code>, light context, 180s timeout.</li>
+<li><strong>Job to be done:</strong> propose <em>one</em> business bet — not three. Specific title, named buyer, why-now grounded in a wiki/recent signal, one proof step, one kill test. 140 words max. Must be materially different from the last 10 ideas.</li>
+<li><strong>Why it exists:</strong> Shane&#x27;s portfolio of bets needs ongoing pressure-testing without becoming an idea-dump firehose. The three-times-weekly cadence is the frequency at which a new bet feels fresh but doesn&#x27;t crowd out execution.</li>
+<li><strong>What makes it different:</strong> the only Shanepedia cron with a strict &quot;buyer + proof step&quot; contract. It refuses to deliver a bet that isn&#x27;t testable. It&#x27;s the wiki&#x27;s mechanism for staying <em>commercial</em>, not just curatorial.</li>
+<li><strong>Kill signal:</strong> the bets repeat themselves or the proof steps stop being executable in a week. Means the recent-history filter is failing.</li>
 </ul>
+<h2>4. Shanepedia Weekly Roundup</h2>
+<ul>
+<li><strong>Schedule:</strong> <code>0 19 <em> </em> 0</code> — Sunday 19:00, America/Los_Angeles.</li>
+<li><strong>Skill:</strong> <code>~/setup-mac/.agents/skills/shanepedia-weekly-roundup/SKILL.md</code>.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code>, light context, 90s timeout.</li>
+<li><strong>Job to be done:</strong> Sunday-evening digest of what changed in the wiki that week, what&#x27;s still open, one suggestion for next week.</li>
+<li><strong>Why it exists:</strong> the three daily/weekly slots above are about <em>moves</em>. The Roundup is about <em>state</em>. Without it, the daily slots can feel like a stream with no sense of accumulation. The Roundup makes the week visible as a unit.</li>
+<li><strong>What makes it different:</strong> the only Shanepedia cron that explicitly looks at log.md and reports on the wiki <em>as a system</em>, rather than asking for input. It&#x27;s the closest thing to a chief-of-staff Sunday report.</li>
+<li><strong>Kill signal:</strong> the week genuinely had no signal worth reporting more than once or twice in a quarter. That would mean the wiki itself has stopped accumulating, which is a bigger problem than the cron slot.</li>
+</ul>
+<h2>How the four work together</h2>
+<p>Read as a set, the rhythm is:</p>
+<ul>
+<li><strong>Daily 11:00</strong> — keep an existing page warm.</li>
+<li><strong>Daily 12:30</strong> — surface a possibly-new thing from outside.</li>
+<li><strong>Tue/Thu/Sat 14:37</strong> — pressure-test a commercial bet.</li>
+<li><strong>Sunday 19:00</strong> — see the week as a whole.</li>
+</ul>
+<p>That covers maintenance, ingest, commerce, and reflection. Each slot does <em>one</em> of those things and refuses to drift.</p>
+<p>The slots also share a single delivery channel (Telegram, allowlist of one), a single voice contract (<code>workspace/config/daily-update-voice.md</code>), and a single failure-alert pattern (one Telegram alert per failure, 24h cooldown). They are intentionally homogeneous in shape so Shane only ever has to learn one set of conventions.</p>
+<h2>The rule</h2>
+<p>If any of these stop being useful, kill them. Crons should earn their slot.</p>
+<p><code>enabled: false</code> in <code>jobs.json</code> is the right move — don&#x27;t delete. Disabled slots are a record of what was tried and what didn&#x27;t work, and they are recoverable in one toggle if the use case comes back.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>

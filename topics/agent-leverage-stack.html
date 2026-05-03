@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLM wiki pattern — Shanepedia</title>
+  <title>Agent Leverage Stack — How Shane Actually Uses AI — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -189,55 +189,65 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-04-10</span></div><div class="tag-pills"><span class="tag-pill">topic</span><span class="tag-pill">llm-wiki</span><span class="tag-pill">methodology</span></div><section class="related"><h2>Related</h2><ul><li><a href="agentic-business-studio.html">Agentic business studio</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="../ops/obsidian-workflow.html">Obsidian Workflow</a></li><li><a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../projects/shanepedia-studio.html">Shanepedia Studio</a></li><li><a href="../sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a></li></ul></section><header><p class="eyebrow">topic</p><h1>LLM wiki pattern</h1></header>
-<p>The LLM wiki pattern is the idea that an LLM should maintain a persistent markdown wiki as an intermediate compiled knowledge layer between raw source documents and future queries.</p>
-<h2>Contrast with ordinary RAG</h2>
-<p>In ordinary RAG, the model repeatedly rediscovers relevant context from source fragments at query time. In an LLM wiki, the synthesis is compiled forward over time. The model updates pages, cross-references, summaries, and contradictions as new material arrives.</p>
-<h2>Structural layers</h2>
-<ol>
-<li>raw immutable source documents</li>
-<li>an LLM-maintained markdown wiki</li>
-<li>an instruction file that teaches the LLM how to ingest, update, query, and lint the system</li>
-</ol>
-<h2>Adapted for Shanepedia and Codex</h2>
-<p>In this environment the pattern becomes:</p>
-<ol>
-<li><code>raw/</code> as the evidence layer</li>
-<li><code>wiki/</code> as compiled founder/operator memory</li>
-<li>Obsidian as the human IDE for browsing the graph</li>
-<li>Codex as the primary maintainer writing durable updates</li>
-<li>OpenClaw child lanes as feeder systems that should improve the parent wiki</li>
-</ol>
-<p>That means good answers should usually leave a file behind. The system should gain pages, links, maps, dashboards, and clarified contradictions, not just terminal output.</p>
-<h2>Why the pattern is powerful</h2>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">agents</span><span class="tag-pill">openclaw</span><span class="tag-pill">leverage</span><span class="tag-pill">models</span><span class="tag-pill">skills</span><span class="tag-pill">cron</span><span class="tag-pill">channels</span><span class="tag-pill">personality</span><span class="tag-pill">stack</span></div><section class="related"><h2>Related</h2><ul><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="agent-personality-design.html">Agent Personality Design</a></li><li><a href="../entities/openclaw.html">OpenClaw</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="operating-rituals.html">Operating rituals</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Agent Leverage Stack — How Shane Actually Uses AI</h1></header>
+<p>This is the actual leverage stack — not a wishlist. Every piece below is wired into Shane&#x27;s machine right now and earns its place by being used. The goal is to map <em>what is actually getting work done</em>, so the next time someone asks &quot;what&#x27;s your AI setup&quot;, there is a single page to point at, and so future pruning decisions have something concrete to argue against.</p>
+<h2>Layer 1 — Model routing</h2>
+<p>OpenClaw exposes a fleet of models as aliases in <code>~/.openclaw/openclaw.json</code>. The point of routing is to avoid burning frontier-model time on jobs that any decent model can do, and to keep one model in primary so behavior is predictable.</p>
 <ul>
-<li>knowledge compounds instead of resetting every query</li>
-<li>useful analysis can be written back as durable pages</li>
-<li>cross-links and contradictions can be maintained incrementally</li>
-<li>the human gets a browsable system instead of a pile of uploads</li>
-<li>Obsidian becomes a real IDE for thought instead of just a note browser</li>
+<li><strong>codex</strong> (<code>openai-codex/gpt-5.4</code>) — daily driver. Primary model for the Best Robot main agent and most cron jobs that need real reasoning. The default for &quot;do this thing well.&quot;</li>
+<li><strong>codex53</strong> (<code>openai-codex/gpt-5.3-codex</code>) — fallback and the model that runs the 2-hour heartbeat. Cheaper, still strong on code and structured tasks.</li>
+<li><strong>codex-mini</strong> (<code>openai-codex/gpt-5.1-codex-mini</code>) — small jobs, summarization, classification. The &quot;don&#x27;t waste tokens&quot; lane.</li>
+<li><strong>flash</strong> (<code>openrouter/google/gemini-3-flash-preview</code>) — grounded search, public web research, the YouTube spark candidate fetcher. When the answer needs to come from outside the machine, route through Gemini.</li>
+<li><strong>sonnet</strong> (<code>openrouter/anthropic/claude-sonnet-4.6</code>) — long-form prose, writing voice, anything that has to read well at human-paragraph length. Used by the wiki-gen and Shanepedia daily-page paths when they need to <em>write</em>, not just plan.</li>
+<li><strong>haiku</strong> (<code>openrouter/anthropic/claude-haiku-4.5</code>) — cheap, fast formatting, tiny ops, &quot;is this still relevant&quot; classification.</li>
+<li><strong>qcoder / devstral / codestral / deepseek-code</strong> — the code-experiment shelf. Live in routing as comparison candidates for the weekly PinchBench review. Not primary for anything; promotion requires evidence.</li>
 </ul>
-<h2>Shanepedia implication</h2>
-<p>Shanepedia should explicitly act like this pattern, not merely resemble it. That means every ingest, question, and synthesis should be treated as an opportunity to improve the compiled wiki itself.</p>
-<h2>Codex implication</h2>
-<p>Codex should behave less like an ephemeral assistant and more like a wiki maintainer:</p>
+<p>The PinchBench Weekly Review (Mondays 8:45) is the actual mechanism that keeps this list honest — see <code><a href="operating-rituals.html">Operating rituals</a></code>. If a model isn&#x27;t winning a slot in benchmarks against the incumbent, it stays on the bench.</p>
+<h2>Layer 2 — The skill library</h2>
+<p>Skills are the unit of agentic work. They live in <code>~/.openclaw/skills/</code> and <code>~/setup-mac/.agents/skills/</code>, follow the Agent Skills open standard (a directory with <code>SKILL.md</code> containing YAML frontmatter and instructions), and are invoked by name. The currently installed set spans:</p>
 <ul>
-<li>parent wiki first</li>
-<li>child lane second</li>
-<li>raw source only when the compiled layer is missing or needs verification</li>
-<li>durable markdown output by default for reusable insight</li>
-<li>index, lint, and navigation upkeep as part of the task, not optional polish</li>
+<li><strong>Vendor surfaces</strong> — <code>claude-code</code>, <code>claude-desktop</code>, <code>codex</code>, <code>gemini</code> for native CLIs/UIs of each model vendor.</li>
+<li><strong>Cloudflare lane</strong> — <code>cloudflare</code>, <code>wrangler</code> for deploys, the same lane that backs <code><a href="../entities/openclaw.html">OpenClaw</a></code>.</li>
+<li><strong>Knowledge/wiki</strong> — <code>obsidian</code>, <code>wiki-gen</code>, <code>llm-kb</code>, <code>imp-doc</code>, <code>pdf</code>, <code>summarize</code> for the Shanepedia maintenance loop.</li>
+<li><strong>Agent ops</strong> — <code>openclaw-ops</code>, <code>openclaw-power-ops</code>, <code>openclaw-backup</code>, <code>agent-cli-stack</code>, <code>find-skills</code>, <code>skill-creator</code> for keeping the gateway healthy.</li>
+<li><strong>Channels and capture</strong> — <code>apple-notes</code>, <code>apple-reminders</code>, <code>calendar-reminders</code>, <code>local-whisper</code>, <code>screenshot</code>, <code>youtube-transcript-yt-dlp</code>.</li>
+<li><strong>Lane-specific</strong> — <code>bitcoin-local-map</code>, <code>shanepedia-daily-page</code>, <code>shanepedia-weekly-roundup</code>, <code>random-interesting-thing</code>, <code>meme-factory</code>, <code>memes</code>, <code>shopping</code>.</li>
+<li><strong>Quality + safety</strong> — <code>security</code>, <code>ralph</code> (the looping orchestrator), <code>web-perf</code>, <code>playwright</code>, <code>design-md</code>.</li>
 </ul>
-<h2>Product implication</h2>
-<p>This is also one of Shanepedia Studio&#x27;s strongest possible offers: an agent-maintained founder wiki that compounds context over time and becomes a durable operating system for projects, relationships, travel, research, and decisions.</p>
-<h2>Business seed: Founder Pi Briefcase</h2>
+<p>The principle: skills are durable, version-controlled instruction surfaces. New behavior almost never needs a new model — it needs a new skill that routes work through the existing models cleanly.</p>
+<h2>Layer 3 — Cron-driven schedule</h2>
+<p>Crons turn the gateway from a chat tool into a <em>system</em>. The push-based surfaces (see <code><a href="cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a></code>) are where most of the daily leverage actually lands. Currently active:</p>
 <ul>
-<li>A Raspberry Pi or local-docker founder console that turns the LLM wiki pattern into a daily control surface: latest notes, open decisions, relationship prompts, and one-tap capture.</li>
-<li>Fits Shane&#x27;s taste for fast, intentional interfaces: instant-boot screen, clear hierarchy, low chrome, and obvious next actions instead of dashboard sprawl.</li>
-<li>Agents maintain the markdown wiki, compile daily briefs, surface contradictions, and keep the founder memory layer durable without making the buyer learn a new system.</li>
-<li>Best first buyers are fast-moving founders with scattered chats, screenshots, and experiments who need a calm command center more than another SaaS tool.</li>
-<li>Can start as a setup + upkeep service, then expand into reusable hardware images, templates, and agent workflows across the founder OS lane.</li>
+<li><strong>Morning Briefing</strong> (07:00 daily) — calendar + memory + voice contract, 90 words.</li>
+<li><strong>Bitcoin + El Salvador Pulse</strong> (08:30 Mon/Wed/Fri) — price + one fresh ES signal, 80 words.</li>
+<li><strong>PinchBench + Stack Review</strong> (08:45 Mon) — model routing + software upgrade decisions.</li>
+<li><strong>Shanepedia Daily Page</strong> (11:00 daily) — random wiki page + Gemini YouTube find + ask for updates.</li>
+<li><strong>Shanepedia Random Spark</strong> (12:30 daily) — broader cross-interest spark.</li>
+<li><strong>Shanepedia One Bet</strong> (14:37 Tue/Thu/Sat) — single business bet with proof step.</li>
+<li><strong>OpenCluck Weekly Hardware Spark</strong> (10:00 Wed) — one concrete coop-build action.</li>
+<li><strong>Shanepedia Weekly Roundup</strong> (19:00 Sun) — what changed, what&#x27;s open.</li>
+<li><strong>Weekly Reset Brief</strong> (20:00 Sun) — kept / dropped / next.</li>
 </ul>
+<p>See <code><a href="../entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></code> for the Shanepedia-specific subset.</p>
+<h2>Layer 4 — Personality stack</h2>
+<p>Three files in <code>~/.openclaw/workspace/</code> anchor every fresh session:</p>
+<ul>
+<li><strong>SOUL.md</strong> — voice, register, what to never do.</li>
+<li><strong>IDENTITY.md</strong> — who the agent is and what it&#x27;s loyal to.</li>
+<li><strong>USER.md</strong> — who Shane is, how he thinks, what he&#x27;s building.</li>
+</ul>
+<p>The voice contract for one-shot deliverables (briefings, pulses) lives at <code>~/.openclaw/workspace/config/daily-update-voice.md</code> and is enforced by being read into every cron prompt. See <code><a href="voice-and-style.html">Voice and Style — How Shane Sounds</a></code> for the canonical writing rules and <code><a href="agent-personality-design.html">Agent Personality Design</a></code> for the design argument behind treating personality as a first-class surface.</p>
+<h2>Layer 5 — Multi-channel reach</h2>
+<p>Output isn&#x27;t useful if it lands in a terminal Shane isn&#x27;t watching. Channels:</p>
+<ul>
+<li><strong>Telegram</strong> (primary) — bot token in config, allowlist of one user, push-based reach to Shane&#x27;s phone. Every cron above lands here.</li>
+<li><strong>ACP</strong> — local agent-to-agent protocol surface for tools that talk back to OpenClaw.</li>
+<li><strong>Discord</strong> (configured, currently disabled) — second channel for guild-scoped reach if/when group surfaces matter.</li>
+<li><strong>Claude Code (web app)</strong> — the GitHub/Gmail/Calendar/Drive connectors are wired; that&#x27;s the surface for tasks that need a real keyboard.</li>
+</ul>
+<h2>How it composes</h2>
+<p>The leverage isn&#x27;t any one piece. It&#x27;s that <strong>a Telegram message at 11am can route through the codex model, hit the shanepedia-daily-page skill, read the SOUL voice contract, query the live wiki, and come back as a 90-word note that knows what Shane was working on yesterday</strong> — without Shane having opened anything. That single composition is the product. Everything else is supporting infrastructure for that move and a few dozen variants of it.</p>
+<p>If a piece of this stack stops contributing to a move like that, it should be cut. The point of mapping the stack is to make those cuts obvious.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>

@@ -79,8 +79,9 @@
 <li><a href="/maps/project-map.html">Project Map</a></li>
 </ul></details>
 <details class="nav-group" data-group="topics">
-<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">41</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">43</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
+<li><a href="/topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li>
 <li><a href="/topics/agent-personality-design.html">Agent Personality Design</a></li>
 <li><a href="/topics/agentic-business-studio.html">Agentic business studio</a></li>
 <li><a href="/topics/anti-roadmap.html">Anti-Roadmap — Things Shane Should Not Build</a></li>
@@ -92,6 +93,7 @@
 <li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a></li>
 <li><a href="/topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li>
 <li><a href="/topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a></li>
+<li><a href="/topics/cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a></li>
 <li><a href="/topics/dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li>
 <li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a></li>
 <li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a></li>
@@ -132,7 +134,7 @@
 <li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
 </ul></details>
 <details class="nav-group" data-group="entities">
-<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">12</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">13</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/entities/cash-for-clankers.html">Cash for Clankers — GitHub Org</a></li>
 <li><a href="/entities/el-zonte.html">El Zonte</a></li>
@@ -145,6 +147,7 @@
 <li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a></li>
 <li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
 <li><a href="/entities/the-chickens.html">The Chickens</a></li>
+<li><a href="/entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li>
 <li><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a></li>
 </ul></details>
 <details class="nav-group" data-group="ops">
@@ -186,10 +189,10 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">entity</span><span class="meta-note">research</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">iot</span><span class="tag-pill">esp32</span><span class="tag-pill">chickens</span><span class="tag-pill">hardware</span><span class="tag-pill">sensors</span><span class="tag-pill">telegram</span><span class="tag-pill">monitoring</span></div><section class="related"><h2>Related</h2><ul><li><a href="../topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li><li><a href="../topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="../topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a></li></ul></section><header><p class="eyebrow">entity</p><h1>OpenCluck — Chicken Coop IoT Monitor</h1></header>
+      <div class="meta-row"><span class="badge">entity</span><span class="meta-note">research</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">iot</span><span class="tag-pill">esp32</span><span class="tag-pill">chickens</span><span class="tag-pill">hardware</span><span class="tag-pill">sensors</span><span class="tag-pill">telegram</span><span class="tag-pill">monitoring</span></div><section class="related"><h2>Related</h2><ul><li><a href="../topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li><li><a href="../topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="../topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a></li><li><a href="the-chickens.html">The Chickens</a></li></ul></section><header><p class="eyebrow">entity</p><h1>OpenCluck — Chicken Coop IoT Monitor</h1></header>
 <p>OpenCluck is Shane&#x27;s ESP32-based IoT sensor system for monitoring a chicken coop. It watches air quality, temperature, and humidity to catch dangerous conditions before they harm the flock, and it lays the groundwork for tracking egg production over time.</p>
 <h2>Why it exists</h2>
-<p>Shane keeps 8 egg-laying hens on borrowed farmland. Coop conditions — ammonia buildup, excessive heat or cold, high humidity — are silent threats to bird health. A backyard flock on borrowed land is low-margin and can&#x27;t absorb losses from preventable die-offs. OpenCluck is the monitoring layer that turns a manual daily check into an automated alert system, freeing Shane from being physically present to catch problems.</p>
+<p>Shane keeps 8 egg-laying hens on borrowed farmland — see <code><a href="the-chickens.html">The Chickens</a></code> for the flock itself. Coop conditions — ammonia buildup, excessive heat or cold, high humidity — are silent threats to bird health. A backyard flock on borrowed land is low-margin and can&#x27;t absorb losses from preventable die-offs. OpenCluck is the monitoring layer that turns a manual daily check into an automated alert system, freeing Shane from being physically present to catch problems.</p>
 <p>The name riffs on &quot;OpenClaw&quot; — it&#x27;s the same philosophy (open hardware + agent-friendly interfaces) applied to chickens instead of compute.</p>
 <h2>Hardware plan (BOM)</h2>
 <p>| Component | Purpose | |---|---| | ESP32-CAM + MB board | Main microcontroller + future egg-count camera | | MQ-135 gas sensor | Ammonia and air quality detection | | AHT20 breakout | Temperature and humidity | | Waterproof IP65 project box | Enclosure — protects electronics in the wet coop environment |</p>
