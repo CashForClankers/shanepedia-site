@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix — Shanepedia</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M20 18h24v8H28v6h14c6.1 0 10 3.6 10 9.3C52 48.5 47 53 39 53H20v-8h19c3.4 0 5-1.1 5-3.2 0-1.8-1.3-2.8-4-2.8H20V18z' fill='%23f8fafc'/%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <script>
+    (function() {
+      var saved = window.localStorage.getItem('shanepedia-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="/index.html">Shanepedia</a>
+      <small>Founder wiki &amp; operator system</small>
+    </div>
+    <div class="header-controls">
+      <nav class="header-nav">
+        <a href="/index.html">Main page</a>
+        <a href="/dashboards/today-dashboard.html">Today</a>
+        <a href="/browse/index.html">Browse</a>
+        <a href="/ops/shanepedia-agent-runtime.html">Runtime</a>
+        <a href="/ops/elsalkb-automation-status.html">Lane status</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle site theme">Dark mode</button>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="searchwrap">
+        <input id="search" class="searchbox" placeholder="Search titles, tags, notes...">
+        <span class="kbd-hint" aria-hidden="true">/</span>
+      </div>
+      <div id="searchmeta" class="searchmeta"></div>
+      <div id="results" class="results"></div>
+      <details class="tag-browser">
+        <summary>Browse by tag</summary>
+        <div id="tag-cloud" class="tag-cloud"></div>
+      </details>
+      <details class="nav-group" data-group="." open>
+<summary><div class="nav-label-inner"><h3>Main</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/00_overview.html">Shanepedia Overview</a></li>
+<li><a href="/SCHEMA.html">Schema</a></li>
+<li><a href="/START_HERE.html">Start Here</a></li>
+<li><a href="/log.html">Wiki Log</a></li>
+</ul></details>
+<details class="nav-group" data-group="dashboards">
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
+<li><a href="/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
+<li><a href="/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
+<li><a href="/dashboards/today-dashboard.html">Today Dashboard</a></li>
+</ul></details>
+<details class="nav-group" data-group="maps">
+<summary><div class="nav-label-inner"><h3>Maps</h3><span class="badge">3</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/maps/founder-map.html">Founder Map</a></li>
+<li><a href="/maps/ops-map.html">Ops Map</a></li>
+<li><a href="/maps/project-map.html">Project Map</a></li>
+</ul></details>
+<details class="nav-group" data-group="topics">
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">31</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/topics/agentic-business-studio.html">Agentic business studio</a></li>
+<li><a href="/topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a></li>
+<li><a href="/topics/bitcoin-circular-economy-news.html">Bitcoin Circular Economy — News and Research Signals</a></li>
+<li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li>
+<li><a href="/topics/bitcoin-commerce-map.html">Bitcoin commerce map</a></li>
+<li><a href="/topics/bitcoin-toy-store.html">Bitcoin Toy Store — Retail Concept</a></li>
+<li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a></li>
+<li><a href="/topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li>
+<li><a href="/topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a></li>
+<li><a href="/topics/dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li>
+<li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a></li>
+<li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a></li>
+<li><a href="/topics/founder-archetypes-and-needs.html">Founder archetypes and needs</a></li>
+<li><a href="/topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a></li>
+<li><a href="/topics/home-recipes.html">Home Recipes</a></li>
+<li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
+<li><a href="/topics/kids-activities-and-places.html">Kids activities and places</a></li>
+<li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
+<li><a href="/topics/llm-wiki-pattern.html">LLM wiki pattern</a></li>
+<li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos marine products</a></li>
+<li><a href="/topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li>
+<li><a href="/topics/micro-site-factory.html">Micro-site factory</a></li>
+<li><a href="/topics/niche-experience-products.html">Niche experience products</a></li>
+<li><a href="/topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li>
+<li><a href="/topics/shane-design-and-ux-taste.html">Shane design and UX taste</a></li>
+<li><a href="/topics/shane-founder-operating-principles.html">Shane founder operating principles</a></li>
+<li><a href="/topics/shane-trip-preferences.html">Shane trip preferences</a></li>
+<li><a href="/topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li>
+<li><a href="/topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li>
+<li><a href="/topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a></li>
+<li><a href="/topics/whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li>
+</ul></details>
+<details class="nav-group" data-group="projects">
+<summary><div class="nav-label-inner"><h3>Projects</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/projects/elsalkb.html">ElSalKB</a></li>
+<li><a href="/projects/operator-site-rescue.html">Operator site rescue (first business)</a></li>
+<li><a href="/projects/shanepedia-public-site.html">Shanepedia Public Site</a></li>
+<li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
+</ul></details>
+<details class="nav-group" data-group="entities">
+<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/entities/el-zonte.html">El Zonte</a></li>
+<li><a href="/entities/isla-bella-portland.html">Isla Bella (Portland)</a></li>
+<li><a href="/entities/los-cobanos.html">Los Cobanos</a></li>
+<li><a href="/entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li>
+<li><a href="/entities/portland-gresham.html">Portland / Gresham Home Base</a></li>
+<li><a href="/entities/punta-mango.html">Punta Mango / Oriente Salvaje</a></li>
+<li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a></li>
+<li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
+<li><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a></li>
+</ul></details>
+<details class="nav-group" data-group="ops">
+<summary><div class="nav-label-inner"><h3>Ops</h3><span class="badge">12</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li>
+<li><a href="/ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li>
+<li><a href="/ops/elsalkb-automation-status.html">ElSalKB automation status</a></li>
+<li><a href="/ops/family-fun-tracker.html">Family fun tracker</a></li>
+<li><a href="/ops/future-el-salvador-trip-program.html">Future El Salvador trip program</a></li>
+<li><a href="/ops/obsidian-workflow.html">Obsidian Workflow</a></li>
+<li><a href="/ops/photo-ingest-execution-loop.html">Photo ingest execution loop</a></li>
+<li><a href="/ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li>
+<li><a href="/ops/shanepedia-founder-portfolio-system.html">Shanepedia founder portfolio system</a></li>
+<li><a href="/ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a></li>
+<li><a href="/ops/shanepedia-roadmap.html">Shanepedia roadmap</a></li>
+<li><a href="/ops/source-ingest-pipeline.html">Source ingest pipeline</a></li>
+</ul></details>
+<details class="nav-group" data-group="travel">
+<summary><div class="nav-label-inner"><h3>Travel</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/travel/oregon-coast-memorial-day-2026-stays.html">Memorial Day Weekend Oregon Coast Stays (2026)</a></li>
+</ul></details>
+<details class="nav-group" data-group="sources">
+<summary><div class="nav-label-inner"><h3>Sources</h3><span class="badge">7</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia ideation 2026-04-05</a></li>
+<li><a href="/sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a></li>
+<li><a href="/sources/los-cobanos_tours_site.html">Los Cobanos Tours site</a></li>
+<li><a href="/sources/shane_san_salvador_trip_corpus.html">Shane San Salvador trip corpus</a></li>
+<li><a href="/sources/shaneneeley_site.html">ShaneNeeley.com and public profile</a></li>
+<li><a href="/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
+<li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
+</ul></details>
+<details class="nav-group" data-group="patterns">
+<summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a></li>
+</ul></details>
+    </aside>
+    <main class="content">
+      <div class="meta-row"><span class="badge">product-hardware</span><span class="meta-note">active-research</span></div><div class="tag-pills"><span class="tag-pill">vending</span><span class="tag-pill">terminal</span><span class="tag-pill">Nayax</span><span class="tag-pill">Cantaloupe</span><span class="tag-pill">CPI</span><span class="tag-pill">lightning</span><span class="tag-pill">QR</span><span class="tag-pill">BTCPay</span><span class="tag-pill">OpenNode</span><span class="tag-pill">gateway</span><span class="tag-pill">hardware</span></div><section class="related"><h2>Related</h2><ul><li><a href="vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li><li><a href="bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li><li><a href="hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li><li><a href="btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li><li><a href="vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li></ul></section><header><p class="eyebrow">page</p><h1>Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</h1></header>
+<blockquote>Research confidence: mixed. Hardware specs are verified from vendor docs. Bitcoin/Lightning integration is partially confirmed — noted per row.</blockquote>
+<p>The core problem: most commercial vending terminals were built for Visa/MC/NFC. Lightning requires dynamic QR code generation tied to a live invoice. That is a software integration problem, not a screen problem — but the screen still needs to be color and large enough to scan.</p>
+<p>This page answers: which terminals can physically display a Lightning QR, which have an API path to route payments through a crypto gateway, and what the realistic integration complexity is.</p>
+<h2>Why Lightning QR is different from card payments</h2>
+<p>Standard card terminal:</p>
+<ul>
+<li>Customer taps card → terminal talks to processor → processor approves → vend</li>
+</ul>
+<p>Lightning terminal:</p>
+<ul>
+<li>Customer selects product → terminal requests invoice from Lightning node/gateway → gateway returns a QR string → terminal renders QR on color screen → customer scans with phone → Lightning payment confirmed (&lt; 2 seconds) → gateway webhooks the terminal → terminal triggers MDB vend command</li>
+</ul>
+<p>The difference: the terminal must be able to <strong>request and render a dynamic QR on demand</strong>, not just read a static payment token. This rules out older black-and-white or button-only readers.</p>
+<h2>Terminal comparison matrix</h2>
+<p>| Terminal | Screen | QR capable | API path | Crypto gateway path | Confidence | Source | |---|---|---|---|---|---|---| | <strong>Nayax VPOS Touch</strong> | 2.4&quot; color touchscreen | Yes — native QR support documented | Cortina API (third-party gateway hook) | BitPay, OpenNode, GoCrypto via Cortina | Medium — API confirmed, crypto path theoretical | <a href="https://developerhub.nayax.com/docs/nayax-different-integrations">Nayax developer hub</a> | | <strong>Cantaloupe Engage Pulse</strong> | Edge-to-edge color touchscreen | Yes — designed for dynamic QR | Cantaloupe SDK / Seed API | Bakkt partnership (bitcoin via Bakkt app); Lightning path unconfirmed | Low-Medium — Bakkt bitcoin path confirmed in 2021, Lightning unconfirmed | <a href="https://store.cantaloupe.com/products/engage-pulse">Cantaloupe store</a> | | <strong>Raspberry Pi + 7&quot; touchscreen</strong> | 7&quot; color, full control | Yes — full custom | Any (BTCPay, LNbits, OpenNode) | BTCPay Server — fully verified | High — proven in DIY builds | <a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Hackster.io Ricardo Reis build</a> | | <strong>ESP32 + TFT display</strong> | Small TFT, low cost | Yes — custom firmware | LNbits LNURL API | LNbits — verified | High — open source build exists | <a href="https://github.com/nodestark/mdb-esp32-cashless">GitHub mdb-esp32-cashless</a> | | <strong>CPI / Crane readers</strong> | Varies by model | Depends on model | CPI SDK (enterprise) | No native crypto; custom middleware possible | Low — no public Lightning doc found | <a href="https://www.cranepi.com/en/products">CPI developer docs</a> | | <strong>Ingenico / Worldline</strong> | Color touchscreen (newer models) | Yes on newer models | REST API | No native crypto; middleware retrofit possible | Low — enterprise path only | Not publicly documented | | <strong>Tablet (any Android/iPad)</strong> | Large color — best for scanning | Yes — full control | BTCPay POS app, OpenNode app | Both fully verified | High — easiest QR UX, no MDB needed initially | <a href="https://docs.btcpayserver.org/Apps/">BTCPay Server POS</a> |</p>
+<p>What is actually confirmed by primary docs:</p>
+<ul>
+<li>Nayax officially documents Cortina <code>DynamicQR</code>, and its docs say the integrator returns QR data that is displayed on Nayax devices.</li>
+<li>Nayax officially positions VPOS Touch as supporting QR-based payments.</li>
+<li>BTCPay officially documents a public PoS app that runs on a web device for in-person checkout.</li>
+</ul>
+<p>What is still not confirmed:</p>
+<ul>
+<li>a public, production Lightning deployment on Nayax VPOS Touch</li>
+<li>a public, production Lightning deployment on Cantaloupe Engage Pulse</li>
+<li>any off-the-shelf Lightning plugin from Nayax or Cantaloupe</li>
+</ul>
+<h2>Nayax VPOS Touch — detailed notes</h2>
+<p><strong>What it is</strong>: Nayax&#x27;s flagship unattended payment device. Widely deployed globally. Accepts EMV, NFC (Apple/Google/Samsung Pay), QR codes (Alipay, WeChat Pay confirmed), and magnetic stripe.</p>
+<p><strong>Screen</strong>: 2.4-inch color touchscreen. Small but functional for QR scanning.</p>
+<p><strong>The Cortina API</strong> is Nayax&#x27;s third-party gateway integration layer. It allows an external payment provider to act as the payment processor for the VPOS Touch. Flow:</p>
+<ol>
+<li>Machine sends payment request to Cortina endpoint</li>
+<li>Cortina routes to the configured gateway (normally a card processor)</li>
+<li>With modification: route to a crypto gateway (BitPay, OpenNode, GoCrypto) instead</li>
+<li>Gateway returns a QR string or payment URL</li>
+<li>VPOS Touch renders it</li>
+</ol>
+<p><strong>Confidence caveat</strong>: Nayax&#x27;s public docs confirm Cortina works for &quot;loyalty cards, closed-loop payment methods, and custom payment flows.&quot; They do not explicitly name Bitcoin or Lightning in any developer docs found. The path is technically plausible but requires direct Nayax developer engagement to confirm.</p>
+<p><strong>Spark API</strong>: A separate Nayax API for initiating sessions and handling card payment flows from a backend. Less relevant for Lightning but worth knowing exists for hybrid setups.</p>
+<p><strong>Recommended action</strong>: Contact Nayax developer support and ask specifically: &quot;Can the Cortina API be configured to route to a third-party Bitcoin Lightning gateway like OpenNode or BTCPay Server? Has anyone done this before?&quot;</p>
+<ul>
+<li>Nayax developer hub: <a href="https://developerhub.nayax.com/">https://developerhub.nayax.com/</a></li>
+<li>Cortina API reference: <a href="https://developerhub.nayax.com/reference/cortina-api-overview">https://developerhub.nayax.com/reference/cortina-api-overview</a></li>
+</ul>
+<h2>Cantaloupe Engage Pulse — detailed notes</h2>
+<p><strong>What it is</strong>: Cantaloupe&#x27;s modern touchscreen card reader for vending and amusement. Replaced the E-Port G11 in Cantaloupe&#x27;s lineup.</p>
+<p><strong>Screen</strong>: Edge-to-edge color touchscreen. Larger and higher-res than the VPOS Touch. Better QR scanning UX.</p>
+<p><strong>Crypto history</strong>: Cantaloupe announced a Bakkt partnership in 2021 allowing customers to spend bitcoin and supported loyalty points through the Bakkt app on Cantaloupe&#x27;s unattended retail network. This was a custodial integration — customer pays through Bakkt, Bakkt settles through the Cantaloupe flow. Not a Lightning integration.</p>
+<p><strong>Lightning status</strong>: No confirmed native Lightning support found. The Bakkt path could theoretically be extended, but Bakkt does not offer Lightning payments.</p>
+<p><strong>Custom QR path</strong>: Cantaloupe&#x27;s SDK allows custom payment flows. A custom QR invoice from BTCPay or OpenNode could theoretically display on the Engage Pulse screen via the SDK. Not confirmed in production.</p>
+<p><strong>Recommended action</strong>: Contact Cantaloupe and ask about custom payment gateway integration via their SDK. Ask whether the Engage Pulse can display dynamic QR codes from a third-party payment provider.</p>
+<ul>
+<li>Cantaloupe store: <a href="https://store.cantaloupe.com/products/engage-pulse">https://store.cantaloupe.com/products/engage-pulse</a></li>
+<li>Cantaloupe card readers: <a href="https://www.cantaloupe.com/products/point-of-sale/card-readers/">https://www.cantaloupe.com/products/point-of-sale/card-readers/</a></li>
+</ul>
+<h2>Payment gateway comparison</h2>
+<p>| Gateway | Lightning | On-chain | Self-custody | Fees | Best for | |---|---|---|---|---|---| | <strong>BTCPay Server</strong> | Yes | Yes | Yes — you control keys | 0% (self-hosted) | Sovereign operators, custom builds | | <strong>OpenNode</strong> | Yes | Yes | No — custodial | 1% | Fast setup, API-first, developer-friendly | | <strong>BitPay</strong> | Yes | Yes | No — custodial | 1% | Enterprise integrations, Nayax/Cantaloupe targeting | | <strong>GoCrypto</strong> | Yes | Yes | No — custodial | Varies | European market focus, retail POS | | <strong>LNbits</strong> | Yes (Lightning only) | No | Depends on funding source | 0% (self-hosted) | DIY/family builds, low-cost deployments |</p>
+<p><strong>Recommendation for first machine</strong>: BTCPay Server if you want sovereignty and control. OpenNode if you want the fastest path to a working API integration without self-hosting a Lightning node.</p>
+<h2>The practical MVP path (verified)</h2>
+<p>This is the path with the most confirmed working implementations:</p>
+<pre><code>Tablet (Android or iPad)
+  ↓
+BTCPay Server POS web app (self-hosted or BTCPay.net)
+  ↓
+Lightning invoice generated → QR displayed on tablet screen
+  ↓
+Customer scans with Phoenix / Wallet of Satoshi
+  ↓
+BTCPay webhook fires → payment confirmed
+  ↓
+Raspberry Pi receives signal → sends MDB command
+  ↓
+Vending machine vends</code></pre>
+<p>Cost estimate for this stack:</p>
+<p>| Component | Est. cost | |---|---| | Android tablet (8&quot;) | $80–120 | | Raspberry Pi 5 | $60 | | Qibixx MDB Pi Hat | $150–200 | | BTCPay Server (self-hosted VPS) | $5–10/mo | | Stripe Terminal M2 (card fallback) | $59 | | Case, cables, power | $30 | | <strong>Total hardware</strong> | <strong>~$380–470</strong> |</p>
+<p>This builds on the <a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Ricardo Reis Coke machine build</a> and the <a href="https://devpost.com/software/cryptovend-tablet-ui">CryptoVend Devpost project</a>.</p>
+<h2>Integration path decision tree</h2>
+<pre><code>Do you want commercial-grade hardware (Nayax/Cantaloupe)?
+  YES → Contact Nayax/Cantaloupe dev support first to confirm Lightning gateway path
+        If confirmed: use Cortina API (Nayax) or Cantaloupe SDK + OpenNode/BitPay
+        If not confirmed: fall back to tablet overlay on existing machine
+  NO → Use Raspberry Pi + tablet stack with BTCPay
+       Lowest risk, most documented, full sovereignty</code></pre>
+<h2>Open questions (as of 2026-04-19)</h2>
+<ul>
+<li>[ ] Has anyone confirmed a production Nayax VPOS Touch + Lightning payment in the wild?</li>
+<li>[ ] Does Nayax&#x27;s Cortina API accept arbitrary third-party gateway URLs, or is the list of approved gateways fixed?</li>
+<li>[ ] Can Cantaloupe Engage Pulse display a custom BTCPay QR via their SDK without a Bakkt account?</li>
+<li>[ ] Does OpenNode have a pre-built Nayax Cortina integration available?</li>
+</ul>
+<p>These should be answered by direct vendor outreach before buying commercial hardware. The DIY Raspberry Pi path can start without any of these answers.</p>
+<h2>References</h2>
+<ul>
+<li><a href="https://developerhub.nayax.com/">Nayax Developer Hub</a></li>
+<li><a href="https://devzone.nayax.com/docs/cortina/overview-cortina">Nayax Cortina Overview</a></li>
+<li><a href="https://developerhub.nayax.com/reference/cortina-api-overview">Nayax Cortina API Overview</a></li>
+<li><a href="https://devzone.nayax.com/docs/dynamicqr-generateqr">Nayax DynamicQR docs</a></li>
+<li><a href="https://www.nayax.com/solution/vpos-touch/">Nayax VPOS Touch product page</a></li>
+<li><a href="https://store.cantaloupe.com/products/engage-pulse">Cantaloupe Engage Pulse</a></li>
+<li><a href="https://www.businesswire.com/news/home/20210506005345/en/Bakkt-and-Cantaloupe-Announce-Partnership-to-Accept-Cryptocurrency-and-Participating-Loyalty-Points-in-Cantaloupes-Unattended-Retail-Network">Cantaloupe / Bakkt official press release</a></li>
+<li><a href="https://docs.btcpayserver.org/FAQ/Apps/">BTCPay Server Apps FAQ</a></li>
+<li><a href="https://docs.btcpayserver.org/Apps/">BTCPay POS App</a></li>
+<li><a href="https://www.hackster.io/ricardo-reis/coke-vending-machine-with-bitcoin-and-lightning-network-870a82">Ricardo Reis — Coke Machine + Lightning (Hackster.io)</a></li>
+<li><a href="https://devpost.com/software/cryptovend-tablet-ui">CryptoVend Tablet UI (Devpost)</a></li>
+<li><a href="https://devpost.com/software/lightning-network-enabled-vending-machine">Lightning Network Vending Machine (Devpost)</a></li>
+<li><a href="https://github.com/nodestark/mdb-esp32-cashless">ESP32 MDB Cashless (GitHub)</a></li>
+<li><a href="https://qibixx.com/">Qibixx MDB Pi Hat</a></li>
+<li><a href="https://docs.qibixx.com/released/mdb-products/mdb-pi-hat">Qibixx MDB Pi Hat docs</a></li>
+</ul>
+    </main>
+  </div>
+  <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
+  <script src="/assets/search.js"></script>
+</body>
+</html>

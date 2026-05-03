@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitcoin Toy Store — Retail Concept — Shanepedia</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M20 18h24v8H28v6h14c6.1 0 10 3.6 10 9.3C52 48.5 47 53 39 53H20v-8h19c3.4 0 5-1.1 5-3.2 0-1.8-1.3-2.8-4-2.8H20V18z' fill='%23f8fafc'/%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <script>
+    (function() {
+      var saved = window.localStorage.getItem('shanepedia-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="/index.html">Shanepedia</a>
+      <small>Founder wiki &amp; operator system</small>
+    </div>
+    <div class="header-controls">
+      <nav class="header-nav">
+        <a href="/index.html">Main page</a>
+        <a href="/dashboards/today-dashboard.html">Today</a>
+        <a href="/browse/index.html">Browse</a>
+        <a href="/ops/shanepedia-agent-runtime.html">Runtime</a>
+        <a href="/ops/elsalkb-automation-status.html">Lane status</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle site theme">Dark mode</button>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="searchwrap">
+        <input id="search" class="searchbox" placeholder="Search titles, tags, notes...">
+        <span class="kbd-hint" aria-hidden="true">/</span>
+      </div>
+      <div id="searchmeta" class="searchmeta"></div>
+      <div id="results" class="results"></div>
+      <details class="tag-browser">
+        <summary>Browse by tag</summary>
+        <div id="tag-cloud" class="tag-cloud"></div>
+      </details>
+      <details class="nav-group" data-group="." open>
+<summary><div class="nav-label-inner"><h3>Main</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/00_overview.html">Shanepedia Overview</a></li>
+<li><a href="/SCHEMA.html">Schema</a></li>
+<li><a href="/START_HERE.html">Start Here</a></li>
+<li><a href="/log.html">Wiki Log</a></li>
+</ul></details>
+<details class="nav-group" data-group="dashboards">
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
+<li><a href="/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
+<li><a href="/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
+<li><a href="/dashboards/today-dashboard.html">Today Dashboard</a></li>
+</ul></details>
+<details class="nav-group" data-group="maps">
+<summary><div class="nav-label-inner"><h3>Maps</h3><span class="badge">3</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/maps/founder-map.html">Founder Map</a></li>
+<li><a href="/maps/ops-map.html">Ops Map</a></li>
+<li><a href="/maps/project-map.html">Project Map</a></li>
+</ul></details>
+<details class="nav-group" data-group="topics">
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">31</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/topics/agentic-business-studio.html">Agentic business studio</a></li>
+<li><a href="/topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a></li>
+<li><a href="/topics/bitcoin-circular-economy-news.html">Bitcoin Circular Economy — News and Research Signals</a></li>
+<li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li>
+<li><a href="/topics/bitcoin-commerce-map.html">Bitcoin commerce map</a></li>
+<li><a href="/topics/bitcoin-toy-store.html">Bitcoin Toy Store — Retail Concept</a></li>
+<li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a></li>
+<li><a href="/topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li>
+<li><a href="/topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a></li>
+<li><a href="/topics/dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li>
+<li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a></li>
+<li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a></li>
+<li><a href="/topics/founder-archetypes-and-needs.html">Founder archetypes and needs</a></li>
+<li><a href="/topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a></li>
+<li><a href="/topics/home-recipes.html">Home Recipes</a></li>
+<li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
+<li><a href="/topics/kids-activities-and-places.html">Kids activities and places</a></li>
+<li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
+<li><a href="/topics/llm-wiki-pattern.html">LLM wiki pattern</a></li>
+<li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos marine products</a></li>
+<li><a href="/topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li>
+<li><a href="/topics/micro-site-factory.html">Micro-site factory</a></li>
+<li><a href="/topics/niche-experience-products.html">Niche experience products</a></li>
+<li><a href="/topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li>
+<li><a href="/topics/shane-design-and-ux-taste.html">Shane design and UX taste</a></li>
+<li><a href="/topics/shane-founder-operating-principles.html">Shane founder operating principles</a></li>
+<li><a href="/topics/shane-trip-preferences.html">Shane trip preferences</a></li>
+<li><a href="/topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li>
+<li><a href="/topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li>
+<li><a href="/topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a></li>
+<li><a href="/topics/whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li>
+</ul></details>
+<details class="nav-group" data-group="projects">
+<summary><div class="nav-label-inner"><h3>Projects</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/projects/elsalkb.html">ElSalKB</a></li>
+<li><a href="/projects/operator-site-rescue.html">Operator site rescue (first business)</a></li>
+<li><a href="/projects/shanepedia-public-site.html">Shanepedia Public Site</a></li>
+<li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
+</ul></details>
+<details class="nav-group" data-group="entities">
+<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/entities/el-zonte.html">El Zonte</a></li>
+<li><a href="/entities/isla-bella-portland.html">Isla Bella (Portland)</a></li>
+<li><a href="/entities/los-cobanos.html">Los Cobanos</a></li>
+<li><a href="/entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li>
+<li><a href="/entities/portland-gresham.html">Portland / Gresham Home Base</a></li>
+<li><a href="/entities/punta-mango.html">Punta Mango / Oriente Salvaje</a></li>
+<li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a></li>
+<li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
+<li><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a></li>
+</ul></details>
+<details class="nav-group" data-group="ops">
+<summary><div class="nav-label-inner"><h3>Ops</h3><span class="badge">12</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li>
+<li><a href="/ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li>
+<li><a href="/ops/elsalkb-automation-status.html">ElSalKB automation status</a></li>
+<li><a href="/ops/family-fun-tracker.html">Family fun tracker</a></li>
+<li><a href="/ops/future-el-salvador-trip-program.html">Future El Salvador trip program</a></li>
+<li><a href="/ops/obsidian-workflow.html">Obsidian Workflow</a></li>
+<li><a href="/ops/photo-ingest-execution-loop.html">Photo ingest execution loop</a></li>
+<li><a href="/ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li>
+<li><a href="/ops/shanepedia-founder-portfolio-system.html">Shanepedia founder portfolio system</a></li>
+<li><a href="/ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a></li>
+<li><a href="/ops/shanepedia-roadmap.html">Shanepedia roadmap</a></li>
+<li><a href="/ops/source-ingest-pipeline.html">Source ingest pipeline</a></li>
+</ul></details>
+<details class="nav-group" data-group="travel">
+<summary><div class="nav-label-inner"><h3>Travel</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/travel/oregon-coast-memorial-day-2026-stays.html">Memorial Day Weekend Oregon Coast Stays (2026)</a></li>
+</ul></details>
+<details class="nav-group" data-group="sources">
+<summary><div class="nav-label-inner"><h3>Sources</h3><span class="badge">7</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia ideation 2026-04-05</a></li>
+<li><a href="/sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a></li>
+<li><a href="/sources/los-cobanos_tours_site.html">Los Cobanos Tours site</a></li>
+<li><a href="/sources/shane_san_salvador_trip_corpus.html">Shane San Salvador trip corpus</a></li>
+<li><a href="/sources/shaneneeley_site.html">ShaneNeeley.com and public profile</a></li>
+<li><a href="/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
+<li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
+</ul></details>
+<details class="nav-group" data-group="patterns">
+<summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a></li>
+</ul></details>
+    </aside>
+    <main class="content">
+      <div class="meta-row"><span class="badge">product-hardware</span><span class="meta-note">active-research</span></div><div class="tag-pills"><span class="tag-pill">kids</span><span class="tag-pill">bitcoin</span><span class="tag-pill">lightning</span><span class="tag-pill">toys</span><span class="tag-pill">education</span><span class="tag-pill">retail</span><span class="tag-pill">store</span><span class="tag-pill">circular-economy</span><span class="tag-pill">pop-up</span><span class="tag-pill">onboarding</span></div><section class="related"><h2>Related</h2><ul><li><a href="kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li><li><a href="vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li><li><a href="bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li></ul></section><header><p class="eyebrow">page</p><h1>Bitcoin Toy Store — Retail Concept</h1></header>
+<blockquote>&quot;The vending machine teaches a transaction. The store teaches commerce.&quot;</blockquote>
+<p>The vending machine is a single-player interaction: one kid, one coin, one toy. The toy store is an environment — kids browse, compare prices, talk to staff, ask parents, make choices, and carry bags out the door. That difference is everything for Bitcoin education.</p>
+<p>This is the staffed, experience-based complement to <a href="kids-sats-toy-vending.html">Kids Sats Toy Vending</a>.</p>
+<h2>Core thesis</h2>
+<p>A Bitcoin toy store works on three levels simultaneously:</p>
+<ol>
+<li><strong>Education</strong>: kids encounter sats prices on real tags, pay with real Lightning wallets or NFC cards, and feel what Bitcoin commerce actually is</li>
+<li><strong>Onboarding</strong>: parents who have never held Bitcoin can open a wallet at the register, receive a small welcome gift in sats, and make their first purchase in under five minutes</li>
+<li><strong>Circular economy node</strong>: the store earns sats, pays suppliers in sats where possible, and demonstrates that a Bitcoin-native business can sustain itself</li>
+</ol>
+<h2>What makes this different from the vending machine</h2>
+<p>| Vending machine | Toy store | |---|---| | Automated, unattended | Staffed, conversational | | One SKU interaction | Browse, compare, choose | | Kid-only UX | Family UX — parent learns too | | Fixed low price points | Range from 50 sats to 5,000+ sats | | Mechanical novelty | Brand, curation, story | | Low operating labor | Requires a person — or an agent-assisted kiosk |</p>
+<p>Neither replaces the other. The store scales the vending machine lesson into a full retail frame.</p>
+<h2>Location strategy</h2>
+<h3>Tier 1: Bitcoin hotspots</h3>
+<ul>
+<li><strong>El Zonte / Bitcoin Beach, El Salvador</strong>: built-in circular economy, tourist foot traffic, existing Bitcoin culture, staff who already understand Lightning</li>
+<li><strong>Bitcoin conferences</strong> (BTC Miami, Adopting Bitcoin): pop-up format, highest density of early adopters and curious parents</li>
+</ul>
+<h3>Tier 2: aligned host venues</h3>
+<ul>
+<li>Inside an existing Bitcoin-accepting shop (coffee shop, surf shop, bookstore) as a shop-in-shop</li>
+<li>At Portland-area Bitcoin meetup events or food cart pods</li>
+<li>At homeschool co-ops or STEM fairs as a temporary activation</li>
+</ul>
+<h3>Tier 3: online store</h3>
+<ul>
+<li>Accept Lightning, on-chain, and credit card via BTCPay + Stripe</li>
+<li>Ship physical Bitcoin-themed toys worldwide</li>
+<li>Use as a catalog and brand home that feeds the physical pop-up concept</li>
+</ul>
+<h2>Toy and product curation</h2>
+<p>The store&#x27;s product mix is not random novelty. Every item should earn its shelf space by teaching something or reinforcing Bitcoin culture.</p>
+<h3>Educational hardware replicas and games</h3>
+<ul>
+<li>Hardware wallet replica (non-functional, teaches custody concept)</li>
+<li>&quot;Mine Your Own Bitcoin&quot; mining kit toy (sand/gem mining format, but &quot;find the nonce&quot; theme)</li>
+<li>Node-in-a-box kit: kid assembles a pretend node from foam blocks, each piece labeled (CPU, storage, mempool, peer connection)</li>
+<li>Lightning Network puzzle: connect nodes across a map, teach routing and channels</li>
+</ul>
+<h3>Collectibles and art</h3>
+<ul>
+<li>Satoshi-themed trading cards (historical figures in Bitcoin: Satoshi, Hal Finney, Laszlo)</li>
+<li>Blockchain block toy (transparent cube with &quot;transactions&quot; printed on paper inside)</li>
+<li>Limited-run Bitcoin-themed enamel pins or patches</li>
+<li>3D-printed coin sculptures, each with embedded QR code for a sats claim</li>
+</ul>
+<h3>Everyday carry starter kits</h3>
+<ul>
+<li>Kids NFC wallet card + sticker set (pre-loaded with 500 sats, branded as a &quot;first wallet&quot;)</li>
+<li>Seed phrase practice card deck (random word cards, teaches the concept without real funds)</li>
+<li>Bitcoin piggy bank with a Lightning receive QR on the bottom</li>
+</ul>
+<h3>Books and zines</h3>
+<ul>
+<li>Age-appropriate Bitcoin books (already a small but growing market)</li>
+<li>House-produced zine explaining Bitcoin to kids in 8 panels</li>
+<li>Coloring book: &quot;Color the Blockchain&quot; — transaction flow, mining, wallets, Lightning</li>
+</ul>
+<h2>Pricing in sats: the key UX detail</h2>
+<p>Every price tag shows:</p>
+<pre><code>Satoshi trading card
+₿ 800 sats
+~ $0.80 USD</code></pre>
+<p>The USD equivalent is shown in small type for parent reference. The sats number is primary. This trains the eye to read sats as the unit of account.</p>
+<p>Staff should not convert to USD in conversation unless the customer asks. The goal is sats fluency.</p>
+<h2>Onboarding flow for first-time visitors</h2>
+<ol>
+<li>Greeter offers a free &quot;first sats&quot; card — 100 sats on an NFC card or QR code</li>
+<li>Customer downloads Phoenix or Wallet of Satoshi (QR for each is on a sign near the door)</li>
+<li>They transfer or receive the 100 sats into their phone wallet</li>
+<li>They browse the store and find something for 500-800 sats</li>
+<li>They top up their wallet (card, fiat-to-sats conversion if offered) and pay</li>
+<li>They leave with a toy, a receipt in sats, and the muscle memory of a Lightning payment</li>
+</ol>
+<p>This is the best five-minute Bitcoin onboarding experience possible. It has a physical outcome the kid will remember.</p>
+<h2>Staff and ops model</h2>
+<h3>Minimum viable staff</h3>
+<ul>
+<li>One person who can explain Lightning wallets at a basic level</li>
+<li>Able to help a parent download a wallet and fund it in under three minutes</li>
+<li>Does not need to be a Bitcoin expert — needs patience and a script</li>
+</ul>
+<h3>Agent-assisted kiosk variant</h3>
+<p>For lower-traffic venues or pop-ups without dedicated staff:</p>
+<ul>
+<li>Tablet kiosk at entry with guided onboarding flow</li>
+<li>BTCPay POS for checkout</li>
+<li>Self-service wallet setup via animated tutorial on screen</li>
+<li>Text or QR support link for stuck customers</li>
+</ul>
+<p>This version scales to a single operator running multiple pop-up tables at a conference.</p>
+<h2>Bitcoin circular economy integration</h2>
+<p>The store is not just a retail point. It is a proof node.</p>
+<ul>
+<li>Sourcing: buy toys from suppliers who accept Bitcoin (growing list — check BTCMap supplier networks)</li>
+<li>Payroll: pay any contractors or helpers in sats if they opt in</li>
+<li>Revenue: hold a portion of sats earned rather than converting to fiat — demonstrate conviction</li>
+<li>Reporting: publish a monthly &quot;sats in / sats out&quot; transparency report as a content and trust signal</li>
+</ul>
+<p>Over time the store becomes evidence that a Bitcoin-native business survives and grows.</p>
+<h2>Pop-up activation format</h2>
+<p>The lowest-risk entry is a pop-up table, not a lease.</p>
+<h3>What you need for a pop-up</h3>
+<ul>
+<li>Folding table, branded tablecloth</li>
+<li>20-30 SKUs in a carrying case</li>
+<li>Tablet with BTCPay POS</li>
+<li>Stack of &quot;first sats&quot; NFC cards or paper QR wallets (pre-loaded with 100-500 sats each)</li>
+<li>Printed price-in-sats tags for each item</li>
+<li>One QR poster: &quot;Download Phoenix / Wallet of Satoshi here&quot;</li>
+<li>A small capsule vending machine on the table (bridge to <a href="kids-sats-toy-vending.html">Kids Sats Toy Vending</a>)</li>
+</ul>
+<p>Total setup time: under 30 minutes. Total gear: fits in a rolling carry-on.</p>
+<h3>Ideal pop-up venues</h3>
+<ul>
+<li>Bitcoin Beach market days (El Zonte, La Libertad)</li>
+<li>Portland-area Bitcoin meetups</li>
+<li>Homeschool co-ops and STEM fairs</li>
+<li>Maker fairs and hacker cons</li>
+<li>Church bazaars and neighborhood markets (surprise demographic: grandparents buy educational toys)</li>
+</ul>
+<h2>Brand and naming ideas</h2>
+<p>The store needs a name that is friendly, not intimidating. Options to consider:</p>
+<ul>
+<li><strong>Satoshi&#x27;s Toy Chest</strong> — warm, nostalgic</li>
+<li><strong>Sats Shop</strong> — simple, on-the-nose</li>
+<li><strong>The Lightning Store</strong> — energetic, implies speed and magic</li>
+<li><strong>BitKids</strong> — brand extension of a kids Bitcoin education mission</li>
+<li><strong>Stackers</strong> — playful, references saving sats</li>
+</ul>
+<p>Best approach: test names at one pop-up, see what kids repeat back.</p>
+<h2>Key risks and mitigations</h2>
+<p>| Risk | Mitigation | |---|---| | Lightning payment fails in front of a child | Always have a fallback: token or manual trade if tech fails | | Parents don&#x27;t have a wallet and won&#x27;t install one | Offer paper QR wallets pre-loaded with sats for cash swap | | Regulatory friction (money transmission) | Sell goods priced in sats; the payment is Bitcoin-native; consult local rules per jurisdiction | | Unsold inventory | Start with low-MOQ items (cards, stickers, 3D prints) and prove demand before buying toys in bulk | | Staff explaining Bitcoin wrong | Single-page staff script; avoid speculation and price talk |</p>
+<h2>Relationship to the vending machine</h2>
+<p>The vending machine (<a href="kids-sats-toy-vending.html">Kids Sats Toy Vending</a>) is the automated, unattended version. The toy store is the human-centered, experience-designed version.</p>
+<p>They are complements on a spectrum:</p>
+<pre><code>Vending machine → Pop-up table → Kiosk with staff → Permanent store location</code></pre>
+<p>Start with the vending machine to prove payment mechanics and demand. Add the pop-up table when you want to teach at scale and onboard whole families. The permanent store is the destination if the pop-up proves the concept.</p>
+<h2>References</h2>
+<ul>
+<li><a href="kids-sats-toy-vending.html">Kids Sats Toy Vending</a> — the vending machine build</li>
+<li><a href="vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a> — Lightning terminal stack</li>
+<li><a href="bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a> — local circular economy context</li>
+<li><a href="https://docs.btcpayserver.org/Apps/">BTCPay Point of Sale App</a></li>
+<li><a href="https://phoenix.acinq.co/">Phoenix Wallet</a> — recommended first Lightning wallet for new users</li>
+<li><a href="https://www.walletofsatoshi.com/">Wallet of Satoshi</a> — easiest custodial onboarding</li>
+<li><a href="https://www.etsy.com/search?q=bitcoin+toys">Satoshi&#x27;s Toys (existing brand)</a> — check Etsy for existing suppliers</li>
+<li><a href="https://www.boltcard.org/">Bolt Card</a> — NFC card payments for repeat customers</li>
+</ul>
+    </main>
+  </div>
+  <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
+  <script src="/assets/search.js"></script>
+</body>
+</html>

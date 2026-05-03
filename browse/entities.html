@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entities Browse — Shanepedia</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M20 18h24v8H28v6h14c6.1 0 10 3.6 10 9.3C52 48.5 47 53 39 53H20v-8h19c3.4 0 5-1.1 5-3.2 0-1.8-1.3-2.8-4-2.8H20V18z' fill='%23f8fafc'/%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <script>
+    (function() {
+      var saved = window.localStorage.getItem('shanepedia-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="/index.html">Shanepedia</a>
+      <small>Founder wiki &amp; operator system</small>
+    </div>
+    <div class="header-controls">
+      <nav class="header-nav">
+        <a href="/index.html">Main page</a>
+        <a href="/dashboards/today-dashboard.html">Today</a>
+        <a href="/browse/index.html">Browse</a>
+        <a href="/ops/shanepedia-agent-runtime.html">Runtime</a>
+        <a href="/ops/elsalkb-automation-status.html">Lane status</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle site theme">Dark mode</button>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="searchwrap">
+        <input id="search" class="searchbox" placeholder="Search titles, tags, notes...">
+        <span class="kbd-hint" aria-hidden="true">/</span>
+      </div>
+      <div id="searchmeta" class="searchmeta"></div>
+      <div id="results" class="results"></div>
+      <details class="tag-browser">
+        <summary>Browse by tag</summary>
+        <div id="tag-cloud" class="tag-cloud"></div>
+      </details>
+      <details class="nav-group" data-group="." open>
+<summary><div class="nav-label-inner"><h3>Main</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/00_overview.html">Shanepedia Overview</a></li>
+<li><a href="/SCHEMA.html">Schema</a></li>
+<li><a href="/START_HERE.html">Start Here</a></li>
+<li><a href="/log.html">Wiki Log</a></li>
+</ul></details>
+<details class="nav-group" data-group="dashboards">
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
+<li><a href="/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
+<li><a href="/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
+<li><a href="/dashboards/today-dashboard.html">Today Dashboard</a></li>
+</ul></details>
+<details class="nav-group" data-group="maps">
+<summary><div class="nav-label-inner"><h3>Maps</h3><span class="badge">3</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/maps/founder-map.html">Founder Map</a></li>
+<li><a href="/maps/ops-map.html">Ops Map</a></li>
+<li><a href="/maps/project-map.html">Project Map</a></li>
+</ul></details>
+<details class="nav-group" data-group="topics">
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">31</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/topics/agentic-business-studio.html">Agentic business studio</a></li>
+<li><a href="/topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a></li>
+<li><a href="/topics/bitcoin-circular-economy-news.html">Bitcoin Circular Economy — News and Research Signals</a></li>
+<li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li>
+<li><a href="/topics/bitcoin-commerce-map.html">Bitcoin commerce map</a></li>
+<li><a href="/topics/bitcoin-toy-store.html">Bitcoin Toy Store — Retail Concept</a></li>
+<li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a></li>
+<li><a href="/topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li>
+<li><a href="/topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a></li>
+<li><a href="/topics/dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li>
+<li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a></li>
+<li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a></li>
+<li><a href="/topics/founder-archetypes-and-needs.html">Founder archetypes and needs</a></li>
+<li><a href="/topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a></li>
+<li><a href="/topics/home-recipes.html">Home Recipes</a></li>
+<li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
+<li><a href="/topics/kids-activities-and-places.html">Kids activities and places</a></li>
+<li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
+<li><a href="/topics/llm-wiki-pattern.html">LLM wiki pattern</a></li>
+<li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos marine products</a></li>
+<li><a href="/topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li>
+<li><a href="/topics/micro-site-factory.html">Micro-site factory</a></li>
+<li><a href="/topics/niche-experience-products.html">Niche experience products</a></li>
+<li><a href="/topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li>
+<li><a href="/topics/shane-design-and-ux-taste.html">Shane design and UX taste</a></li>
+<li><a href="/topics/shane-founder-operating-principles.html">Shane founder operating principles</a></li>
+<li><a href="/topics/shane-trip-preferences.html">Shane trip preferences</a></li>
+<li><a href="/topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li>
+<li><a href="/topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li>
+<li><a href="/topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a></li>
+<li><a href="/topics/whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li>
+</ul></details>
+<details class="nav-group" data-group="projects">
+<summary><div class="nav-label-inner"><h3>Projects</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/projects/elsalkb.html">ElSalKB</a></li>
+<li><a href="/projects/operator-site-rescue.html">Operator site rescue (first business)</a></li>
+<li><a href="/projects/shanepedia-public-site.html">Shanepedia Public Site</a></li>
+<li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
+</ul></details>
+<details class="nav-group" data-group="entities">
+<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/entities/el-zonte.html">El Zonte</a></li>
+<li><a href="/entities/isla-bella-portland.html">Isla Bella (Portland)</a></li>
+<li><a href="/entities/los-cobanos.html">Los Cobanos</a></li>
+<li><a href="/entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li>
+<li><a href="/entities/portland-gresham.html">Portland / Gresham Home Base</a></li>
+<li><a href="/entities/punta-mango.html">Punta Mango / Oriente Salvaje</a></li>
+<li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a></li>
+<li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
+<li><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a></li>
+</ul></details>
+<details class="nav-group" data-group="ops">
+<summary><div class="nav-label-inner"><h3>Ops</h3><span class="badge">12</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li>
+<li><a href="/ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li>
+<li><a href="/ops/elsalkb-automation-status.html">ElSalKB automation status</a></li>
+<li><a href="/ops/family-fun-tracker.html">Family fun tracker</a></li>
+<li><a href="/ops/future-el-salvador-trip-program.html">Future El Salvador trip program</a></li>
+<li><a href="/ops/obsidian-workflow.html">Obsidian Workflow</a></li>
+<li><a href="/ops/photo-ingest-execution-loop.html">Photo ingest execution loop</a></li>
+<li><a href="/ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li>
+<li><a href="/ops/shanepedia-founder-portfolio-system.html">Shanepedia founder portfolio system</a></li>
+<li><a href="/ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a></li>
+<li><a href="/ops/shanepedia-roadmap.html">Shanepedia roadmap</a></li>
+<li><a href="/ops/source-ingest-pipeline.html">Source ingest pipeline</a></li>
+</ul></details>
+<details class="nav-group" data-group="travel">
+<summary><div class="nav-label-inner"><h3>Travel</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/travel/oregon-coast-memorial-day-2026-stays.html">Memorial Day Weekend Oregon Coast Stays (2026)</a></li>
+</ul></details>
+<details class="nav-group" data-group="sources">
+<summary><div class="nav-label-inner"><h3>Sources</h3><span class="badge">7</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia ideation 2026-04-05</a></li>
+<li><a href="/sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a></li>
+<li><a href="/sources/los-cobanos_tours_site.html">Los Cobanos Tours site</a></li>
+<li><a href="/sources/shane_san_salvador_trip_corpus.html">Shane San Salvador trip corpus</a></li>
+<li><a href="/sources/shaneneeley_site.html">ShaneNeeley.com and public profile</a></li>
+<li><a href="/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
+<li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
+</ul></details>
+<details class="nav-group" data-group="patterns">
+<summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a></li>
+</ul></details>
+    </aside>
+    <main class="content">
+      <header><p class="eyebrow">browse</p><h1>Entities</h1></header><section class="feed"><h2>All entities pages</h2><ul class="feed-list"><li class="feed-item"><a href="/entities/el-zonte.html">El Zonte</a><span class="feed-date">2026-04-05</span><p class="feed-summary">El Zonte is presented as the accessible, socially active coastal node in the Stay at Bitcoin Beach ecosystem. It is framed as close to the airport (about 40 min</p></li><li class="feed-item"><a href="/entities/isla-bella-portland.html">Isla Bella (Portland)</a><span class="feed-date">2026-04-26</span><p class="feed-summary">Isla Bella is a Cuban restaurant in Portland, Oregon that accepts Bitcoin and Lightning payments. Shane visited on 2026-04-26, making it the first confirmed in-</p></li><li class="feed-item"><a href="/entities/los-cobanos.html">Los Cobanos</a><span class="feed-date">2026-04-05</span><p class="feed-summary">Los Cobanos is the west-coast reef and marine-life anchor in the current Shane-centric travel wiki. It matters less as a generic beach town and more as the clea</p></li><li class="feed-item"><a href="/entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a><span class="feed-date">2026-05-03</span><p class="feed-summary">OpenCluck is Shane&#x27;s ESP32-based IoT sensor system for monitoring a chicken coop. It watches air quality, temperature, and humidity to catch dangerous condition</p></li><li class="feed-item"><a href="/entities/portland-gresham.html">Portland / Gresham Home Base</a><span class="feed-date">2026-04-26</span><p class="feed-summary">Portland and Gresham, Oregon are Shane&#x27;s home base. The area encompasses the east Portland metro, Happy Valley suburbs, and downtown Portland. For Shanepedia pu</p></li><li class="feed-item"><a href="/entities/punta-mango.html">Punta Mango / Oriente Salvaje</a><span class="feed-date">2026-04-05</span><p class="feed-summary">Punta Mango (marketed as Oriente Salvaje) is positioned as the remote, low-density, high-nature counterpart to El Zonte. The site frames it as roughly three hou</p></li><li class="feed-item"><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a><span class="feed-date">2026-04-05</span><p class="feed-summary">For future Shane trips, the Apaneca, Ataco, Los Naranjos, Juayua, and Cerro Verde highlands should be treated as one coherent mountain-and-finca arc. This clust</p></li><li class="feed-item"><a href="/entities/shane-neeley.html">Shane Neeley</a><span class="feed-date">2026-04-05</span><p class="feed-summary">Shane is the human Shanepedia should optimize for. Publicly, he presents as a software and AI engineer with a bias toward simple, fast products. In the trip cor</p></li><li class="feed-item"><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a><span class="feed-date">2026-04-05</span><p class="feed-summary">Victor is the named local guide anchor on `los-cobanos.com`, and the site makes him the main trust surface for first-time visitors. The pitch is not luxury bran</p></li></ul></section>
+    </main>
+  </div>
+  <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
+  <script src="/assets/search.js"></script>
+</body>
+</html>

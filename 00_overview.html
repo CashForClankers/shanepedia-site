@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>00_overview — Shanepedia</title>
+  <title>Shanepedia Overview — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M20 18h24v8H28v6h14c6.1 0 10 3.6 10 9.3C52 48.5 47 53 39 53H20v-8h19c3.4 0 5-1.1 5-3.2 0-1.8-1.3-2.8-4-2.8H20V18z' fill='%23f8fafc'/%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <script>
     (function() {
       var saved = window.localStorage.getItem('shanepedia-theme');
@@ -26,6 +30,8 @@
     <div class="header-controls">
       <nav class="header-nav">
         <a href="/index.html">Main page</a>
+        <a href="/dashboards/today-dashboard.html">Today</a>
+        <a href="/browse/index.html">Browse</a>
         <a href="/ops/shanepedia-agent-runtime.html">Runtime</a>
         <a href="/ops/elsalkb-automation-status.html">Lane status</a>
       </nav>
@@ -34,171 +40,209 @@
   </header>
   <div class="shell">
     <aside class="sidebar">
-      <input id="search" class="searchbox" placeholder="Search wiki...">
+      <div class="searchwrap">
+        <input id="search" class="searchbox" placeholder="Search titles, tags, notes...">
+        <span class="kbd-hint" aria-hidden="true">/</span>
+      </div>
       <div id="searchmeta" class="searchmeta"></div>
       <div id="results" class="results"></div>
-      <section class="nav-group">
-<div class="nav-label"><h3>Main</h3><span class="badge">4</span></div>
+      <details class="tag-browser">
+        <summary>Browse by tag</summary>
+        <div id="tag-cloud" class="tag-cloud"></div>
+      </details>
+      <details class="nav-group" data-group="." open>
+<summary><div class="nav-label-inner"><h3>Main</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
-<li><a href="/00_overview.html">Overview</a></li>
+<li><a href="/00_overview.html">Shanepedia Overview</a></li>
 <li><a href="/SCHEMA.html">Schema</a></li>
 <li><a href="/START_HERE.html">Start Here</a></li>
-<li><a href="/log.html">Log</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Dashboards</h3><span class="badge">3</span></div>
+<li><a href="/log.html">Wiki Log</a></li>
+</ul></details>
+<details class="nav-group" data-group="dashboards">
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
 <li><a href="/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
 <li><a href="/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Entities</h3><span class="badge">6</span></div>
-<ul>
-<li><a href="/entities/el-zonte.html">El Zonte</a></li>
-<li><a href="/entities/los-cobanos.html">Los Cobanos</a></li>
-<li><a href="/entities/punta-mango.html">Punta Mango</a></li>
-<li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta De Las Flores Highlands</a></li>
-<li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
-<li><a href="/entities/victor-los-cobanos.html">Victor Los Cobanos</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Maps</h3><span class="badge">3</span></div>
+<li><a href="/dashboards/today-dashboard.html">Today Dashboard</a></li>
+</ul></details>
+<details class="nav-group" data-group="maps">
+<summary><div class="nav-label-inner"><h3>Maps</h3><span class="badge">3</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/maps/founder-map.html">Founder Map</a></li>
 <li><a href="/maps/ops-map.html">Ops Map</a></li>
 <li><a href="/maps/project-map.html">Project Map</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Ops</h3><span class="badge">11</span></div>
+</ul></details>
+<details class="nav-group" data-group="topics">
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">31</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
-<li><a href="/ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian Llm Wiki Loop</a></li>
-<li><a href="/ops/elsalkb-automation-status.html">Elsalkb Automation Status</a></li>
-<li><a href="/ops/family-fun-tracker.html">Family Fun Tracker</a></li>
-<li><a href="/ops/future-el-salvador-trip-program.html">Future El Salvador Trip Program</a></li>
-<li><a href="/ops/obsidian-workflow.html">Obsidian Workflow</a></li>
-<li><a href="/ops/photo-ingest-execution-loop.html">Photo Ingest Execution Loop</a></li>
-<li><a href="/ops/shanepedia-agent-runtime.html">Shanepedia Agent Runtime</a></li>
-<li><a href="/ops/shanepedia-founder-portfolio-system.html">Shanepedia Founder Portfolio System</a></li>
-<li><a href="/ops/shanepedia-research-flywheel.html">Shanepedia Research Flywheel</a></li>
-<li><a href="/ops/shanepedia-roadmap.html">Shanepedia Roadmap</a></li>
-<li><a href="/ops/source-ingest-pipeline.html">Source Ingest Pipeline</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Projects</h3><span class="badge">3</span></div>
-<ul>
-<li><a href="/projects/elsalkb.html">Elsalkb</a></li>
-<li><a href="/projects/operator-site-rescue.html">Operator Site Rescue</a></li>
-<li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Sources</h3><span class="badge">7</span></div>
-<ul>
-<li><a href="/sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia Ideation 2026 04 05</a></li>
-<li><a href="/sources/llm-wiki-pattern-2026-04-10.html">Llm Wiki Pattern 2026 04 10</a></li>
-<li><a href="/sources/los-cobanos_tours_site.html">Los Cobanos Tours Site</a></li>
-<li><a href="/sources/shane_san_salvador_trip_corpus.html">Shane San Salvador Trip Corpus</a></li>
-<li><a href="/sources/shaneneeley_site.html">Shaneneeley Site</a></li>
-<li><a href="/sources/stayatbitcoinbeach_homepage.html">Stayatbitcoinbeach Homepage</a></li>
-<li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram Photo Batches 2026 04 04</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Topics</h3><span class="badge">22</span></div>
-<ul>
-<li><a href="/topics/agentic-business-studio.html">Agentic Business Studio</a></li>
-<li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy Portland</a></li>
-<li><a href="/topics/bitcoin-commerce-map.html">Bitcoin Commerce Map</a></li>
-<li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin Travel Onboarding</a></li>
-<li><a href="/topics/coffee-route-agritourism-products.html">Coffee Route Agritourism Products</a></li>
-<li><a href="/topics/dual-audience-offer-design.html">Dual Audience Offer Design</a></li>
-<li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador Business Idea Lanes</a></li>
-<li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador Tourism Landscape 2026</a></li>
-<li><a href="/topics/founder-archetypes-and-needs.html">Founder Archetypes And Needs</a></li>
+<li><a href="/topics/agentic-business-studio.html">Agentic business studio</a></li>
+<li><a href="/topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a></li>
+<li><a href="/topics/bitcoin-circular-economy-news.html">Bitcoin Circular Economy — News and Research Signals</a></li>
+<li><a href="/topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li>
+<li><a href="/topics/bitcoin-commerce-map.html">Bitcoin commerce map</a></li>
+<li><a href="/topics/bitcoin-toy-store.html">Bitcoin Toy Store — Retail Concept</a></li>
+<li><a href="/topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a></li>
+<li><a href="/topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a></li>
+<li><a href="/topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a></li>
+<li><a href="/topics/dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li>
+<li><a href="/topics/el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a></li>
+<li><a href="/topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a></li>
+<li><a href="/topics/founder-archetypes-and-needs.html">Founder archetypes and needs</a></li>
+<li><a href="/topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a></li>
 <li><a href="/topics/home-recipes.html">Home Recipes</a></li>
 <li><a href="/topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li>
-<li><a href="/topics/kids-activities-and-places.html">Kids Activities And Places</a></li>
+<li><a href="/topics/kids-activities-and-places.html">Kids activities and places</a></li>
 <li><a href="/topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a></li>
-<li><a href="/topics/llm-wiki-pattern.html">Llm Wiki Pattern</a></li>
-<li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos Marine Products</a></li>
-<li><a href="/topics/micro-site-factory.html">Micro Site Factory</a></li>
-<li><a href="/topics/niche-experience-products.html">Niche Experience Products</a></li>
-<li><a href="/topics/shane-design-and-ux-taste.html">Shane Design And Ux Taste</a></li>
-<li><a href="/topics/shane-founder-operating-principles.html">Shane Founder Operating Principles</a></li>
-<li><a href="/topics/shane-trip-preferences.html">Shane Trip Preferences</a></li>
-<li><a href="/topics/vending-machine-terminal-tech.html">Vending Machine Terminal Tech</a></li>
-<li><a href="/topics/whatsapp-booking-funnels.html">Whatsapp Booking Funnels</a></li>
-</ul></section>
-<section class="nav-group">
-<div class="nav-label"><h3>Travel</h3><span class="badge">1</span></div>
+<li><a href="/topics/llm-wiki-pattern.html">LLM wiki pattern</a></li>
+<li><a href="/topics/los-cobanos-marine-products.html">Los Cobanos marine products</a></li>
+<li><a href="/topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li>
+<li><a href="/topics/micro-site-factory.html">Micro-site factory</a></li>
+<li><a href="/topics/niche-experience-products.html">Niche experience products</a></li>
+<li><a href="/topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li>
+<li><a href="/topics/shane-design-and-ux-taste.html">Shane design and UX taste</a></li>
+<li><a href="/topics/shane-founder-operating-principles.html">Shane founder operating principles</a></li>
+<li><a href="/topics/shane-trip-preferences.html">Shane trip preferences</a></li>
+<li><a href="/topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li>
+<li><a href="/topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li>
+<li><a href="/topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a></li>
+<li><a href="/topics/whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li>
+</ul></details>
+<details class="nav-group" data-group="projects">
+<summary><div class="nav-label-inner"><h3>Projects</h3><span class="badge">4</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
-<li><a href="/travel/oregon-coast-memorial-day-2026-stays.html">Oregon Coast Memorial Day 2026 Stays</a></li>
-</ul></section>
+<li><a href="/projects/elsalkb.html">ElSalKB</a></li>
+<li><a href="/projects/operator-site-rescue.html">Operator site rescue (first business)</a></li>
+<li><a href="/projects/shanepedia-public-site.html">Shanepedia Public Site</a></li>
+<li><a href="/projects/shanepedia-studio.html">Shanepedia Studio</a></li>
+</ul></details>
+<details class="nav-group" data-group="entities">
+<summary><div class="nav-label-inner"><h3>Entities</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/entities/el-zonte.html">El Zonte</a></li>
+<li><a href="/entities/isla-bella-portland.html">Isla Bella (Portland)</a></li>
+<li><a href="/entities/los-cobanos.html">Los Cobanos</a></li>
+<li><a href="/entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li>
+<li><a href="/entities/portland-gresham.html">Portland / Gresham Home Base</a></li>
+<li><a href="/entities/punta-mango.html">Punta Mango / Oriente Salvaje</a></li>
+<li><a href="/entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a></li>
+<li><a href="/entities/shane-neeley.html">Shane Neeley</a></li>
+<li><a href="/entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a></li>
+</ul></details>
+<details class="nav-group" data-group="ops">
+<summary><div class="nav-label-inner"><h3>Ops</h3><span class="badge">12</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li>
+<li><a href="/ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li>
+<li><a href="/ops/elsalkb-automation-status.html">ElSalKB automation status</a></li>
+<li><a href="/ops/family-fun-tracker.html">Family fun tracker</a></li>
+<li><a href="/ops/future-el-salvador-trip-program.html">Future El Salvador trip program</a></li>
+<li><a href="/ops/obsidian-workflow.html">Obsidian Workflow</a></li>
+<li><a href="/ops/photo-ingest-execution-loop.html">Photo ingest execution loop</a></li>
+<li><a href="/ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li>
+<li><a href="/ops/shanepedia-founder-portfolio-system.html">Shanepedia founder portfolio system</a></li>
+<li><a href="/ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a></li>
+<li><a href="/ops/shanepedia-roadmap.html">Shanepedia roadmap</a></li>
+<li><a href="/ops/source-ingest-pipeline.html">Source ingest pipeline</a></li>
+</ul></details>
+<details class="nav-group" data-group="travel">
+<summary><div class="nav-label-inner"><h3>Travel</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/travel/oregon-coast-memorial-day-2026-stays.html">Memorial Day Weekend Oregon Coast Stays (2026)</a></li>
+</ul></details>
+<details class="nav-group" data-group="sources">
+<summary><div class="nav-label-inner"><h3>Sources</h3><span class="badge">7</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia ideation 2026-04-05</a></li>
+<li><a href="/sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a></li>
+<li><a href="/sources/los-cobanos_tours_site.html">Los Cobanos Tours site</a></li>
+<li><a href="/sources/shane_san_salvador_trip_corpus.html">Shane San Salvador trip corpus</a></li>
+<li><a href="/sources/shaneneeley_site.html">ShaneNeeley.com and public profile</a></li>
+<li><a href="/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
+<li><a href="/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
+</ul></details>
+<details class="nav-group" data-group="patterns">
+<summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a></li>
+</ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">page</span></div><h1>Shanepedia Overview</h1>
+      <div class="meta-row"><span class="badge">page</span></div><header><p class="eyebrow">page</p><h1>Shanepedia Overview</h1></header>
 <p>Shanepedia is the parent founder/operator wiki for Shane&#x27;s life, businesses, projects, relationships, trips, history, and ongoing research. This repository is the correct root for that system. <code>ElSalKB</code> is just one child lane inside it.</p>
 <h2>Recent work</h2>
 <ul>
-<li><strong>2026-04-18: Local Bitcoin commerce lane</strong> — new parent-level work on building a circular bitcoin economy around Gresham / Portland / Happy Valley by combining merchant discovery with owned spend surfaces. Start with <a href="topics/bitcoin-circular-economy-portland.html">bitcoin-circular-economy-portland</a>.</li>
-<li><strong>2026-04-18: Bitcoin-accepting vending machine concept</strong> — a hot sauce vending machine at food cart pods as the first owned Lightning + card spend surface and a live proof-of-demand node. See <a href="topics/hot-sauce-vending-machine.html">hot-sauce-vending-machine</a>.</li>
-<li><strong>2026-04-18: Terminal implementation path</strong> — concrete hardware/software notes for getting a vending machine to accept Lightning and cards, then dispense reliably. See <a href="topics/vending-machine-terminal-tech.html">vending-machine-terminal-tech</a>.</li>
-<li><strong>2026-04-18: Kids sats toy machine</strong> — a family-friendly toy or capsule machine so kids can share sats, tap or scan to pay, and learn that Bitcoin buys real things. See <a href="topics/kids-sats-toy-vending.html">kids-sats-toy-vending</a>.</li>
+<li><strong>2026-05-03: Site publishing and daily spark loop</strong> — added a web-facing <a href="dashboards/today-dashboard.html">Today Dashboard</a>, documented the public artifact path in <a href="projects/shanepedia-public-site.html">Shanepedia Public Site</a>, and turned the random-interesting cron into a daily Shanepedia-mining loop. See <a href="ops/daily-random-spark-loop.html">Daily Random Spark Loop</a>.</li>
+<li><strong>2026-04-26: Isla Bella (Portland)</strong> — first confirmed in-person Lightning spend in the Portland corpus. Cuban restaurant, verified 2026-04-26. See <a href="entities/isla-bella-portland.html">Isla Bella (Portland)</a>. Merchant table updated in <a href="topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a>.</li>
+<li><strong>2026-04-26: Founder tech stack pages</strong> — added <a href="topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a> (the AI gateway system), <a href="topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a> (the 11-phase agent dev machine setup), <a href="entities/portland-gresham.html">Portland / Gresham Home Base</a> (home base place entity), <a href="patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a> (core operating pattern), and <a href="topics/bitcoin-circular-economy-news.html">Bitcoin Circular Economy — News and Research Signals</a> (Cron research signals for the Portland Bitcoin lane).</li>
+<li><strong>2026-04-18: Local Bitcoin commerce lane</strong> — new parent-level work on building a circular bitcoin economy around Gresham / Portland / Happy Valley by combining merchant discovery with owned spend surfaces. Start with <a href="topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a>.</li>
+<li><strong>2026-04-18: Bitcoin-accepting vending machine concept</strong> — a hot sauce vending machine at food cart pods as the first owned Lightning + card spend surface and a live proof-of-demand node. See <a href="topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a>.</li>
+<li><strong>2026-04-18: Terminal implementation path</strong> — concrete hardware/software notes for getting a vending machine to accept Lightning and cards, then dispense reliably. See <a href="topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a>.</li>
+<li><strong>2026-04-19: Vending execution pack</strong> — the lane now has a buyers guide, a verified examples catalog, and a placement playbook so the next step can move from idea to sourcing and outreach. See <a href="topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a>, <a href="topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a>, and <a href="topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a>.</li>
+<li><strong>2026-04-18: Kids sats toy machine</strong> — a family-friendly toy or capsule machine so kids can share sats, tap or scan to pay, and learn that Bitcoin buys real things. See <a href="topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a>.</li>
 </ul>
 <h2>Start here</h2>
 <ul>
-<li><a href="START_HERE.html">START_HERE</a></li>
-<li><a href="maps/founder-map.html">founder-map</a></li>
-<li><a href="maps/project-map.html">project-map</a></li>
-<li><a href="maps/ops-map.html">ops-map</a></li>
+<li><a href="START_HERE.html">Start Here</a></li>
+<li><a href="dashboards/today-dashboard.html">Today Dashboard</a></li>
+<li><a href="maps/founder-map.html">Founder Map</a></li>
+<li><a href="maps/project-map.html">Project Map</a></li>
+<li><a href="maps/ops-map.html">Ops Map</a></li>
 </ul>
 <h2>Active business idea lanes</h2>
 <p>The most promising ideas in the current corpus are not one big startup — they are several linked lanes that compound:</p>
 <ul>
-<li><strong>Operator site rescue</strong> — the first launchable business. Fast website + WhatsApp funnel builds for tourism operators with no English web presence. $150-500 per client, near-zero cost. See <a href="projects/operator-site-rescue.html">operator-site-rescue</a>.</li>
-<li><strong>WhatsApp booking funnels</strong> — structured booking flows replacing chaotic DMs. The key channel for every operator. See <a href="topics/whatsapp-booking-funnels.html">whatsapp-booking-funnels</a>.</li>
-<li><strong>Los Cobanos marine products</strong> — whale watching (Oct-Feb), reef snorkeling, marine fauna tours. 43 authorized guides, booming demand, weak online packaging. See <a href="topics/los-cobanos-marine-products.html">los-cobanos-marine-products</a>.</li>
-<li><strong>Coffee route agritourism</strong> — Ruta de las Flores finca tours, highland arcs, birding. Strong heritage stories, no one packages the multi-day arc. See <a href="topics/coffee-route-agritourism-products.html">coffee-route-agritourism-products</a>.</li>
-<li><strong>Micro-site factory</strong> — agent-assisted production pipeline: operator photos in, live sites out in 48 hours. See <a href="topics/micro-site-factory.html">micro-site-factory</a>.</li>
-<li><strong>Agentic business studio</strong> — the wiki itself as an agent-readable system that turns people, places, businesses, and photos into executable projects. See <a href="topics/agentic-business-studio.html">agentic-business-studio</a>.</li>
-<li><strong>Bitcoin travel onboarding</strong> — dual-audience offers bridging crypto-native visitors and local operators. See <a href="topics/bitcoin-travel-onboarding.html">bitcoin-travel-onboarding</a>.</li>
-<li><strong>Bitcoin commerce map</strong> — the business graph behind Bitcoin tourism products and verification opportunities. See <a href="topics/bitcoin-commerce-map.html">bitcoin-commerce-map</a>.</li>
-<li><strong>Local bitcoin commerce lab</strong> — the Portland / Gresham / Happy Valley extension: multi-map merchant discovery plus owned Bitcoin vending experiments. See <a href="topics/bitcoin-circular-economy-portland.html">bitcoin-circular-economy-portland</a>, <a href="topics/hot-sauce-vending-machine.html">hot-sauce-vending-machine</a>, and <a href="topics/vending-machine-terminal-tech.html">vending-machine-terminal-tech</a>.</li>
-<li><strong>Kids sats-learning machines</strong> — toy and reward dispensers that teach children how sats work through real purchases and sharing. See <a href="topics/kids-sats-toy-vending.html">kids-sats-toy-vending</a>.</li>
-<li><strong>Niche experience products</strong> — poorly packaged high-value experiences that could become bookable offers. See <a href="topics/niche-experience-products.html">niche-experience-products</a>.</li>
-<li><strong>El Salvador market landscape</strong> — tourism up 30%+ since 2021, 300% growth in Bitcoin-adjacent sectors, digital nomad infrastructure expanding fast. See <a href="topics/el-salvador-tourism-landscape-2026.html">el-salvador-tourism-landscape-2026</a>.</li>
+<li><strong>Operator site rescue</strong> — the first launchable business. Fast website + WhatsApp funnel builds for tourism operators with no English web presence. $150-500 per client, near-zero cost. See <a href="projects/operator-site-rescue.html">Operator site rescue (first business)</a>.</li>
+<li><strong>WhatsApp booking funnels</strong> — structured booking flows replacing chaotic DMs. The key channel for every operator. See <a href="topics/whatsapp-booking-funnels.html">WhatsApp booking funnels</a>.</li>
+<li><strong>Los Cobanos marine products</strong> — whale watching (Oct-Feb), reef snorkeling, marine fauna tours. 43 authorized guides, booming demand, weak online packaging. See <a href="topics/los-cobanos-marine-products.html">Los Cobanos marine products</a>.</li>
+<li><strong>Coffee route agritourism</strong> — Ruta de las Flores finca tours, highland arcs, birding. Strong heritage stories, no one packages the multi-day arc. See <a href="topics/coffee-route-agritourism-products.html">Coffee route agritourism products</a>.</li>
+<li><strong>Micro-site factory</strong> — agent-assisted production pipeline: operator photos in, live sites out in 48 hours. See <a href="topics/micro-site-factory.html">Micro-site factory</a>.</li>
+<li><strong>Agentic business studio</strong> — the wiki itself as an agent-readable system that turns people, places, businesses, and photos into executable projects. See <a href="topics/agentic-business-studio.html">Agentic business studio</a>.</li>
+<li><strong>Bitcoin travel onboarding</strong> — dual-audience offers bridging crypto-native visitors and local operators. See <a href="topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a>.</li>
+<li><strong>Bitcoin commerce map</strong> — the business graph behind Bitcoin tourism products and verification opportunities. See <a href="topics/bitcoin-commerce-map.html">Bitcoin commerce map</a>.</li>
+<li><strong>Local bitcoin commerce lab</strong> — the Portland / Gresham / Happy Valley extension: multi-map merchant discovery plus owned Bitcoin vending experiments. See <a href="topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a>, <a href="topics/hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a>, <a href="topics/vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a>, <a href="topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a>, <a href="topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a>, and <a href="topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a>.</li>
+<li><strong>Kids sats-learning machines</strong> — toy and reward dispensers that teach children how sats work through real purchases and sharing. See <a href="topics/kids-sats-toy-vending.html">Kids Sats Toy Vending</a>.</li>
+<li><strong>Niche experience products</strong> — poorly packaged high-value experiences that could become bookable offers. See <a href="topics/niche-experience-products.html">Niche experience products</a>.</li>
+<li><strong>El Salvador market landscape</strong> — tourism up 30%+ since 2021, 300% growth in Bitcoin-adjacent sectors, digital nomad infrastructure expanding fast. See <a href="topics/el-salvador-tourism-landscape-2026.html">El Salvador tourism landscape 2026</a>.</li>
 </ul>
 <h2>Founder anchor</h2>
 <ul>
-<li><a href="entities/shane-neeley.html">shane-neeley</a> — founder profile, voice, operating principles</li>
-<li><a href="topics/shane-founder-operating-principles.html">shane-founder-operating-principles</a> — how Shane works</li>
-<li><a href="topics/shane-design-and-ux-taste.html">shane-design-and-ux-taste</a> — design taste and UX standards</li>
+<li><a href="entities/shane-neeley.html">Shane Neeley</a> — founder profile, voice, operating principles</li>
+<li><a href="topics/shane-founder-operating-principles.html">Shane founder operating principles</a> — how Shane works</li>
+<li><a href="topics/shane-design-and-ux-taste.html">Shane design and UX taste</a> — design taste and UX standards</li>
+<li><a href="topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a> — the AI gateway system powering all agent work</li>
+<li><a href="topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a> — the 11-phase agent dev machine setup</li>
+<li><a href="patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a> — core operating pattern</li>
 </ul>
 <h2>Project lanes</h2>
 <ul>
-<li><a href="projects/shanepedia-studio.html">shanepedia-studio</a> — the Shanepedia project itself</li>
-<li><a href="projects/elsalkb.html">elsalkb</a> — El Salvador knowledge base (child lane)</li>
+<li><a href="projects/shanepedia-studio.html">Shanepedia Studio</a> — the Shanepedia project itself</li>
+<li><a href="projects/shanepedia-public-site.html">Shanepedia Public Site</a> — public static site artifact and publishing path</li>
+<li><a href="projects/elsalkb.html">ElSalKB</a> — El Salvador knowledge base (child lane)</li>
 </ul>
 <h2>Travel planning</h2>
 <ul>
-<li><a href="travel/oregon-coast-memorial-day-2026-stays.html">oregon-coast-memorial-day-2026-stays</a> — Oregon coast lodging research</li>
+<li><a href="travel/oregon-coast-memorial-day-2026-stays.html">Memorial Day Weekend Oregon Coast Stays (2026)</a> — Oregon coast lodging research</li>
 </ul>
 <h2>Active places &amp; people</h2>
 <ul>
-<li><a href="entities/el-zonte.html">el-zonte</a> — Bitcoin Beach</li>
-<li><a href="entities/los-cobanos.html">los-cobanos</a> — marine operator hub</li>
-<li><a href="entities/punta-mango.html">punta-mango</a> — surf and nature</li>
-<li><a href="entities/ruta-de-las-flores-highlands.html">ruta-de-las-flores-highlands</a> — highland arc</li>
-<li><a href="entities/victor-los-cobanos.html">victor-los-cobanos</a> — local guide contact</li>
+<li><a href="entities/portland-gresham.html">Portland / Gresham Home Base</a> — home base, Portland circular economy operations</li>
+<li><a href="entities/isla-bella-portland.html">Isla Bella (Portland)</a> — Cuban restaurant, first verified Portland Lightning spend</li>
+<li><a href="entities/el-zonte.html">El Zonte</a> — Bitcoin Beach (El Salvador)</li>
+<li><a href="entities/los-cobanos.html">Los Cobanos</a> — marine operator hub</li>
+<li><a href="entities/punta-mango.html">Punta Mango / Oriente Salvaje</a> — surf and nature</li>
+<li><a href="entities/ruta-de-las-flores-highlands.html">Ruta de las Flores highlands</a> — highland arc</li>
+<li><a href="entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a> — local guide contact</li>
 </ul>
 <h2>Operations &amp; runtime</h2>
 <ul>
-<li><a href="ops/shanepedia-roadmap.html">shanepedia-roadmap</a> — current roadmap</li>
-<li><a href="ops/shanepedia-founder-portfolio-system.html">shanepedia-founder-portfolio-system</a> — portfolio system</li>
-<li><a href="ops/shanepedia-agent-runtime.html">shanepedia-agent-runtime</a> — agent runtime docs</li>
-<li><a href="ops/codex-obsidian-llm-wiki-loop.html">codex-obsidian-llm-wiki-loop</a> — concrete local adaptation of the LLM wiki pattern for Codex + Obsidian</li>
-<li><a href="ops/shanepedia-research-flywheel.html">shanepedia-research-flywheel</a> — research flywheel</li>
-<li><a href="ops/future-el-salvador-trip-program.html">future-el-salvador-trip-program</a> — next trip planning</li>
-<li><a href="ops/photo-ingest-execution-loop.html">photo-ingest-execution-loop</a> — photo ingest pipeline</li>
+<li><a href="ops/shanepedia-roadmap.html">Shanepedia roadmap</a> — current roadmap</li>
+<li><a href="ops/shanepedia-founder-portfolio-system.html">Shanepedia founder portfolio system</a> — portfolio system</li>
+<li><a href="ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a> — agent runtime docs</li>
+<li><a href="ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a> — concrete local adaptation of the LLM wiki pattern for Codex + Obsidian</li>
+<li><a href="ops/shanepedia-research-flywheel.html">Shanepedia research flywheel</a> — research flywheel</li>
+<li><a href="ops/future-el-salvador-trip-program.html">Future El Salvador trip program</a> — next trip planning</li>
+<li><a href="ops/photo-ingest-execution-loop.html">Photo ingest execution loop</a> — photo ingest pipeline</li>
 </ul>
 <h2>Parent-child model</h2>
 <ul>
@@ -216,12 +260,12 @@
 </ol>
 <h2>Sources</h2>
 <ul>
-<li><a href="sources/stayatbitcoinbeach_homepage.html">stayatbitcoinbeach_homepage</a></li>
-<li><a href="sources/los-cobanos_tours_site.html">los-cobanos_tours_site</a></li>
-<li><a href="sources/shaneneeley_site.html">shaneneeley_site</a></li>
-<li><a href="sources/shane_san_salvador_trip_corpus.html">shane_san_salvador_trip_corpus</a></li>
-<li><a href="sources/telegram_photo_batches_2026-04-04.html">telegram_photo_batches_2026-04-04</a></li>
-<li><a href="sources/gemini_shanepedia_ideation_2026-04-05.html">gemini_shanepedia_ideation_2026-04-05</a></li>
+<li><a href="sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
+<li><a href="sources/los-cobanos_tours_site.html">Los Cobanos Tours site</a></li>
+<li><a href="sources/shaneneeley_site.html">ShaneNeeley.com and public profile</a></li>
+<li><a href="sources/shane_san_salvador_trip_corpus.html">Shane San Salvador trip corpus</a></li>
+<li><a href="sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
+<li><a href="sources/gemini_shanepedia_ideation_2026-04-05.html">Gemini Shanepedia ideation 2026-04-05</a></li>
 </ul>
     </main>
   </div>

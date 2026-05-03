@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-05-03T22:34:43Z",
+  "fresh_ideas": [
+    {
+      "title": "Whale Weekend Trust Funnel",
+      "lane": "marine operator and whale-season products",
+      "date": "2026-05-03",
+      "feasibility": "high",
+      "revenue_model": "$400 setup + 8% booking commission",
+      "summary": "$400 setup + 8% booking commission. Lens: cross-pollinate two unrelated lanes into one offer someone would pay for this month",
+      "preferred": "true"
+    },
+    {
+      "title": "Founder Pi Briefcase",
+      "lane": "founder-os-as-a-service",
+      "date": "2026-05-02",
+      "feasibility": "high",
+      "revenue_model": "$600 setup + $100/month upkeep",
+      "summary": "$600 setup + $100/month upkeep. Lens: find a business idea from OpenCluck, hardware, or IoT that connects to the founder portfolio",
+      "preferred": "true"
+    },
+    {
+      "title": "Victor Deposit Clarity Bot",
+      "lane": "local-business-AI-enablement",
+      "date": "2026-05-01",
+      "feasibility": "high",
+      "revenue_model": "$129 setup + $99/month per operator inbox",
+      "summary": "$129 setup + $99/month per operator inbox. Lens: design an agent-as-a-service product using Claude/Gemini/Codex that solves a real problem",
+      "preferred": "true"
+    },
+    {
+      "title": "48-Hour Booking Friction Brief",
+      "lane": "micro-site-factory",
+      "date": "2026-04-30",
+      "feasibility": "high",
+      "revenue_model": "$199 one-time per operator brief; optional $79/month update cycle",
+      "summary": "$199 one-time per operator brief; optional $79/month update cycle. Lens: design a research brief or intelligence product a specific buyer would pay $50-500 for",
+      "preferred": "true"
+    },
+    {
+      "title": "Victor Tide Board",
+      "lane": "los-cobanos-marine-products",
+      "date": "2026-04-29",
+      "feasibility": "high",
+      "revenue_model": "$199 install + $99/month per operator or hotel desk",
+      "summary": "$199 install + $99/month per operator or hotel desk. Lens: find a business idea from OpenCluck, hardware, or IoT that connects to the founder portfolio",
+      "preferred": "true"
+    },
+    {
+      "title": "Sats Status Hotline",
+      "lane": "bitcoin-commerce-map",
+      "date": "2026-04-28",
+      "feasibility": "high",
+      "revenue_model": "$149 setup + $99/month per hotel or host",
+      "summary": "$149 setup + $99/month per hotel or host. Lens: find a gap in the wiki that IS a business opportunity",
+      "preferred": "true"
+    },
+    {
+      "title": "Whale Window Reply Desk",
+      "lane": "local-business-AI-enablement",
+      "date": "2026-04-27",
+      "feasibility": "high",
+      "revenue_model": "$199 setup + $149/month per operator or hotel inbox",
+      "summary": "$199 setup + $149/month per operator or hotel inbox. Lens: design an agent-as-a-service product using Claude/Gemini/Codex that solves a real problem",
+      "preferred": "true"
+    },
+    {
+      "title": "Heritage Roast Storypack",
+      "lane": "coffee-route-agritourism-products",
+      "date": "2026-04-25",
+      "feasibility": "high",
+      "revenue_model": "$350 setup + $89/month refresh",
+      "summary": "$350 setup + $89/month refresh. Lens: productize something Shane does informally \u2014 name it, price it, describe the buyer",
+      "preferred": "true"
+    },
+    {
+      "title": "Operator Evidence Pack",
+      "lane": "micro-site-factory",
+      "date": "2026-04-24",
+      "feasibility": "high",
+      "revenue_model": "$250 setup + $79/month updates",
+      "summary": "$250 setup + $79/month updates. Lens: find a gap in the wiki that IS a business opportunity",
+      "preferred": "true"
+    },
+    {
+      "title": "Los Cobanos Booking Friction Scan",
+      "lane": "los-cobanos-marine-products",
+      "date": "2026-04-23",
+      "feasibility": "high",
+      "revenue_model": "$199 per operator brief or $349 with WhatsApp reply templates",
+      "summary": "$199 per operator brief or $349 with WhatsApp reply templates. Lens: design a research brief or intelligence product a specific buyer would pay $50-500 for",
+      "preferred": "true"
+    },
+    {
+      "title": "Whale Desk Monthly",
+      "lane": "los-cobanos-marine-products",
+      "date": "2026-04-22",
+      "feasibility": "high",
+      "revenue_model": "$79-199/month per hotel or operator",
+      "summary": "$79-199/month per hotel or operator. Lens: design a content or education product from wiki knowledge someone would subscribe to",
+      "preferred": "true"
+    },
+    {
+      "title": "Highland Arc Launch Page",
+      "lane": "mountain and finca discovery products",
+      "date": "2026-04-21",
+      "feasibility": "high",
+      "revenue_model": "$500 setup per operator cluster + referral/commission on booked add-ons",
+      "summary": "$500 setup per operator cluster + referral/commission on booked add-ons. Lens: find a gap in the wiki that IS a business opportunity",
+      "preferred": "true"
+    }
+  ],
+  "stale_active_pages": [
+    {
+      "path": "topics/agentic-business-studio.md",
+      "title": "Agentic business studio",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "ops/codex-obsidian-llm-wiki-loop.md",
+      "title": "Codex Obsidian LLM wiki loop",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "topics/llm-wiki-pattern.md",
+      "title": "LLM wiki pattern",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "sources/llm-wiki-pattern-2026-04-10.md",
+      "title": "LLM wiki pattern 2026-04-10",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "dashboards/open-loops-dashboard.md",
+      "title": "Open Loops Dashboard",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "dashboards/projects-dashboard.md",
+      "title": "Projects Dashboard",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "ops/shanepedia-agent-runtime.md",
+      "title": "Shanepedia agent runtime",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "ops/shanepedia-roadmap.md",
+      "title": "Shanepedia roadmap",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "ops/source-ingest-pipeline.md",
+      "title": "Source ingest pipeline",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-10",
+      "stale_days": "23",
+      "summary": ""
+    },
+    {
+      "path": "ops/family-fun-tracker.md",
+      "title": "Family fun tracker",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-14",
+      "stale_days": "19",
+      "summary": ""
+    },
+    {
+      "path": "topics/kids-activities-and-places.md",
+      "title": "Kids activities and places",
+      "status": "active",
+      "lane": "",
+      "surface_date": "2026-04-14",
+      "stale_days": "19",
+      "summary": ""
+    },
+    {
+      "path": "topics/bitcoin-circular-economy-portland.md",
+      "title": "Bitcoin Circular Economy \u2014 Portland / Gresham / Happy Valley",
+      "status": "active-research",
+      "lane": "bitcoin-commerce-map",
+      "surface_date": "2026-04-18",
+      "stale_days": "15",
+      "summary": ""
+    }
+  ],
+  "autoresearch_runs": [
+    {
+      "title": "ElSalKB autoresearch",
+      "date": "2026-04-06",
+      "started_at": "2026-04-06T00:55:28",
+      "goals": "db_coverage, query_access, contact_enrichment",
+      "summary": "Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.",
+      "log_path": "/Users/bestrobot/.openclaw/workspace/projects/shanepedia/state/logs/elsalkb-autoresearch-20260405-175528.log"
+    },
+    {
+      "title": "ElSalKB autoresearch",
+      "date": "2026-04-05",
+      "started_at": "2026-04-05T17:35:11",
+      "goals": "db_coverage, query_access, contact_enrichment",
+      "summary": "Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.",
+      "log_path": "/Users/bestrobot/.openclaw/workspace/projects/shanepedia/state/logs/elsalkb-autoresearch-20260405-103511.log"
+    },
+    {
+      "title": "ElSalKB autoresearch",
+      "date": "2026-04-05",
+      "started_at": "2026-04-05T17:33:36",
+      "goals": "db_coverage",
+      "summary": "Parent-owned lane loop ran and wrote a log.",
+      "log_path": "/Users/bestrobot/.openclaw/workspace/projects/shanepedia/state/logs/elsalkb-autoresearch-20260405-103336.log"
+    },
+    {
+      "title": "ElSalKB autoresearch",
+      "date": "2026-04-05",
+      "started_at": "2026-04-05T17:32:30",
+      "goals": "db_coverage, query_access, contact_enrichment",
+      "summary": "Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.",
+      "log_path": "/Users/bestrobot/.openclaw/workspace/projects/shanepedia/state/logs/elsalkb-autoresearch-20260405-103230.log"
+    },
+    {
+      "title": "ElSalKB autoresearch",
+      "date": "2026-04-05",
+      "started_at": "2026-04-05T17:31:27",
+      "goals": "db_coverage, query_access",
+      "summary": "Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.",
+      "log_path": "/Users/bestrobot/.openclaw/workspace/projects/shanepedia/state/logs/elsalkb-autoresearch-20260405-103127.log"
+    }
+  ],
+  "ideation": {
+    "latest_date": "2026-05-03",
+    "entry_count": 19,
+    "preference_count": 1,
+    "preferred_lanes": [
+      "marine-operator-products"
+    ]
+  }
+}
