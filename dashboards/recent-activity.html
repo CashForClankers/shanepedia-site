@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Backyard Chickens — Oregon Keeper Notes — Shanepedia</title>
+  <title>Recent Activity — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -179,67 +179,59 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">chickens</span><span class="tag-pill">oregon</span><span class="tag-pill">portland</span><span class="tag-pill">gresham</span><span class="tag-pill">egg-production</span><span class="tag-pill">flock-management</span><span class="tag-pill">borrowed-land</span></div><section class="related"><h2>Related</h2><ul><li><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li><li><a href="../entities/portland-gresham.html">Portland / Gresham Home Base</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Backyard Chickens — Oregon Keeper Notes</h1></header>
-<p>Practical reference for keeping 8 egg-laying hens in the Portland/Gresham area on borrowed farmland. This covers what actually matters for a small flock in the Pacific Northwest climate — not a tutorial, a keeper&#x27;s reference.</p>
-<h2>Flock overview</h2>
+      <div class="meta-row"><span class="badge">dashboard</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">dashboard</span><span class="tag-pill">activity</span><span class="tag-pill">changelog</span></div><section class="related"><h2>Related</h2><ul><li><a href="../00_overview.html">Shanepedia Overview</a></li><li><a href="../log.html">Wiki Log</a></li><li><a href="whats-cooking.html">What&#x27;s Cooking</a></li></ul></section><header><p class="eyebrow">dashboard</p><h1>Recent Activity</h1></header>
+<p>Reverse-chronological log of meaningful additions and changes to Shanepedia. Pulled from <a href="../log.html">Wiki Log</a> and rephrased for scanning. Focus is on the last 30 days. For the full operator-style log entries with context, see <a href="../log.html">Wiki Log</a>.</p>
+<h2>2026-05-03</h2>
 <ul>
-<li>8 hens, egg-laying breeds</li>
-<li>Location: borrowed farmland in the Gresham area</li>
-<li>No permanent structure investment (borrowed land constraint)</li>
-<li>Monitoring: see <code><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></code> for the IoT sensor project</li>
+<li>New dashboards: <a href="whats-cooking.html">What&#x27;s Cooking</a>, <a href="open-questions.html">Open Questions</a>, <a href="recent-activity.html">Recent Activity</a> — first parent-level synthesis pages beyond the existing today/founder/projects/open-loops set.</li>
+<li>New welcome page: <a href="../00_welcome.html">Welcome to Shanepedia</a> — hand-curated landing surface as a richer alternative to the generated index.</li>
+<li>Added <a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a> — ESP32-based chicken coop IoT monitor (ammonia, temp/humidity, future egg-count camera). BOM, alert mechanism, Phase 1 vs. Phase 2 scope.</li>
+<li>Added <a href="../topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a> — practical keeper reference for 8 hens in Portland/Gresham. Seasonal egg curves, Oregon-specific risks, borrowed-land logistics, OpenCluck integration.</li>
+<li>Added <a href="../topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a> — operational layer for running a vending machine in east Portland: stocking, pod selection, terminal reliability, seasonal weather constraints, scaling path.</li>
+<li>Wiki now at 76 pages.</li>
+<li>Added <a href="today-dashboard.html">Today Dashboard</a> as a web-visible daily operating surface for current gravity, random-spark candidates, and what to ask Shane.</li>
+<li>Added <a href="../projects/shanepedia-public-site.html">Shanepedia Public Site</a> — documents the private source repo, public artifact repo, GitHub Pages URL, and publish checklist.</li>
+<li>Added <a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a> to define the daily Telegram random spark contract.</li>
+<li>Updated <a href="../00_overview.html">Shanepedia Overview</a>, <a href="founder-dashboard.html">Founder Dashboard</a>, <a href="../maps/project-map.html">Project Map</a>, and <a href="../projects/shanepedia-studio.html">Shanepedia Studio</a> so the new surfaces are discoverable.</li>
 </ul>
-<h2>Egg production by season</h2>
-<p>Production is strongly seasonal in the Pacific Northwest. Hens respond to daylight hours, not temperature.</p>
-<p>| Season | Expected production | Notes | |---|---|---| | Spring (Mar–May) | Peak — close to 1 egg/hen/day | Days lengthening; most breeds hit their annual high | | Summer (Jun–Aug) | High, slight dip in heat waves | Production drops during heat stress above 85°F | | Fall (Sep–Nov) | Declining as days shorten | First-year hens may continue; older hens molt first | | Winter molt (Nov–Feb) | Near zero during molt | Molt lasts 6–12 weeks; hens redirect protein to feather regrowth |</p>
-<p><strong>Portland winter reality:</strong> The Willamette Valley gets 35–40 inches of rain per year with overcast winters. Day length in December drops to ~8.5 hours of daylight — well below the ~14 hours hens need for sustained production. Artificial lighting (a simple 40W bulb on a timer at dawn) can extend the productive season, but it comes at the cost of shortening a hen&#x27;s productive lifetime. Without supplemental light, expect 2–3 winter months of near-zero production per year.</p>
-<p><strong>Molt timing:</strong> Most hens molt in fall. During molt, production drops to zero. High-protein feed (game bird or &quot;feather fixer&quot; crumble) shortens molt duration.</p>
-<h2>Oregon-specific risks</h2>
-<h3>Wet winters</h3>
-<p>Oregon&#x27;s wet season (Oct–Apr) creates persistent coop humidity. High humidity:</p>
+<h2>2026-04-26</h2>
 <ul>
-<li>Encourages respiratory disease (Mycoplasma, aspergillosis)</li>
-<li>Promotes mold in bedding and feed</li>
-<li>Raises ammonia faster as wet litter breaks down</li>
+<li>Added <a href="../topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a> — OpenClaw as the gateway/routing layer above Claude Code: skills, workspace, nono sandbox, Telegram channel, config authority.</li>
+<li>Added <a href="../topics/mac-agent-dev-stack.html">Mac Agent Dev Stack</a> — the 11-phase setup-mac project philosophy and tech choices (Bun, uv, Rust, starship, nono, Claude Code, OpenClaw, Keychain secrets).</li>
+<li>Added <a href="../entities/portland-gresham.html">Portland / Gresham Home Base</a> — home base place entity for the Bitcoin circular economy lane, food cart pod culture, and family dimension.</li>
+<li>Added <a href="../patterns/research-synthesis-before-build.html">Research and Synthesis Before Build</a> — names Shane&#x27;s core operating pattern in a new <code>patterns/</code> directory.</li>
+<li>Added <a href="../topics/bitcoin-circular-economy-news.html">Bitcoin Circular Economy — News and Research Signals</a> — macro context plus Cron-driven research signal set: BTCMap Portland delta, Lightning PNW news, El Salvador reference case, local business news, meetup calendar.</li>
+<li>Added <a href="../entities/isla-bella-portland.html">Isla Bella (Portland)</a> — Cuban restaurant, first confirmed in-person Lightning spend in the Portland corpus. Verification checklist for future visits and BTCMap listing guidance.</li>
+<li>Updated <a href="../topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a> with Isla Bella in the verified merchant table.</li>
+<li>Updated <a href="../00_overview.html">Shanepedia Overview</a> to surface all new pages in Recent Work, Founder Anchor, and Active Places sections.</li>
+<li>Wiki at 70 pages, 0 broken links, 0 orphans. Site rebuilt.</li>
 </ul>
-<p>Ventilation is the primary mitigation. A coop that breathes — open vents at the peak, not the sides — dries faster than a sealed box. Deep litter (6+ inches of dry pine shavings) composted in place builds heat and manages moisture better than frequent cleanouts in wet weather.</p>
-<h3>Slugs and mites</h3>
+<h2>2026-04-19</h2>
 <ul>
-<li><strong>Slugs:</strong> Plentiful in Portland-area gardens, especially fall through spring. Hens will eat them, which is net positive, but slug bait (metaldehyde) is toxic. Iron phosphate bait (Sluggo) is safe around poultry.</li>
-<li><strong>Northern fowl mites and red mites:</strong> Common in the PNW. Red mites hide in coop cracks by day, feed at night. Diatomaceous earth (food-grade) dusted in nesting boxes and coop seams helps. Check hens weekly at the vent feathers — mites cluster there.</li>
+<li>Refined static-site discovery: homepage now acts more like a daily check-in surface with quick links, fresh log activity, recent pages, and lane browse rather than a static overview wall.</li>
+<li>Fixed search-result routing so matches resolve from nested pages.</li>
+<li>Surfaced the vending-machine research lane in <a href="../00_overview.html">Shanepedia Overview</a> and <a href="../maps/project-map.html">Project Map</a> so newest work isn&#x27;t trapped as orphans.</li>
+<li>Tightened <a href="../topics/btc-vending-machine-examples.html">Bitcoin Vending Machine — Real Examples</a> around verified examples and clarified proven builds vs. research demos vs. prototypes.</li>
+<li>Added generated section browse pages under <code>site/browse/</code> and a header-level Browse entry for exploration without search.</li>
+<li>Switched nav labels and rendered wikilinks toward page titles instead of slug-looking filenames.</li>
+<li>Added a short human intro to <a href="founder-dashboard.html">Founder Dashboard</a> and improved summary extraction so homepage cards stop leaking raw code/query syntax.</li>
+<li>Added <a href="../topics/vending-terminal-buyers-guide.html">Vending Terminal Buyers Guide — Lightning QR Feasibility Matrix</a> — verified feasibility matrix for Nayax, Cantaloupe, Raspberry Pi, ESP32, CPI/Crane, and tablet stacks. ~$380–470 MVP cost estimate, decision tree, confidence levels per row.</li>
+<li>Added <a href="../topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a> — full operator playbook for finding and winning placements: Tier 1/2/3 targeting, in-person script, phone/email templates, commission structure, unit economics.</li>
+<li>Added <a href="../topics/bitcoin-toy-store.html">Bitcoin Toy Store — Retail Concept</a> — staffed retail concept distinct from the automated vending lane. Pop-up to permanent spectrum, sats-first pricing UX, family onboarding flow.</li>
 </ul>
-<h3>Predators</h3>
-<p>Portland-area predators that take chickens:</p>
+<h2>2026-04-18</h2>
 <ul>
-<li><strong>Raccoons</strong> — primary threat; clever, can open simple latches. Use spring-loaded or carabiner-style closures.</li>
-<li><strong>Opossums</strong> — opportunistic, mostly eggs and small pullets</li>
-<li><strong>Hawks</strong> — Red-tailed hawks are resident; Cooper&#x27;s hawks migrate through. Run cover (overhead netting or dense plantings over the run) matters.</li>
-<li><strong>Coyotes</strong> — present in east Portland and Gresham edge areas</li>
-<li><strong>Rats</strong> — not a direct predator of adults, but take eggs and attract snakes</li>
+<li>Added parent-level topic pages for the Portland / Gresham / Happy Valley circular-bitcoin research lane, the hot sauce vending concept, and the vending terminal implementation stack.</li>
+<li>Surfaced those pages in the overview and project map.</li>
+<li>Captured the operating thesis: combine multi-map merchant discovery with an owned Lightning + card vending wedge and lightweight field ops for stocking, maintenance, and merchant verification.</li>
+<li>Added the kids sats-learning toy vending lane and tightened the hardware decision: BTCPay + Stripe Terminal + Qibixx for the real machine, LNbits + NFC/Bolt Card + token capsule for the family-learning variant.</li>
 </ul>
-<p>Hardware cloth (1/2&quot; welded wire) over all openings beats chicken wire, which raccoons can pull apart. Automatic coop doors on a light sensor or timer eliminate the most common error: forgetting to close up at dusk.</p>
-<h2>Feed, grit, and calcium</h2>
-<p><strong>Layer feed:</strong> 16–18% protein pellet or crumble. All-flock feed at 20% protein is acceptable and simplifies multi-species feeding.</p>
-<p><strong>Oyster shell:</strong> Free-choice calcium supplement, essential for shell quality. Keep a separate container in the coop at all times. Hens self-regulate intake.</p>
-<p><strong>Grit:</strong> Hens that forage on grass and bugs need insoluble grit (granite) to grind feed in the gizzard. Free-range birds often pick up enough from the ground; confined hens need it offered.</p>
-<p><strong>Scratch grains:</strong> Treat only — roughly 10% of diet maximum. High scratch lowers protein ratio in the diet and raises body temperature, which compounds heat stress in summer.</p>
-<p><strong>Water:</strong> 8 hens drink roughly 1–2 gallons per day in warm weather. Nipple drinkers stay cleaner than open dishes and freeze less readily in winter (though they still need a heated base or daily attention when temps drop below 32°F — which happens maybe 15–25 nights per year in Gresham).</p>
-<h2>Borrowed land logistics</h2>
-<p>Borrowed land shapes every decision toward impermanence and low capital exposure:</p>
+<h2>2026-04-10</h2>
 <ul>
-<li><strong>No permanent structures.</strong> Coops should be movable or cheap enough to abandon. A used dog kennel with a plywood shelter attached costs $200–400 and can be relocated or sold.</li>
-<li><strong>No deep improvements to the land.</strong> Gravel pads, permanent fencing, or buried hardware cloth all become sunk costs when the land relationship changes.</li>
-<li><strong>Minimal footprint.</strong> A smaller flock is easier to relocate in a crisis than a larger one.</li>
-<li><strong>Document the arrangement.</strong> Even informal borrowed land should have a text message or email trail confirming the arrangement and any shared expectations (who gets eggs, who pays feed, etc.).</li>
+<li>Strengthened the LLM Wiki source and topic pages so the pattern is explicitly adapted to Shanepedia, Codex, and Obsidian.</li>
+<li>Added <a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a> as the concrete local operating contract.</li>
+<li>Updated <a href="../START_HERE.html">Start Here</a>, <a href="../00_overview.html">Shanepedia Overview</a>, runtime docs, and Obsidian workflow so future agents read the Codex/Obsidian loop early.</li>
 </ul>
-<p>The monitoring investment (OpenCluck) is portable — the hardware moves with the coop.</p>
-<h2>OpenCluck integration</h2>
-<p>The <code><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></code> sensor project monitors ammonia, temperature, and humidity and fires Telegram alerts. Key thresholds for Oregon conditions:</p>
-<ul>
-<li><strong>Ammonia:</strong> Alert at 25 ppm. In a closed wet-season coop, ammonia can build quickly if litter management slips.</li>
-<li><strong>Temperature:</strong> Alert below 35°F (hypothermia risk for non-cold-hardy breeds) and above 85°F (heat stress).</li>
-<li><strong>Humidity:</strong> Alert above 70% sustained — indicator that ventilation is failing or litter is too wet.</li>
-</ul>
-<p>Egg count tracking is Phase 2 of OpenCluck. A nesting box camera or door-count sensor would let Shane track seasonal production curves without manual daily logging.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>

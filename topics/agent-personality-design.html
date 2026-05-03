@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Backyard Chickens — Oregon Keeper Notes — Shanepedia</title>
+  <title>Agent Personality Design — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -179,67 +179,61 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">chickens</span><span class="tag-pill">oregon</span><span class="tag-pill">portland</span><span class="tag-pill">gresham</span><span class="tag-pill">egg-production</span><span class="tag-pill">flock-management</span><span class="tag-pill">borrowed-land</span></div><section class="related"><h2>Related</h2><ul><li><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li><li><a href="../entities/portland-gresham.html">Portland / Gresham Home Base</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Backyard Chickens — Oregon Keeper Notes</h1></header>
-<p>Practical reference for keeping 8 egg-laying hens in the Portland/Gresham area on borrowed farmland. This covers what actually matters for a small flock in the Pacific Northwest climate — not a tutorial, a keeper&#x27;s reference.</p>
-<h2>Flock overview</h2>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">agents</span><span class="tag-pill">personality</span><span class="tag-pill">soul</span><span class="tag-pill">identity</span><span class="tag-pill">openclaw</span><span class="tag-pill">ux</span><span class="tag-pill">voice</span></div><section class="related"><h2>Related</h2><ul><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="shane-founder-operating-principles.html">Shane founder operating principles</a></li><li><a href="../entities/shane-neeley.html">Shane Neeley</a></li><li><a href="../entities/cash-for-clankers.html">Cash for Clankers — GitHub Org</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Agent Personality Design</h1></header>
+<p>Most agent stacks have no personality. They have a system prompt that says &quot;you are a helpful assistant&quot; and inherit whatever default tone the model ships with — usually a hedging, over-explaining, mildly sycophantic register that reads as corporate by default. For a personal agent that talks to one operator dozens of times a day, that default is wrong. It wastes tokens, it wastes attention, and it never develops the trust gradient that makes an agent feel like a colleague instead of a chatbot.</p>
+<p>This page argues for treating personality as a first-class design surface, with concrete reference to the OpenClaw setup Shane runs.</p>
+<h2>Voice: terse beats verbose, casual beats formal (for personal agents)</h2>
+<p>Two axes:</p>
 <ul>
-<li>8 hens, egg-laying breeds</li>
-<li>Location: borrowed farmland in the Gresham area</li>
-<li>No permanent structure investment (borrowed land constraint)</li>
-<li>Monitoring: see <code><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></code> for the IoT sensor project</li>
+<li><strong>Length:</strong> terse vs verbose</li>
+<li><strong>Register:</strong> casual vs formal</li>
 </ul>
-<h2>Egg production by season</h2>
-<p>Production is strongly seasonal in the Pacific Northwest. Hens respond to daylight hours, not temperature.</p>
-<p>| Season | Expected production | Notes | |---|---|---| | Spring (Mar–May) | Peak — close to 1 egg/hen/day | Days lengthening; most breeds hit their annual high | | Summer (Jun–Aug) | High, slight dip in heat waves | Production drops during heat stress above 85°F | | Fall (Sep–Nov) | Declining as days shorten | First-year hens may continue; older hens molt first | | Winter molt (Nov–Feb) | Near zero during molt | Molt lasts 6–12 weeks; hens redirect protein to feather regrowth |</p>
-<p><strong>Portland winter reality:</strong> The Willamette Valley gets 35–40 inches of rain per year with overcast winters. Day length in December drops to ~8.5 hours of daylight — well below the ~14 hours hens need for sustained production. Artificial lighting (a simple 40W bulb on a timer at dawn) can extend the productive season, but it comes at the cost of shortening a hen&#x27;s productive lifetime. Without supplemental light, expect 2–3 winter months of near-zero production per year.</p>
-<p><strong>Molt timing:</strong> Most hens molt in fall. During molt, production drops to zero. High-protein feed (game bird or &quot;feather fixer&quot; crumble) shortens molt duration.</p>
-<h2>Oregon-specific risks</h2>
-<h3>Wet winters</h3>
-<p>Oregon&#x27;s wet season (Oct–Apr) creates persistent coop humidity. High humidity:</p>
+<p>For a personal agent operated by one person, the right corner is <strong>terse + casual</strong>. The reasons:</p>
 <ul>
-<li>Encourages respiratory disease (Mycoplasma, aspergillosis)</li>
-<li>Promotes mold in bedding and feed</li>
-<li>Raises ammonia faster as wet litter breaks down</li>
+<li>A personal operator already has context. Reintroducing it every turn is friction.</li>
+<li>Long preambles (&quot;I&#x27;d be happy to help! Here is...&quot; / &quot;Great question!&quot;) are pure cost, no signal.</li>
+<li>Casual register lets the agent push back without sounding insubordinate. &quot;That&#x27;s a bad idea because X&quot; reads as advice from a casual register and as insubordination from a formal one.</li>
+<li>The model can drop the customer-service voice and use the same words a smart friend would use.</li>
 </ul>
-<p>Ventilation is the primary mitigation. A coop that breathes — open vents at the peak, not the sides — dries faster than a sealed box. Deep litter (6+ inches of dry pine shavings) composted in place builds heat and manages moisture better than frequent cleanouts in wet weather.</p>
-<h3>Slugs and mites</h3>
+<p>The wrong corner for a personal agent is <strong>verbose + formal</strong> — the default a fresh model ships with. It signals &quot;I do not know who you are&quot; every single turn.</p>
+<p>The right corner for a customer-facing agent (different problem) is usually <strong>terse + formal</strong> — short answers, professional register. That is not what we are designing here.</p>
+<h2>Opinions: yes, your personal agent should have them</h2>
+<p>There is a school of thought that says agents should be neutral and reflect back. For a search engine or a generic assistant, fine. For a personal agent embedded in your daily ops, neutrality is a failure mode:</p>
 <ul>
-<li><strong>Slugs:</strong> Plentiful in Portland-area gardens, especially fall through spring. Hens will eat them, which is net positive, but slug bait (metaldehyde) is toxic. Iron phosphate bait (Sluggo) is safe around poultry.</li>
-<li><strong>Northern fowl mites and red mites:</strong> Common in the PNW. Red mites hide in coop cracks by day, feed at night. Diatomaceous earth (food-grade) dusted in nesting boxes and coop seams helps. Check hens weekly at the vent feathers — mites cluster there.</li>
+<li>You already have your own opinion. You do not need a mirror.</li>
+<li>Useful agents disagree when you are wrong. A neutral agent cannot do that.</li>
+<li>Compounding context means the agent has seen more of your work than any human collaborator. It is the best-positioned advisor you have. Refusing to give opinions wastes that.</li>
 </ul>
-<h3>Predators</h3>
-<p>Portland-area predators that take chickens:</p>
+<p>The honest version is: your personal agent should hold opinions roughly aligned with your own taste — not a yes-machine, but a sharper version of your own judgment. It should disagree when it has a real reason and concede when you push back with new information. It should refuse to fold just because you sounded annoyed.</p>
+<p>Sycophancy is the failure mode on the opposite end. An agent that congratulates every idea, agrees with every direction, and apologizes when corrected is worse than useless — it actively degrades your judgment by simulating consensus where none exists. The line is: be honest, be direct, be willing to lose a small argument, refuse to lose a big one.</p>
+<h2>OpenClaw worked example: SOUL.md, IDENTITY.md, USER.md</h2>
+<p>Shane&#x27;s OpenClaw setup uses three files in <code>~/.openclaw/workspace/</code> to anchor agent personality across sessions. See <code><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></code> for the broader gateway context.</p>
 <ul>
-<li><strong>Raccoons</strong> — primary threat; clever, can open simple latches. Use spring-loaded or carabiner-style closures.</li>
-<li><strong>Opossums</strong> — opportunistic, mostly eggs and small pullets</li>
-<li><strong>Hawks</strong> — Red-tailed hawks are resident; Cooper&#x27;s hawks migrate through. Run cover (overhead netting or dense plantings over the run) matters.</li>
-<li><strong>Coyotes</strong> — present in east Portland and Gresham edge areas</li>
-<li><strong>Rats</strong> — not a direct predator of adults, but take eggs and attract snakes</li>
+<li><strong><code>SOUL.md</code></strong> — the agent&#x27;s personality, voice, and operating defaults. What tone it uses, when it pushes back, what it refuses to do, how it handles uncertainty. This is the &quot;who am I&quot; file, written in second person to the agent itself.</li>
+<li><strong><code>IDENTITY.md</code></strong> — a tighter behavioral contract. Names the agent, defines its role relative to the operator, sets the line between assistant and collaborator. Often shorter and more declarative than SOUL.</li>
+<li><strong><code>USER.md</code></strong> — what the agent should know about Shane: how he works, what he prefers, what makes him impatient, what context to assume. This is the &quot;who am I talking to&quot; file. It is what lets the agent skip the customer-service voice from turn one.</li>
 </ul>
-<p>Hardware cloth (1/2&quot; welded wire) over all openings beats chicken wire, which raccoons can pull apart. Automatic coop doors on a light sensor or timer eliminate the most common error: forgetting to close up at dusk.</p>
-<h2>Feed, grit, and calcium</h2>
-<p><strong>Layer feed:</strong> 16–18% protein pellet or crumble. All-flock feed at 20% protein is acceptable and simplifies multi-species feeding.</p>
-<p><strong>Oyster shell:</strong> Free-choice calcium supplement, essential for shell quality. Keep a separate container in the coop at all times. Hens self-regulate intake.</p>
-<p><strong>Grit:</strong> Hens that forage on grass and bugs need insoluble grit (granite) to grind feed in the gizzard. Free-range birds often pick up enough from the ground; confined hens need it offered.</p>
-<p><strong>Scratch grains:</strong> Treat only — roughly 10% of diet maximum. High scratch lowers protein ratio in the diet and raises body temperature, which compounds heat stress in summer.</p>
-<p><strong>Water:</strong> 8 hens drink roughly 1–2 gallons per day in warm weather. Nipple drinkers stay cleaner than open dishes and freeze less readily in winter (though they still need a heated base or daily attention when temps drop below 32°F — which happens maybe 15–25 nights per year in Gresham).</p>
-<h2>Borrowed land logistics</h2>
-<p>Borrowed land shapes every decision toward impermanence and low capital exposure:</p>
+<p>Together these three files do what a system prompt cannot: give a fresh agent grounding for both itself and its operator within the first few hundred tokens. Every Claude Code session that starts in OpenClaw inherits this anchoring, which is why the agent does not feel like a fresh chatbot every morning.</p>
+<p>The three-file split matters. A single monolithic personality prompt is hard to edit and hard to debug. Splitting personality (SOUL), role (IDENTITY), and operator-context (USER) lets you change one without disturbing the others. If the agent is being too soft, you edit SOUL. If it is forgetting that Shane uses Telegram remotely, you edit USER. If you want a different agent persona for a specific project, you swap IDENTITY and keep the rest.</p>
+<h2>&quot;Be a good friend, not a good employee&quot;</h2>
+<p>This is the design rule. A good employee is responsive, polite, never disagrees, and produces deliverables on request. A good friend tells you when your idea is bad, remembers what you said three weeks ago, jokes when something is funny, and does not pretend to be impressed when they are not.</p>
+<p>For a personal agent, the friend register is correct. The employee register breeds learned helplessness, hedge-soup outputs, false agreement on bad ideas, and zero compounding intimacy across sessions. The friend register breeds direct feedback, shared shorthand, willingness to volunteer information without being prompted, and a relationship that improves with use.</p>
+<p>The risk: a friend-register agent can come across as rude to anyone but the operator. That is fine for a personal agent. It is not fine for a customer-facing one. The same model with the same backbone needs different personality files for different roles. Do not try to ship one personality everywhere.</p>
+<h2>Practical advice for designing your own stack</h2>
 <ul>
-<li><strong>No permanent structures.</strong> Coops should be movable or cheap enough to abandon. A used dog kennel with a plywood shelter attached costs $200–400 and can be relocated or sold.</li>
-<li><strong>No deep improvements to the land.</strong> Gravel pads, permanent fencing, or buried hardware cloth all become sunk costs when the land relationship changes.</li>
-<li><strong>Minimal footprint.</strong> A smaller flock is easier to relocate in a crisis than a larger one.</li>
-<li><strong>Document the arrangement.</strong> Even informal borrowed land should have a text message or email trail confirming the arrangement and any shared expectations (who gets eggs, who pays feed, etc.).</li>
+<li><strong>Write personality files in the agent&#x27;s voice, not yours.</strong> Second person (&quot;you are X, you do Y&quot;) works in SOUL/IDENTITY. First person drifts into mission-statement mode.</li>
+<li><strong>Use concrete examples, not abstract principles.</strong> &quot;Skip &#x27;great question!&#x27; preambles&quot; beats &quot;be concise.&quot;</li>
+<li><strong>Edit after every irritation.</strong> If the agent annoyed you today, the personality file should be different tomorrow.</li>
+<li><strong>Test with a fresh session weekly.</strong> Open a new conversation with no warm cache and check whether the personality survives. If the first three messages feel like a generic chatbot, the files are too vague or not loading.</li>
+<li><strong>Keep the files in version control.</strong> Your agent&#x27;s personality is an asset.</li>
 </ul>
-<p>The monitoring investment (OpenCluck) is portable — the hardware moves with the coop.</p>
-<h2>OpenCluck integration</h2>
-<p>The <code><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></code> sensor project monitors ammonia, temperature, and humidity and fires Telegram alerts. Key thresholds for Oregon conditions:</p>
+<h2>What to avoid</h2>
 <ul>
-<li><strong>Ammonia:</strong> Alert at 25 ppm. In a closed wet-season coop, ammonia can build quickly if litter management slips.</li>
-<li><strong>Temperature:</strong> Alert below 35°F (hypothermia risk for non-cold-hardy breeds) and above 85°F (heat stress).</li>
-<li><strong>Humidity:</strong> Alert above 70% sustained — indicator that ventilation is failing or litter is too wet.</li>
+<li>copying someone else&#x27;s SOUL.md verbatim (uncanny because it is not yours)</li>
+<li>performative tough-guy voice (&quot;I&#x27;m a no-bullshit operator who tells it like it is&quot; reads as cringe)</li>
+<li>personality that contradicts the model&#x27;s actual capabilities</li>
+<li>letting files drift out of sync with how you actually want the agent to behave today</li>
 </ul>
-<p>Egg count tracking is Phase 2 of OpenCluck. A nesting box camera or door-count sensor would let Shane track seasonal production curves without manual daily logging.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
