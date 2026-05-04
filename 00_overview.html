@@ -30,6 +30,7 @@
     <div class="header-controls">
       <nav class="header-nav">
         <a href="/shanepedia-site/index.html">Main page</a>
+        <a href="/shanepedia-site/dashboards/shane-feed.html">Feed</a>
         <a href="/shanepedia-site/dashboards/today-dashboard.html">Today</a>
         <a href="/shanepedia-site/browse/index.html">Browse</a>
         <a href="/shanepedia-site/ops/shanepedia-agent-runtime.html">Runtime</a>
@@ -60,7 +61,7 @@
 <li><a href="/shanepedia-site/log.html">Wiki Log</a></li>
 </ul></details>
 <details class="nav-group" data-group="dashboards">
-<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">8</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
@@ -68,6 +69,7 @@
 <li><a href="/shanepedia-site/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/public-offer-cards.html">Public Offer Cards</a></li>
 <li><a href="/shanepedia-site/dashboards/recent-activity.html">Recent Activity</a></li>
+<li><a href="/shanepedia-site/dashboards/shane-feed.html">Shane Feed</a></li>
 <li><a href="/shanepedia-site/dashboards/today-dashboard.html">Today Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/whats-cooking.html">What&#x27;s Cooking</a></li>
 </ul></details>
@@ -182,6 +184,11 @@
 <li><a href="/shanepedia-site/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
+<details class="nav-group" data-group="daily">
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
+</ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
@@ -193,6 +200,7 @@
 <p>Shanepedia is the parent founder/operator wiki for Shane&#x27;s life, businesses, projects, relationships, trips, history, and ongoing research. This repository is the correct root for that system. <code>ElSalKB</code> is just one child lane inside it.</p>
 <h2>Recent work</h2>
 <ul>
+<li><strong>2026-05-04: Shane Feed and daily page contract</strong> - added <a href="dashboards/shane-feed.html">Shane Feed</a> as the open-first feed, added daily page automation for <code>wiki/daily/</code>, and reworked the homepage so cron work and obvious current interests show up before the rest of the directory. See <a href="ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a>.</li>
 <li><strong>2026-05-03: Site publishing and daily spark loop</strong> — added a web-facing <a href="dashboards/today-dashboard.html">Today Dashboard</a>, documented the public artifact path in <a href="projects/shanepedia-public-site.html">Shanepedia Public Site</a>, and turned the random-interesting cron into a daily Shanepedia-mining loop. See <a href="ops/daily-random-spark-loop.html">Daily Random Spark Loop</a>.</li>
 <li><strong>2026-05-03: Public artifacts and YouTube sparks</strong> — added <a href="dashboards/public-offer-cards.html">Public Offer Cards</a>, <a href="topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a>, and <a href="topics/founder-pi-briefcase.html">Founder Pi Briefcase</a> so the site has weirder public-safe artifacts and the daily cron can mine bounded YouTube/Gemini randomness.</li>
 <li><strong>2026-04-26: Isla Bella (Portland)</strong> — first confirmed in-person Lightning spend in the Portland corpus. Cuban restaurant, verified 2026-04-26. See <a href="entities/isla-bella-portland.html">Isla Bella (Portland)</a>. Merchant table updated in <a href="topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a>.</li>
@@ -206,6 +214,9 @@
 <h2>Start here</h2>
 <ul>
 <li><a href="START_HERE.html">Start Here</a></li>
+<li><a href="dashboards/shane-feed.html">Shane Feed</a></li>
+<li><a href="dashboards/whats-cooking.html">What&#x27;s Cooking</a></li>
+<li><a href="dashboards/recent-activity.html">Recent Activity</a></li>
 <li><a href="dashboards/today-dashboard.html">Today Dashboard</a></li>
 <li><a href="maps/founder-map.html">Founder Map</a></li>
 <li><a href="maps/project-map.html">Project Map</a></li>
@@ -222,6 +233,7 @@
 <li><strong>Agentic business studio</strong> — the wiki itself as an agent-readable system that turns people, places, businesses, and photos into executable projects. See <a href="topics/agentic-business-studio.html">Agentic business studio</a>.</li>
 <li><strong>Public offer cards</strong> — shareable, anonymized idea cards that expose the living edge of Shanepedia without exposing private context. See <a href="dashboards/public-offer-cards.html">Public Offer Cards</a>.</li>
 <li><strong>YouTube randomness sparks</strong> — a playful discovery lane that turns one public video idea into a wiki maintenance question. See <a href="topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a>.</li>
+<li><strong>Daily page feed</strong> - crons create one durable daily page, link it from the feed, and publish the public artifact. See <a href="dashboards/shane-feed.html">Shane Feed</a> and <a href="entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a>.</li>
 <li><strong>Lateral bets</strong> — cross-lane speculative bets that should stay visible until they become projects or get killed. See <a href="topics/lateral-bets.html">Lateral Bets — Hot Takes and Open Questions</a>.</li>
 <li><strong>Bitcoin travel onboarding</strong> — dual-audience offers bridging crypto-native visitors and local operators. See <a href="topics/bitcoin-travel-onboarding.html">Bitcoin travel onboarding</a>.</li>
 <li><strong>Bitcoin commerce map</strong> — the business graph behind Bitcoin tourism products and verification opportunities. See <a href="topics/bitcoin-commerce-map.html">Bitcoin commerce map</a>.</li>
@@ -262,6 +274,7 @@
 </ul>
 <h2>Operations &amp; runtime</h2>
 <ul>
+<li><a href="dashboards/shane-feed.html">Shane Feed</a> — open-first feed for current interests, cron work, and daily page archive</li>
 <li><a href="ops/shanepedia-roadmap.html">Shanepedia roadmap</a> — current roadmap</li>
 <li><a href="ops/shanepedia-founder-portfolio-system.html">Shanepedia founder portfolio system</a> — portfolio system</li>
 <li><a href="ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a> — agent runtime docs</li>

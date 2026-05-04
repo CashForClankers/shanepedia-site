@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cron as Product — Push-Based AI Beats Pull-Based AI — Shanepedia</title>
+  <title>Shane Feed — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -196,55 +196,47 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">cron</span><span class="tag-pill">agents</span><span class="tag-pill">product</span><span class="tag-pill">push</span><span class="tag-pill">telegram</span><span class="tag-pill">leverage</span><span class="tag-pill">scheduling</span><span class="tag-pill">attention</span></div><section class="related"><h2>Related</h2><ul><li><a href="agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li><li><a href="../entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li><li><a href="operating-rituals.html">Operating rituals</a></li><li><a href="agent-personality-design.html">Agent Personality Design</a></li><li><a href="voice-and-style.html">Voice and Style — How Shane Sounds</a></li><li><a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Cron as Product — Push-Based AI Beats Pull-Based AI</h1></header>
-<p>Most AI products are pull-based. You open the app, you ask it something, it answers, you close the app. The interaction is bounded by your willingness to initiate. For an operator who already has too many tabs open, that&#x27;s the wrong shape — pull-based AI competes with the rest of your attention budget and usually loses.</p>
-<p>The most useful AI surface for Shane right now is push-based. It opens Telegram for him, says one specific thing, and asks one specific question. It runs on cron. It earns its slot or it gets killed.</p>
-<p>This page is the argument for treating cron-driven agent messages as a real product surface, not a &quot;feature&quot; of the gateway.</p>
-<h2>Why push wins for someone running a portfolio</h2>
-<p>Shane runs a portfolio of bets — chickens, vending, El Salvador, Bitcoin local commerce, the agent stack itself. Each lane has a memory. Each lane has decisions waiting on input. The classic productivity-app failure is that every lane wants its own surface and they all compete for the moment Shane decides to &quot;check&quot; something.</p>
-<p>Push-based AI inverts the problem. Instead of Shane having to remember &quot;what was I supposed to look at for vending this week&quot;, a 14:37 Tuesday Telegram message arrives that already knows. It already read the wiki. It already filtered the last ten ideas. It hands him <em>one</em> bet with a proof step. He says yes, no, or &quot;later&quot;. The lane stays alive without consuming attention until something is decided.</p>
-<p>The portfolio doesn&#x27;t need a dashboard. It needs a <em>messenger</em> per lane, on a different cadence per lane, all routing into one inbox.</p>
-<h2>Why low-noise scheduling beats high-noise apps</h2>
-<p>Most &quot;AI assistant&quot; apps default to high noise — notifications on everything, a feed to scroll, suggestions you didn&#x27;t ask for. They&#x27;re optimizing for engagement, not for leverage.</p>
-<p>Cron is the opposite. There is no feed. Each message has a specific time, a specific shape, and a specific job. If a slot stops being useful, it gets disabled in <code>jobs.json</code> and the noise goes to zero. The 80-word ceiling is a feature: it forces every message to do work.</p>
-<p>The active cron schedule for Shane is around eight to ten messages per day, ranging from 80 to 180 words. Total daily AI-message volume is well under 1,500 words — less than a single article. If any single slot starts to feel like padding, it&#x27;s measurable and removable.</p>
-<h2>Examples from the actual setup</h2>
-<p>Each of these is a real, currently-running cron job with a specific job-to-be-done:</p>
+      <div class="meta-row"><span class="badge">dashboard</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-04</span></div><div class="tag-pills"><span class="tag-pill">feed</span><span class="tag-pill">dashboard</span><span class="tag-pill">daily</span></div><section class="related"><h2>Related</h2><ul><li><a href="../START_HERE.html">Start Here</a></li><li><a href="today-dashboard.html">Today Dashboard</a></li><li><a href="whats-cooking.html">What&#x27;s Cooking</a></li><li><a href="recent-activity.html">Recent Activity</a></li><li><a href="../entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li></ul></section><header><p class="eyebrow">dashboard</p><h1>Shane Feed</h1></header>
+<p>This is the &quot;open first&quot; surface. It should answer three questions quickly: what is interesting right now, what moved today, and what should Shane be asked to update next.</p>
+<h2>Open now</h2>
 <ul>
-<li><strong>Morning Briefing</strong> (07:00 daily) — anchor the day. One concrete next move, calendar sanity check, no fluff.</li>
-<li><strong>BTC + El Salvador Pulse</strong> (08:30 Mon/Wed/Fri) — keep the ES/Bitcoin thread warm without forcing Shane to open a news app.</li>
-<li><strong>Shanepedia Daily Page</strong> (11:00 daily) — surface a random wiki page so the wiki itself stays alive in Shane&#x27;s head.</li>
-<li><strong>Shanepedia Random Spark</strong> (12:30 daily) — broader cross-interest curiosity nudge.</li>
-<li><strong>Shanepedia One Bet</strong> (14:37 Tue/Thu/Sat) — exactly one business bet, named buyer, named proof step.</li>
-<li><strong>OpenCluck Weekly Hardware Spark</strong> (10:00 Wed) — one specific build move for the chicken coop.</li>
-<li><strong>Weekly Meme Delivery</strong> — joy slot. Doesn&#x27;t need to justify itself in productivity terms.</li>
-<li><strong>Shanepedia Weekly Roundup</strong> (19:00 Sun) — what actually changed in the wiki this week.</li>
-<li><strong>Weekly Reset Brief</strong> (20:00 Sun) — kept / dropped / next move for Monday.</li>
+<li><a href="whats-cooking.html">What&#x27;s Cooking</a> - the current state of the world: active builds, stuck items, recent wins, and the next thing to ship.</li>
+<li><a href="recent-activity.html">Recent Activity</a> - what changed recently without reading the full log.</li>
+<li><a href="public-offer-cards.html">Public Offer Cards</a> - public-safe ideas that can become posts, landing pages, client offers, or demos.</li>
+<li><a href="../topics/the-shane-test.html">The Shane Test</a> - the filter for whether something belongs in the system.</li>
+<li><a href="../topics/anti-roadmap.html">Anti-Roadmap — Things Shane Should Not Build</a> - good ways to avoid wasting Shane time.</li>
 </ul>
-<p>Note the cadence variety. Daily for things that benefit from rhythm. Three-times-weekly for things that would be exhausting daily but need to keep momentum. Weekly for the reset/review beats. Nothing on a 30-minute interval — that would be noise.</p>
-<h2>What makes a good cron message</h2>
-<p>Hard rules for any new slot, refined from what&#x27;s actually running:</p>
+<h2>Obviously relevant right now</h2>
 <ul>
-<li><strong>Specific.</strong> &quot;Here is <em>the</em> bet&quot; beats &quot;here are some bets&quot;. One thing. Named. Concrete.</li>
-<li><strong>Under 100 words</strong> for daily slots. Under 180 for weekly digests. If a longer message is needed, the slot is wrong.</li>
-<li><strong>Action-oriented.</strong> Every message ends with either a question Shane can answer in one tap, or a concrete next move he can do without asking what was meant.</li>
-<li><strong>Doesn&#x27;t repeat the last week.</strong> Recent-history awareness is non-negotiable — every prompt reads the last 7-10 messages and avoids re-treading.</li>
-<li><strong>Voice-contract enforced.</strong> Every prompt loads <code>daily-update-voice.md</code> so the messages don&#x27;t drift into corporate-AI register.</li>
-<li><strong>Plain text.</strong> No markdown tables in Telegram. No bullet lists where prose works.</li>
-<li><strong>Honest about empty.</strong> If the lane has no real signal this week, the message says so in one line and moves on. Padding is the death of the format.</li>
+<li><a href="../topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a> and <a href="../topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a> - get one food cart pod handshake before buying hardware.</li>
+<li><a href="../entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a> and <a href="../topics/backyard-chickens-oregon.html">Backyard Chickens — Oregon Keeper Notes</a> - deploy the smallest chicken monitor before making it fancy.</li>
+<li><a href="../topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a> and <a href="../topics/cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a> - make agents feel like useful daily infrastructure, not long chat transcripts.</li>
+<li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a> - use public YouTube randomness as a spark, then write the durable part back to the wiki.</li>
 </ul>
-<h2>When a cron slot should die</h2>
-<p>Crons should earn their slot. The kill signals:</p>
+<h2>What crons should add</h2>
+<p>Every daily Shanepedia cron should leave one durable page behind. A Telegram note is useful, but the site should also grow by one small page each day:</p>
 <ul>
-<li>Shane stops responding to it for 3+ runs.</li>
-<li>The messages start sounding the same week to week (the lane has run out of fresh material).</li>
-<li>The job-to-be-done has been productized into something more durable (a dashboard, a routine, a playbook).</li>
-<li>The cost of the slot exceeds the leverage. Long-context daily jobs that produce nothing actionable are the most expensive thing in the system.</li>
+<li>a daily feed page under <code>wiki/daily/</code></li>
+<li>a link from this dashboard&#x27;s archive</li>
+<li>rebuilt local site output</li>
+<li>rebuilt public artifact for GitHub Pages</li>
 </ul>
-<p><code>enabled: false</code> in <code>jobs.json</code> is the right move. Don&#x27;t delete — disabled slots are a record of what didn&#x27;t work.</p>
-<h2>The deeper claim</h2>
-<p>Cron-driven agent surfaces are an underrated product category because they are quiet, narrow, and hard to demo. You can&#x27;t show a cron to an investor in a screenshot. But for an operator who already knows what he&#x27;s working on and just needs a system that won&#x27;t let any single lane go dark, push-based AI on a low-noise schedule is the most useful thing the agent stack does.</p>
-<p>Every other surface in <code>[[agent-leverage-stack.md]]</code> exists to support these messages.</p>
+<h2>Daily page archive</h2>
+<p>&lt;!-- daily-feed:start --&gt;</p>
+<ul>
+<li><a href="../daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a> - Shanepedia Daily Feed - 2026-05-04</li>
+<p>&lt;!-- daily-feed:end --&gt;</p>
+</ul>
+<h2>Better daily prompt shape</h2>
+<p>The cron should not say &quot;here is a random page&quot; and stop. It should say:</p>
+<ol>
+<li>what page or idea surfaced</li>
+<li>why it is interesting now</li>
+<li>what changed today in the wiki or cron system</li>
+<li>one direct question: add to it, update it, productize it, or ignore it?</li>
+</ol>
+<h2>Kill boring feed items</h2>
+<p>If a card is generic, too long, or repeats yesterday, it should be demoted. The feed earns its place by being concrete: vending target, chicken sensor, Bitcoin merchant, public offer, travel operator, local family idea, or agent/tooling improvement.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>

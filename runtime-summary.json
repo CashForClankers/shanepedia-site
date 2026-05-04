@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T01:21:22Z",
+  "generated_at": "2026-05-04T01:35:28Z",
   "fresh_ideas": [
     {
       "title": "Whale Weekend Trust Funnel",
@@ -121,15 +121,6 @@
       "summary": ""
     },
     {
-      "path": "ops/codex-obsidian-llm-wiki-loop.md",
-      "title": "Codex Obsidian LLM wiki loop",
-      "status": "active",
-      "lane": "",
-      "surface_date": "2026-04-10",
-      "stale_days": "23",
-      "summary": ""
-    },
-    {
       "path": "topics/llm-wiki-pattern.md",
       "title": "LLM wiki pattern",
       "status": "active",
@@ -214,6 +205,15 @@
       "path": "topics/hot-sauce-vending-machine.md",
       "title": "Hot Sauce Vending Machine",
       "status": "research",
+      "lane": "product-hardware",
+      "surface_date": "2026-04-18",
+      "stale_days": "15",
+      "summary": ""
+    },
+    {
+      "path": "topics/kids-sats-toy-vending.md",
+      "title": "Kids Sats Toy Vending",
+      "status": "active-research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
       "stale_days": "15",

@@ -30,6 +30,7 @@
     <div class="header-controls">
       <nav class="header-nav">
         <a href="/shanepedia-site/index.html">Main page</a>
+        <a href="/shanepedia-site/dashboards/shane-feed.html">Feed</a>
         <a href="/shanepedia-site/dashboards/today-dashboard.html">Today</a>
         <a href="/shanepedia-site/browse/index.html">Browse</a>
         <a href="/shanepedia-site/ops/shanepedia-agent-runtime.html">Runtime</a>
@@ -60,7 +61,7 @@
 <li><a href="/shanepedia-site/log.html">Wiki Log</a></li>
 </ul></details>
 <details class="nav-group" data-group="dashboards">
-<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">8</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
@@ -68,6 +69,7 @@
 <li><a href="/shanepedia-site/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/public-offer-cards.html">Public Offer Cards</a></li>
 <li><a href="/shanepedia-site/dashboards/recent-activity.html">Recent Activity</a></li>
+<li><a href="/shanepedia-site/dashboards/shane-feed.html">Shane Feed</a></li>
 <li><a href="/shanepedia-site/dashboards/today-dashboard.html">Today Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/whats-cooking.html">What&#x27;s Cooking</a></li>
 </ul></details>
@@ -182,6 +184,11 @@
 <li><a href="/shanepedia-site/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
+<details class="nav-group" data-group="daily">
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
+</ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
@@ -189,7 +196,7 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">dashboard</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">dashboard</span><span class="tag-pill">status</span><span class="tag-pill">in-motion</span></div><section class="related"><h2>Related</h2><ul><li><a href="../00_overview.html">Shanepedia Overview</a></li><li><a href="today-dashboard.html">Today Dashboard</a></li><li><a href="../maps/project-map.html">Project Map</a></li><li><a href="open-questions.html">Open Questions</a></li><li><a href="recent-activity.html">Recent Activity</a></li></ul></section><header><p class="eyebrow">dashboard</p><h1>What&#x27;s Cooking</h1></header>
+      <div class="meta-row"><span class="badge">dashboard</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-04</span></div><div class="tag-pills"><span class="tag-pill">dashboard</span><span class="tag-pill">status</span><span class="tag-pill">in-motion</span></div><section class="related"><h2>Related</h2><ul><li><a href="shane-feed.html">Shane Feed</a></li><li><a href="../00_overview.html">Shanepedia Overview</a></li><li><a href="today-dashboard.html">Today Dashboard</a></li><li><a href="../maps/project-map.html">Project Map</a></li><li><a href="open-questions.html">Open Questions</a></li><li><a href="recent-activity.html">Recent Activity</a></li></ul></section><header><p class="eyebrow">dashboard</p><h1>What&#x27;s Cooking</h1></header>
 <p>A snapshot of what is actively in motion across Shane&#x27;s lanes. Read this when you want to know &quot;what is the state of the world right now&quot; without clicking through every project page.</p>
 <p>This is a personal status page, not a roadmap. If a section says &quot;open&quot; it means there&#x27;s nothing live there worth tracking yet — that is honest signal, not a placeholder.</p>
 <h2>Active builds</h2>
@@ -203,7 +210,7 @@
 <li><strong>Bitcoin merchants in Portland / Gresham / Happy Valley.</strong> BTCMap query path documented; Isla Bella verified. Gresham and Happy Valley still mostly TBD in the merchant table. See <a href="../topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a>.</li>
 <li><strong>El Salvador trip retro / future trip program.</strong> Open. The forward-looking program is documented in <a href="../ops/future-el-salvador-trip-program.html">Future El Salvador trip program</a> (coastal block, mountain/finca block, marine block). A retro of any past trip is not yet written as a wiki page.</li>
 <li><strong>Vending placement.</strong> No food cart pod has been pitched yet. Target list: Alberta Arts, SE Division, Mississippi Ave, Gresham downtown. Pitch script lives in <a href="../topics/vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a>.</li>
-<li><strong>Daily random spark loop.</strong> Operational contract written; wiring it into a Telegram cron is the next step. See <a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a>.</li>
+<li><strong>Daily random spark loop.</strong> Operational and wired: the daily page skill now creates one <code>wiki/daily/</code> page per day, rebuilds the site, and keeps the feed archive linked. See <a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a> and <a href="shane-feed.html">Shane Feed</a>.</li>
 </ul>
 <h2>Recent wins</h2>
 <ul>

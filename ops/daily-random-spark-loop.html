@@ -30,6 +30,7 @@
     <div class="header-controls">
       <nav class="header-nav">
         <a href="/shanepedia-site/index.html">Main page</a>
+        <a href="/shanepedia-site/dashboards/shane-feed.html">Feed</a>
         <a href="/shanepedia-site/dashboards/today-dashboard.html">Today</a>
         <a href="/shanepedia-site/browse/index.html">Browse</a>
         <a href="/shanepedia-site/ops/shanepedia-agent-runtime.html">Runtime</a>
@@ -60,7 +61,7 @@
 <li><a href="/shanepedia-site/log.html">Wiki Log</a></li>
 </ul></details>
 <details class="nav-group" data-group="dashboards">
-<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">8</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Dashboards</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/dashboards/founder-dashboard.html">Founder Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
@@ -68,6 +69,7 @@
 <li><a href="/shanepedia-site/dashboards/projects-dashboard.html">Projects Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/public-offer-cards.html">Public Offer Cards</a></li>
 <li><a href="/shanepedia-site/dashboards/recent-activity.html">Recent Activity</a></li>
+<li><a href="/shanepedia-site/dashboards/shane-feed.html">Shane Feed</a></li>
 <li><a href="/shanepedia-site/dashboards/today-dashboard.html">Today Dashboard</a></li>
 <li><a href="/shanepedia-site/dashboards/whats-cooking.html">What&#x27;s Cooking</a></li>
 </ul></details>
@@ -182,6 +184,11 @@
 <li><a href="/shanepedia-site/sources/stayatbitcoinbeach_homepage.html">Stay at Bitcoin Beach homepage</a></li>
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
+<details class="nav-group" data-group="daily">
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
+<ul>
+<li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
+</ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
@@ -189,8 +196,9 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">ops</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">automation</span><span class="tag-pill">cron</span><span class="tag-pill">telegram</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../dashboards/public-offer-cards.html">Public Offer Cards</a></li><li><a href="../projects/shanepedia-public-site.html">Shanepedia Public Site</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li><li><a href="shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li></ul></section><header><p class="eyebrow">ops</p><h1>Daily Random Spark Loop</h1></header>
+      <div class="meta-row"><span class="badge">ops</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-04</span></div><div class="tag-pills"><span class="tag-pill">automation</span><span class="tag-pill">cron</span><span class="tag-pill">telegram</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../dashboards/public-offer-cards.html">Public Offer Cards</a></li><li><a href="../projects/shanepedia-public-site.html">Shanepedia Public Site</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li><li><a href="shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li></ul></section><header><p class="eyebrow">ops</p><h1>Daily Random Spark Loop</h1></header>
 <p>The random spark loop is a daily Telegram nudge that should mine Shanepedia itself, not generic web trivia.</p>
+<p>The sibling <code>Shanepedia Daily Page</code> cron now has the durable write-back job: one <code>wiki/daily/</code> page per day, linked from <a href="../dashboards/shane-feed.html">Shane Feed</a>, rebuilt into the local site, and published to the public artifact when changed.</p>
 <h2>Job</h2>
 <ul>
 <li><strong>Cron name:</strong> <code>Shanepedia Random Spark</code></li>
