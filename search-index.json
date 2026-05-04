@@ -1,7 +1,7 @@
 [
   {
     "title": "Shanepedia Overview",
-    "href": "/00_overview.html",
+    "href": "/shanepedia-site/00_overview.html",
     "path": "00_overview.md",
     "group": ".",
     "group_label": "Main",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Welcome to Shanepedia",
-    "href": "/00_welcome.html",
+    "href": "/shanepedia-site/00_welcome.html",
     "path": "00_welcome.md",
     "group": ".",
     "group_label": "Main",
@@ -36,7 +36,7 @@
   },
   {
     "title": "SCHEMA",
-    "href": "/SCHEMA.html",
+    "href": "/shanepedia-site/SCHEMA.html",
     "path": "SCHEMA.md",
     "group": ".",
     "group_label": "Main",
@@ -52,7 +52,7 @@
   },
   {
     "title": "Start Here",
-    "href": "/START_HERE.html",
+    "href": "/shanepedia-site/START_HERE.html",
     "path": "START_HERE.md",
     "group": ".",
     "group_label": "Main",
@@ -68,7 +68,7 @@
   },
   {
     "title": "Founder Dashboard",
-    "href": "/dashboards/founder-dashboard.html",
+    "href": "/shanepedia-site/dashboards/founder-dashboard.html",
     "path": "dashboards/founder-dashboard.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -87,7 +87,7 @@
   },
   {
     "title": "Open Loops Dashboard",
-    "href": "/dashboards/open-loops-dashboard.html",
+    "href": "/shanepedia-site/dashboards/open-loops-dashboard.html",
     "path": "dashboards/open-loops-dashboard.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -106,7 +106,7 @@
   },
   {
     "title": "Open Questions",
-    "href": "/dashboards/open-questions.html",
+    "href": "/shanepedia-site/dashboards/open-questions.html",
     "path": "dashboards/open-questions.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -126,7 +126,7 @@
   },
   {
     "title": "Projects Dashboard",
-    "href": "/dashboards/projects-dashboard.html",
+    "href": "/shanepedia-site/dashboards/projects-dashboard.html",
     "path": "dashboards/projects-dashboard.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -145,7 +145,7 @@
   },
   {
     "title": "Public Offer Cards",
-    "href": "/dashboards/public-offer-cards.html",
+    "href": "/shanepedia-site/dashboards/public-offer-cards.html",
     "path": "dashboards/public-offer-cards.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -166,7 +166,7 @@
   },
   {
     "title": "Recent Activity",
-    "href": "/dashboards/recent-activity.html",
+    "href": "/shanepedia-site/dashboards/recent-activity.html",
     "path": "dashboards/recent-activity.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -186,7 +186,7 @@
   },
   {
     "title": "Today Dashboard",
-    "href": "/dashboards/today-dashboard.html",
+    "href": "/shanepedia-site/dashboards/today-dashboard.html",
     "path": "dashboards/today-dashboard.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -206,7 +206,7 @@
   },
   {
     "title": "What's Cooking",
-    "href": "/dashboards/whats-cooking.html",
+    "href": "/shanepedia-site/dashboards/whats-cooking.html",
     "path": "dashboards/whats-cooking.md",
     "group": "dashboards",
     "group_label": "Dashboards",
@@ -226,7 +226,7 @@
   },
   {
     "title": "Cash for Clankers \u2014 GitHub Org",
-    "href": "/entities/cash-for-clankers.html",
+    "href": "/shanepedia-site/entities/cash-for-clankers.html",
     "path": "entities/cash-for-clankers.md",
     "group": "entities",
     "group_label": "Entities",
@@ -248,7 +248,7 @@
   },
   {
     "title": "El Zonte",
-    "href": "/entities/el-zonte.html",
+    "href": "/shanepedia-site/entities/el-zonte.html",
     "path": "entities/el-zonte.md",
     "group": "entities",
     "group_label": "Entities",
@@ -269,7 +269,7 @@
   },
   {
     "title": "Isla Bella (Portland)",
-    "href": "/entities/isla-bella-portland.html",
+    "href": "/shanepedia-site/entities/isla-bella-portland.html",
     "path": "entities/isla-bella-portland.md",
     "group": "entities",
     "group_label": "Entities",
@@ -285,7 +285,7 @@
   },
   {
     "title": "Los Cobanos",
-    "href": "/entities/los-cobanos.html",
+    "href": "/shanepedia-site/entities/los-cobanos.html",
     "path": "entities/los-cobanos.md",
     "group": "entities",
     "group_label": "Entities",
@@ -301,7 +301,7 @@
   },
   {
     "title": "OpenClaw",
-    "href": "/entities/openclaw.html",
+    "href": "/shanepedia-site/entities/openclaw.html",
     "path": "entities/openclaw.md",
     "group": "entities",
     "group_label": "Entities",
@@ -323,7 +323,7 @@
   },
   {
     "title": "OpenCluck \u2014 Chicken Coop IoT Monitor",
-    "href": "/entities/opencluck.html",
+    "href": "/shanepedia-site/entities/opencluck.html",
     "path": "entities/opencluck.md",
     "group": "entities",
     "group_label": "Entities",
@@ -347,7 +347,7 @@
   },
   {
     "title": "Portland / Gresham Home Base",
-    "href": "/entities/portland-gresham.html",
+    "href": "/shanepedia-site/entities/portland-gresham.html",
     "path": "entities/portland-gresham.md",
     "group": "entities",
     "group_label": "Entities",
@@ -363,7 +363,7 @@
   },
   {
     "title": "Punta Mango / Oriente Salvaje",
-    "href": "/entities/punta-mango.html",
+    "href": "/shanepedia-site/entities/punta-mango.html",
     "path": "entities/punta-mango.md",
     "group": "entities",
     "group_label": "Entities",
@@ -384,7 +384,7 @@
   },
   {
     "title": "Ruta de las Flores highlands",
-    "href": "/entities/ruta-de-las-flores-highlands.html",
+    "href": "/shanepedia-site/entities/ruta-de-las-flores-highlands.html",
     "path": "entities/ruta-de-las-flores-highlands.md",
     "group": "entities",
     "group_label": "Entities",
@@ -400,7 +400,7 @@
   },
   {
     "title": "Shane Neeley",
-    "href": "/entities/shane-neeley.html",
+    "href": "/shanepedia-site/entities/shane-neeley.html",
     "path": "entities/shane-neeley.md",
     "group": "entities",
     "group_label": "Entities",
@@ -416,7 +416,7 @@
   },
   {
     "title": "The Chickens",
-    "href": "/entities/the-chickens.html",
+    "href": "/shanepedia-site/entities/the-chickens.html",
     "path": "entities/the-chickens.md",
     "group": "entities",
     "group_label": "Entities",
@@ -441,7 +441,7 @@
   },
   {
     "title": "The Shanepedia Cron System",
-    "href": "/entities/the-shanepedia-cron-system.html",
+    "href": "/shanepedia-site/entities/the-shanepedia-cron-system.html",
     "path": "entities/the-shanepedia-cron-system.md",
     "group": "entities",
     "group_label": "Entities",
@@ -466,7 +466,7 @@
   },
   {
     "title": "Victor (Los Cobanos guide)",
-    "href": "/entities/victor-los-cobanos.html",
+    "href": "/shanepedia-site/entities/victor-los-cobanos.html",
     "path": "entities/victor-los-cobanos.md",
     "group": "entities",
     "group_label": "Entities",
@@ -487,7 +487,7 @@
   },
   {
     "title": "Wiki Log",
-    "href": "/log.html",
+    "href": "/shanepedia-site/log.html",
     "path": "log.md",
     "group": ".",
     "group_label": "Main",
@@ -503,7 +503,7 @@
   },
   {
     "title": "Founder Map",
-    "href": "/maps/founder-map.html",
+    "href": "/shanepedia-site/maps/founder-map.html",
     "path": "maps/founder-map.md",
     "group": "maps",
     "group_label": "Maps",
@@ -519,7 +519,7 @@
   },
   {
     "title": "Ops Map",
-    "href": "/maps/ops-map.html",
+    "href": "/shanepedia-site/maps/ops-map.html",
     "path": "maps/ops-map.md",
     "group": "maps",
     "group_label": "Maps",
@@ -535,7 +535,7 @@
   },
   {
     "title": "Project Map",
-    "href": "/maps/project-map.html",
+    "href": "/shanepedia-site/maps/project-map.html",
     "path": "maps/project-map.md",
     "group": "maps",
     "group_label": "Maps",
@@ -551,7 +551,7 @@
   },
   {
     "title": "Codex Obsidian LLM wiki loop",
-    "href": "/ops/codex-obsidian-llm-wiki-loop.html",
+    "href": "/shanepedia-site/ops/codex-obsidian-llm-wiki-loop.html",
     "path": "ops/codex-obsidian-llm-wiki-loop.md",
     "group": "ops",
     "group_label": "Ops",
@@ -572,7 +572,7 @@
   },
   {
     "title": "Daily Random Spark Loop",
-    "href": "/ops/daily-random-spark-loop.html",
+    "href": "/shanepedia-site/ops/daily-random-spark-loop.html",
     "path": "ops/daily-random-spark-loop.md",
     "group": "ops",
     "group_label": "Ops",
@@ -593,7 +593,7 @@
   },
   {
     "title": "ElSalKB automation status",
-    "href": "/ops/elsalkb-automation-status.html",
+    "href": "/shanepedia-site/ops/elsalkb-automation-status.html",
     "path": "ops/elsalkb-automation-status.md",
     "group": "ops",
     "group_label": "Ops",
@@ -609,7 +609,7 @@
   },
   {
     "title": "Family fun tracker",
-    "href": "/ops/family-fun-tracker.html",
+    "href": "/shanepedia-site/ops/family-fun-tracker.html",
     "path": "ops/family-fun-tracker.md",
     "group": "ops",
     "group_label": "Ops",
@@ -625,7 +625,7 @@
   },
   {
     "title": "Future El Salvador trip program",
-    "href": "/ops/future-el-salvador-trip-program.html",
+    "href": "/shanepedia-site/ops/future-el-salvador-trip-program.html",
     "path": "ops/future-el-salvador-trip-program.md",
     "group": "ops",
     "group_label": "Ops",
@@ -641,7 +641,7 @@
   },
   {
     "title": "Obsidian Workflow",
-    "href": "/ops/obsidian-workflow.html",
+    "href": "/shanepedia-site/ops/obsidian-workflow.html",
     "path": "ops/obsidian-workflow.md",
     "group": "ops",
     "group_label": "Ops",
@@ -657,7 +657,7 @@
   },
   {
     "title": "Photo ingest execution loop",
-    "href": "/ops/photo-ingest-execution-loop.html",
+    "href": "/shanepedia-site/ops/photo-ingest-execution-loop.html",
     "path": "ops/photo-ingest-execution-loop.md",
     "group": "ops",
     "group_label": "Ops",
@@ -673,7 +673,7 @@
   },
   {
     "title": "Shanepedia agent runtime",
-    "href": "/ops/shanepedia-agent-runtime.html",
+    "href": "/shanepedia-site/ops/shanepedia-agent-runtime.html",
     "path": "ops/shanepedia-agent-runtime.md",
     "group": "ops",
     "group_label": "Ops",
@@ -693,7 +693,7 @@
   },
   {
     "title": "Shanepedia founder portfolio system",
-    "href": "/ops/shanepedia-founder-portfolio-system.html",
+    "href": "/shanepedia-site/ops/shanepedia-founder-portfolio-system.html",
     "path": "ops/shanepedia-founder-portfolio-system.md",
     "group": "ops",
     "group_label": "Ops",
@@ -709,7 +709,7 @@
   },
   {
     "title": "Shanepedia research flywheel",
-    "href": "/ops/shanepedia-research-flywheel.html",
+    "href": "/shanepedia-site/ops/shanepedia-research-flywheel.html",
     "path": "ops/shanepedia-research-flywheel.md",
     "group": "ops",
     "group_label": "Ops",
@@ -725,7 +725,7 @@
   },
   {
     "title": "Shanepedia roadmap",
-    "href": "/ops/shanepedia-roadmap.html",
+    "href": "/shanepedia-site/ops/shanepedia-roadmap.html",
     "path": "ops/shanepedia-roadmap.md",
     "group": "ops",
     "group_label": "Ops",
@@ -745,7 +745,7 @@
   },
   {
     "title": "Source ingest pipeline",
-    "href": "/ops/source-ingest-pipeline.html",
+    "href": "/shanepedia-site/ops/source-ingest-pipeline.html",
     "path": "ops/source-ingest-pipeline.md",
     "group": "ops",
     "group_label": "Ops",
@@ -765,7 +765,7 @@
   },
   {
     "title": "Research and Synthesis Before Build",
-    "href": "/patterns/research-synthesis-before-build.html",
+    "href": "/shanepedia-site/patterns/research-synthesis-before-build.html",
     "path": "patterns/research-synthesis-before-build.md",
     "group": "patterns",
     "group_label": "Patterns",
@@ -781,7 +781,7 @@
   },
   {
     "title": "ElSalKB",
-    "href": "/projects/elsalkb.html",
+    "href": "/shanepedia-site/projects/elsalkb.html",
     "path": "projects/elsalkb.md",
     "group": "projects",
     "group_label": "Projects",
@@ -797,7 +797,7 @@
   },
   {
     "title": "Operator site rescue (first business)",
-    "href": "/projects/operator-site-rescue.html",
+    "href": "/shanepedia-site/projects/operator-site-rescue.html",
     "path": "projects/operator-site-rescue.md",
     "group": "projects",
     "group_label": "Projects",
@@ -813,7 +813,7 @@
   },
   {
     "title": "Shanepedia Public Site",
-    "href": "/projects/shanepedia-public-site.html",
+    "href": "/shanepedia-site/projects/shanepedia-public-site.html",
     "path": "projects/shanepedia-public-site.md",
     "group": "projects",
     "group_label": "Projects",
@@ -833,7 +833,7 @@
   },
   {
     "title": "Shanepedia Studio",
-    "href": "/projects/shanepedia-studio.html",
+    "href": "/shanepedia-site/projects/shanepedia-studio.html",
     "path": "projects/shanepedia-studio.md",
     "group": "projects",
     "group_label": "Projects",
@@ -853,7 +853,7 @@
   },
   {
     "title": "Gemini Shanepedia ideation 2026-04-05",
-    "href": "/sources/gemini_shanepedia_ideation_2026-04-05.html",
+    "href": "/shanepedia-site/sources/gemini_shanepedia_ideation_2026-04-05.html",
     "path": "sources/gemini_shanepedia_ideation_2026-04-05.md",
     "group": "sources",
     "group_label": "Sources",
@@ -869,7 +869,7 @@
   },
   {
     "title": "LLM wiki pattern 2026-04-10",
-    "href": "/sources/llm-wiki-pattern-2026-04-10.html",
+    "href": "/shanepedia-site/sources/llm-wiki-pattern-2026-04-10.html",
     "path": "sources/llm-wiki-pattern-2026-04-10.md",
     "group": "sources",
     "group_label": "Sources",
@@ -889,7 +889,7 @@
   },
   {
     "title": "Los Cobanos Tours site",
-    "href": "/sources/los-cobanos_tours_site.html",
+    "href": "/shanepedia-site/sources/los-cobanos_tours_site.html",
     "path": "sources/los-cobanos_tours_site.md",
     "group": "sources",
     "group_label": "Sources",
@@ -905,7 +905,7 @@
   },
   {
     "title": "Shane San Salvador trip corpus",
-    "href": "/sources/shane_san_salvador_trip_corpus.html",
+    "href": "/shanepedia-site/sources/shane_san_salvador_trip_corpus.html",
     "path": "sources/shane_san_salvador_trip_corpus.md",
     "group": "sources",
     "group_label": "Sources",
@@ -921,7 +921,7 @@
   },
   {
     "title": "ShaneNeeley.com and public profile",
-    "href": "/sources/shaneneeley_site.html",
+    "href": "/shanepedia-site/sources/shaneneeley_site.html",
     "path": "sources/shaneneeley_site.md",
     "group": "sources",
     "group_label": "Sources",
@@ -937,7 +937,7 @@
   },
   {
     "title": "Stay at Bitcoin Beach homepage",
-    "href": "/sources/stayatbitcoinbeach_homepage.html",
+    "href": "/shanepedia-site/sources/stayatbitcoinbeach_homepage.html",
     "path": "sources/stayatbitcoinbeach_homepage.md",
     "group": "sources",
     "group_label": "Sources",
@@ -953,7 +953,7 @@
   },
   {
     "title": "Telegram photo batches (2026-04-04)",
-    "href": "/sources/telegram_photo_batches_2026-04-04.html",
+    "href": "/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html",
     "path": "sources/telegram_photo_batches_2026-04-04.md",
     "group": "sources",
     "group_label": "Sources",
@@ -969,7 +969,7 @@
   },
   {
     "title": "Agent Leverage Stack \u2014 How Shane Actually Uses AI",
-    "href": "/topics/agent-leverage-stack.html",
+    "href": "/shanepedia-site/topics/agent-leverage-stack.html",
     "path": "topics/agent-leverage-stack.md",
     "group": "topics",
     "group_label": "Topics",
@@ -995,7 +995,7 @@
   },
   {
     "title": "Agent Personality Design",
-    "href": "/topics/agent-personality-design.html",
+    "href": "/shanepedia-site/topics/agent-personality-design.html",
     "path": "topics/agent-personality-design.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1019,7 +1019,7 @@
   },
   {
     "title": "Agentic business studio",
-    "href": "/topics/agentic-business-studio.html",
+    "href": "/shanepedia-site/topics/agentic-business-studio.html",
     "path": "topics/agentic-business-studio.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1039,7 +1039,7 @@
   },
   {
     "title": "Anti-Roadmap \u2014 Things Shane Should Not Build",
-    "href": "/topics/anti-roadmap.html",
+    "href": "/shanepedia-site/topics/anti-roadmap.html",
     "path": "topics/anti-roadmap.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1061,7 +1061,7 @@
   },
   {
     "title": "Backyard Chickens \u2014 Oregon Keeper Notes",
-    "href": "/topics/backyard-chickens-oregon.html",
+    "href": "/shanepedia-site/topics/backyard-chickens-oregon.html",
     "path": "topics/backyard-chickens-oregon.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1085,7 +1085,7 @@
   },
   {
     "title": "Bitcoin Circular Economy \u2014 News and Research Signals",
-    "href": "/topics/bitcoin-circular-economy-news.html",
+    "href": "/shanepedia-site/topics/bitcoin-circular-economy-news.html",
     "path": "topics/bitcoin-circular-economy-news.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1101,7 +1101,7 @@
   },
   {
     "title": "Bitcoin Circular Economy \u2014 Portland / Gresham / Happy Valley",
-    "href": "/topics/bitcoin-circular-economy-portland.html",
+    "href": "/shanepedia-site/topics/bitcoin-circular-economy-portland.html",
     "path": "topics/bitcoin-circular-economy-portland.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1126,7 +1126,7 @@
   },
   {
     "title": "Bitcoin commerce map",
-    "href": "/topics/bitcoin-commerce-map.html",
+    "href": "/shanepedia-site/topics/bitcoin-commerce-map.html",
     "path": "topics/bitcoin-commerce-map.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1142,7 +1142,7 @@
   },
   {
     "title": "Bitcoin Toy Store \u2014 Retail Concept",
-    "href": "/topics/bitcoin-toy-store.html",
+    "href": "/shanepedia-site/topics/bitcoin-toy-store.html",
     "path": "topics/bitcoin-toy-store.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1169,7 +1169,7 @@
   },
   {
     "title": "Bitcoin travel onboarding",
-    "href": "/topics/bitcoin-travel-onboarding.html",
+    "href": "/shanepedia-site/topics/bitcoin-travel-onboarding.html",
     "path": "topics/bitcoin-travel-onboarding.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1185,7 +1185,7 @@
   },
   {
     "title": "Bitcoin Vending Machine \u2014 Real Examples",
-    "href": "/topics/btc-vending-machine-examples.html",
+    "href": "/shanepedia-site/topics/btc-vending-machine-examples.html",
     "path": "topics/btc-vending-machine-examples.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1211,7 +1211,7 @@
   },
   {
     "title": "Coffee route agritourism products",
-    "href": "/topics/coffee-route-agritourism-products.html",
+    "href": "/shanepedia-site/topics/coffee-route-agritourism-products.html",
     "path": "topics/coffee-route-agritourism-products.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1227,7 +1227,7 @@
   },
   {
     "title": "Cron as Product \u2014 Push-Based AI Beats Pull-Based AI",
-    "href": "/topics/cron-as-product.html",
+    "href": "/shanepedia-site/topics/cron-as-product.html",
     "path": "topics/cron-as-product.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1252,7 +1252,7 @@
   },
   {
     "title": "Dual-audience offer design (public + operator)",
-    "href": "/topics/dual-audience-offer-design.html",
+    "href": "/shanepedia-site/topics/dual-audience-offer-design.html",
     "path": "topics/dual-audience-offer-design.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1268,7 +1268,7 @@
   },
   {
     "title": "El Salvador business idea lanes",
-    "href": "/topics/el-salvador-business-idea-lanes.html",
+    "href": "/shanepedia-site/topics/el-salvador-business-idea-lanes.html",
     "path": "topics/el-salvador-business-idea-lanes.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1284,7 +1284,7 @@
   },
   {
     "title": "El Salvador tourism landscape 2026",
-    "href": "/topics/el-salvador-tourism-landscape-2026.html",
+    "href": "/shanepedia-site/topics/el-salvador-tourism-landscape-2026.html",
     "path": "topics/el-salvador-tourism-landscape-2026.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1300,7 +1300,7 @@
   },
   {
     "title": "Founder archetypes and needs",
-    "href": "/topics/founder-archetypes-and-needs.html",
+    "href": "/shanepedia-site/topics/founder-archetypes-and-needs.html",
     "path": "topics/founder-archetypes-and-needs.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1321,7 +1321,7 @@
   },
   {
     "title": "Founder Pi Briefcase",
-    "href": "/topics/founder-pi-briefcase.html",
+    "href": "/shanepedia-site/topics/founder-pi-briefcase.html",
     "path": "topics/founder-pi-briefcase.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1342,7 +1342,7 @@
   },
   {
     "title": "Gresham Vending Ops \u2014 Running a Machine in East Portland",
-    "href": "/topics/gresham-vending-ops.html",
+    "href": "/shanepedia-site/topics/gresham-vending-ops.html",
     "path": "topics/gresham-vending-ops.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1366,7 +1366,7 @@
   },
   {
     "title": "Home Recipes",
-    "href": "/topics/home-recipes.html",
+    "href": "/shanepedia-site/topics/home-recipes.html",
     "path": "topics/home-recipes.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1382,7 +1382,7 @@
   },
   {
     "title": "Hot Sauce Vending Machine",
-    "href": "/topics/hot-sauce-vending-machine.html",
+    "href": "/shanepedia-site/topics/hot-sauce-vending-machine.html",
     "path": "topics/hot-sauce-vending-machine.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1406,7 +1406,7 @@
   },
   {
     "title": "Inspiration and aesthetic",
-    "href": "/topics/inspiration-aesthetic.html",
+    "href": "/shanepedia-site/topics/inspiration-aesthetic.html",
     "path": "topics/inspiration-aesthetic.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1427,7 +1427,7 @@
   },
   {
     "title": "Kids activities and places",
-    "href": "/topics/kids-activities-and-places.html",
+    "href": "/shanepedia-site/topics/kids-activities-and-places.html",
     "path": "topics/kids-activities-and-places.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1448,7 +1448,7 @@
   },
   {
     "title": "Kids Sats Toy Vending",
-    "href": "/topics/kids-sats-toy-vending.html",
+    "href": "/shanepedia-site/topics/kids-sats-toy-vending.html",
     "path": "topics/kids-sats-toy-vending.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1474,7 +1474,7 @@
   },
   {
     "title": "Lateral Bets \u2014 Hot Takes and Open Questions",
-    "href": "/topics/lateral-bets.html",
+    "href": "/shanepedia-site/topics/lateral-bets.html",
     "path": "topics/lateral-bets.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1496,7 +1496,7 @@
   },
   {
     "title": "LLM wiki pattern",
-    "href": "/topics/llm-wiki-pattern.html",
+    "href": "/shanepedia-site/topics/llm-wiki-pattern.html",
     "path": "topics/llm-wiki-pattern.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1516,7 +1516,7 @@
   },
   {
     "title": "Los Cobanos marine products",
-    "href": "/topics/los-cobanos-marine-products.html",
+    "href": "/shanepedia-site/topics/los-cobanos-marine-products.html",
     "path": "topics/los-cobanos-marine-products.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1532,7 +1532,7 @@
   },
   {
     "title": "Mac Agent Dev Stack",
-    "href": "/topics/mac-agent-dev-stack.html",
+    "href": "/shanepedia-site/topics/mac-agent-dev-stack.html",
     "path": "topics/mac-agent-dev-stack.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1548,7 +1548,7 @@
   },
   {
     "title": "Micro-site factory",
-    "href": "/topics/micro-site-factory.html",
+    "href": "/shanepedia-site/topics/micro-site-factory.html",
     "path": "topics/micro-site-factory.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1564,7 +1564,7 @@
   },
   {
     "title": "Niche experience products",
-    "href": "/topics/niche-experience-products.html",
+    "href": "/shanepedia-site/topics/niche-experience-products.html",
     "path": "topics/niche-experience-products.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1580,7 +1580,7 @@
   },
   {
     "title": "OpenClaw AI Gateway",
-    "href": "/topics/openclaw-ai-gateway.html",
+    "href": "/shanepedia-site/topics/openclaw-ai-gateway.html",
     "path": "topics/openclaw-ai-gateway.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1596,7 +1596,7 @@
   },
   {
     "title": "Operating rituals",
-    "href": "/topics/operating-rituals.html",
+    "href": "/shanepedia-site/topics/operating-rituals.html",
     "path": "topics/operating-rituals.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1617,7 +1617,7 @@
   },
   {
     "title": "Oregon Food Cart Pods \u2014 Operator's Read",
-    "href": "/topics/oregon-food-cart-pods.html",
+    "href": "/shanepedia-site/topics/oregon-food-cart-pods.html",
     "path": "topics/oregon-food-cart-pods.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1641,7 +1641,7 @@
   },
   {
     "title": "Shane design and UX taste",
-    "href": "/topics/shane-design-and-ux-taste.html",
+    "href": "/shanepedia-site/topics/shane-design-and-ux-taste.html",
     "path": "topics/shane-design-and-ux-taste.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1657,7 +1657,7 @@
   },
   {
     "title": "Shane founder operating principles",
-    "href": "/topics/shane-founder-operating-principles.html",
+    "href": "/shanepedia-site/topics/shane-founder-operating-principles.html",
     "path": "topics/shane-founder-operating-principles.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1673,7 +1673,7 @@
   },
   {
     "title": "Shane trip preferences",
-    "href": "/topics/shane-trip-preferences.html",
+    "href": "/shanepedia-site/topics/shane-trip-preferences.html",
     "path": "topics/shane-trip-preferences.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1689,7 +1689,7 @@
   },
   {
     "title": "The Shane Test",
-    "href": "/topics/the-shane-test.html",
+    "href": "/shanepedia-site/topics/the-shane-test.html",
     "path": "topics/the-shane-test.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1711,7 +1711,7 @@
   },
   {
     "title": "Vending Machine Location Pitch \u2014 Finding and Winning Placements",
-    "href": "/topics/vending-machine-location-pitch.html",
+    "href": "/shanepedia-site/topics/vending-machine-location-pitch.html",
     "path": "topics/vending-machine-location-pitch.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1737,7 +1737,7 @@
   },
   {
     "title": "Vending Machine Terminal Technology \u2014 Lightning + Credit Card",
-    "href": "/topics/vending-machine-terminal-tech.html",
+    "href": "/shanepedia-site/topics/vending-machine-terminal-tech.html",
     "path": "topics/vending-machine-terminal-tech.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1763,7 +1763,7 @@
   },
   {
     "title": "Vending Terminal Buyers Guide \u2014 Lightning QR Feasibility Matrix",
-    "href": "/topics/vending-terminal-buyers-guide.html",
+    "href": "/shanepedia-site/topics/vending-terminal-buyers-guide.html",
     "path": "topics/vending-terminal-buyers-guide.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1791,7 +1791,7 @@
   },
   {
     "title": "Voice and Style \u2014 How Shane Sounds",
-    "href": "/topics/voice-and-style.html",
+    "href": "/shanepedia-site/topics/voice-and-style.html",
     "path": "topics/voice-and-style.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1815,7 +1815,7 @@
   },
   {
     "title": "WhatsApp booking funnels",
-    "href": "/topics/whatsapp-booking-funnels.html",
+    "href": "/shanepedia-site/topics/whatsapp-booking-funnels.html",
     "path": "topics/whatsapp-booking-funnels.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1831,7 +1831,7 @@
   },
   {
     "title": "YouTube randomness to Shanepedia spark",
-    "href": "/topics/youtube-randomness-shanepedia-spark.html",
+    "href": "/shanepedia-site/topics/youtube-randomness-shanepedia-spark.html",
     "path": "topics/youtube-randomness-shanepedia-spark.md",
     "group": "topics",
     "group_label": "Topics",
@@ -1852,7 +1852,7 @@
   },
   {
     "title": "Memorial Day Weekend Oregon Coast Stays (2026)",
-    "href": "/travel/oregon-coast-memorial-day-2026-stays.html",
+    "href": "/shanepedia-site/travel/oregon-coast-memorial-day-2026-stays.html",
     "path": "travel/oregon-coast-memorial-day-2026-stays.md",
     "group": "travel",
     "group_label": "Travel",
