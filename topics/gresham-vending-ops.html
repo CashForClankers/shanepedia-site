@@ -81,7 +81,7 @@
 <li><a href="/shanepedia-site/maps/project-map.html">Project Map</a></li>
 </ul></details>
 <details class="nav-group" data-group="topics">
-<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">43</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Topics</h3><span class="badge">44</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li>
 <li><a href="/shanepedia-site/topics/agent-personality-design.html">Agent Personality Design</a></li>
@@ -116,6 +116,7 @@
 <li><a href="/shanepedia-site/topics/openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li>
 <li><a href="/shanepedia-site/topics/operating-rituals.html">Operating rituals</a></li>
 <li><a href="/shanepedia-site/topics/oregon-food-cart-pods.html">Oregon Food Cart Pods — Operator&#x27;s Read</a></li>
+<li><a href="/shanepedia-site/topics/oregon-vending-food-cart-permit-stack.html">Oregon vending and food cart permit stack</a></li>
 <li><a href="/shanepedia-site/topics/shane-design-and-ux-taste.html">Shane design and UX taste</a></li>
 <li><a href="/shanepedia-site/topics/shane-founder-operating-principles.html">Shane founder operating principles</a></li>
 <li><a href="/shanepedia-site/topics/shane-trip-preferences.html">Shane trip preferences</a></li>
@@ -196,19 +197,22 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">vending</span><span class="tag-pill">operations</span><span class="tag-pill">gresham</span><span class="tag-pill">portland</span><span class="tag-pill">food-cart-pod</span><span class="tag-pill">hot-sauce</span><span class="tag-pill">logistics</span></div><section class="related"><h2>Related</h2><ul><li><a href="hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li><li><a href="vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li><li><a href="vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li><li><a href="../entities/portland-gresham.html">Portland / Gresham Home Base</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Gresham Vending Ops — Running a Machine in East Portland</h1></header>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-04</span></div><div class="tag-pills"><span class="tag-pill">vending</span><span class="tag-pill">operations</span><span class="tag-pill">gresham</span><span class="tag-pill">portland</span><span class="tag-pill">food-cart-pod</span><span class="tag-pill">hot-sauce</span><span class="tag-pill">logistics</span></div><section class="related"><h2>Related</h2><ul><li><a href="hot-sauce-vending-machine.html">Hot Sauce Vending Machine</a></li><li><a href="vending-machine-terminal-tech.html">Vending Machine Terminal Technology — Lightning + Credit Card</a></li><li><a href="vending-machine-location-pitch.html">Vending Machine Location Pitch — Finding and Winning Placements</a></li><li><a href="oregon-vending-food-cart-permit-stack.html">Oregon vending and food cart permit stack</a></li><li><a href="../entities/portland-gresham.html">Portland / Gresham Home Base</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Gresham Vending Ops — Running a Machine in East Portland</h1></header>
 <p>The operational layer for Shane&#x27;s vending machine work in the Portland/Gresham market. The concept and hardware live in <code>[[../topics/hot-sauce-vending-machine.md]]</code>. This page is about running the machine: stocking, location selection, terminal reliability, and the seasonal and logistical realities of east Portland outdoor ops.</p>
 <h2>Product ops: hot sauce</h2>
 <p>Hot sauce is one of the cleanest vending products from an operations standpoint:</p>
 <ul>
 <li><strong>Shelf stable.</strong> No refrigeration needed. A properly sealed artisan hot sauce has a shelf life of 12–24 months. Spoilage risk is essentially zero compared to any food cart product.</li>
-<li><strong>No regulatory complexity.</strong> Pre-packaged, shelf-stable food sold from a machine does not require a food handler permit or a commercial kitchen in Oregon. (Verify with Multnomah County Environmental Health before deploying — rules shift.)</li>
+<li><strong>Lower regulatory complexity, not zero.</strong> Pre-packaged, shelf-stable hot sauce should be much simpler than prepared food, but Oregon vending rules may still care about licensing, storage, warehouse/commissary details, and host-site context. Verify before buying hardware. See <a href="oregon-vending-food-cart-permit-stack.html">Oregon vending and food cart permit stack</a>.</li>
 <li><strong>Small and stackable.</strong> A 5 oz bottle fits standard snack machine coils. No custom machine modification required for basic placement.</li>
 <li><strong>Impulse price point.</strong> $10–14 is the sweet spot — high enough to cover margins, low enough that a food-curious person at a cart pod doesn&#x27;t think twice.</li>
 </ul>
 <p><strong>Restock cadence:</strong> At 20–30 bottles/week (optimistic for a single machine at one pod), a full machine load (~50–80 bottles depending on coil configuration) lasts 2–4 weeks. Weekly restocking gives a consistent touchpoint with the location operator and lets Shane catch jams and terminal issues before they compound.</p>
 <h2>Food cart pod selection — east Portland and Gresham</h2>
 <p>Portland food cart pods vary significantly in foot traffic, clientele, and operator dynamics. Not all pods are equal for a vending deployment.</p>
+<h2>Permit-first ops note</h2>
+<p>The 2026-05-04 research pass found the real placement risk: not whether a pod likes the machine, but whether the host context turns the machine into a county/city permitting question. Portland&#x27;s own food cart guidance routes operators through zoning, fire, health, business registration, and utility checks. Washington County&#x27;s vending machine licensing language asks about warehouses/commissaries, machine storage/repair locations, product form, and machine counts.</p>
+<p>Practical implication: before buying a machine, send Multnomah County Environmental Health the exact sealed-hot-sauce scenario and ask which vending, warehouse, commissary, or plan-review rules apply. Then make that answer part of the food cart pod pitch.</p>
 <p><strong>What makes a pod work:</strong></p>
 <p>| Factor | What to look for | |---|---| | Foot traffic | Lunch + dinner + weekend peaks; not just weekday lunch | | Pod size | 8–20 carts is the sweet spot — big enough for real traffic, small enough to matter to the operator | | Audience | Food-curious, willing to try new things; not just fast-lunch workers | | Operator relationship | Single operator or small partnership; easier to negotiate than corporate-managed sites | | Power access | Outdoor outlet or permission to run an extension; needed for the terminal | | Covered or sheltered | Critical for winter; an exposed outdoor pod loses traffic in November–March |</p>
 <p><strong>East Portland and Gresham pod landscape:</strong></p>
