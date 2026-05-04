@@ -761,6 +761,10 @@ details.nav-group[open] > summary .nav-chevron { transform: rotate(90deg); }
   --section-accent: var(--accent-sky);
   --section-tint: var(--sky-wash);
 }
+.home-section[data-home-section="daily"] {
+  --section-accent: var(--accent-teal);
+  --section-tint: var(--teal-wash);
+}
 .home-section[data-home-section="recent"] {
   --section-accent: var(--accent);
   --section-tint: var(--accent-wash);
