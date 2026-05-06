@@ -13,7 +13,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Welcome to Shanepedia",
@@ -32,7 +33,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "SCHEMA",
@@ -48,7 +50,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Start Here",
@@ -64,7 +67,29 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "",
-    "type": "guide"
+    "type": "guide",
+    "youtube_url": ""
+  },
+  {
+    "title": "Shanepedia Daily Feed - 2026-05-03",
+    "href": "/shanepedia-site/daily/2026-05-03-shanepedia-feed.html",
+    "path": "daily/2026-05-03-shanepedia-feed.md",
+    "group": "daily",
+    "group_label": "Daily",
+    "summary": "Added dashboards/shane-feed.md as the new open-first feed surface, added `scripts/wiki/create_daily_feed_page.py` so the Shanepedia Daily Page cron can create o",
+    "text": "Shanepedia Daily Feed - 2026-05-03 This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message. Open this first ../dashboards/shane-feed.md - the stable front door for what matters now. ../dashboards/whats-cooking.md - active builds, stuck items, and the next thing to ship. ../dashboards/recent-activity.md - reverse-chronological movement from the wiki log. Work surfaced today **2026-05-04 - refine: Shane Feed + daily page cron contract.** Added dashboards/shane-feed.md as the new open-first feed surface, added scripts/wiki/create_daily_feed_page.py so the Shanepedia Daily Page cron can create one durable wiki/daily/ page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site. **2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.** Fixed orphans (entities/the-chickens.md, topics/inspiration-aesthetic.md, topics/voice-and-style.md) by adding inbound links from entities/opencluck.md, topics/backyard-chickens-oregon.md, topics/shane-design-and-ux-taste.md, and topics/agent-personality-design.md. Added 3 new pages: topics/agent-leverage-stack.md (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real openclaw.json and ~/.openclaw/skills/ contents), topics/cron-as-product.md (~800w argument for push-based AI), and entities/the-shanepedia-cron-system.md (~700w doc of the 4 active Shanepedia cron jobs from ~/.openclaw/cron/jobs.json). Updated 00_welcome.md with a \"Recently added\" section. **2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.** Expanded 5 thinnest non-stub pages past 500 words each: entities/punta-mango.md (146->704), entities/el-zonte.md (151->737), entities/victor-los-cobanos.md (166->718), topics/kids-activities-and-places.md (217->831), topics/founder-archetypes-and-needs.md (221->931); added 3 new pages adding the personal/relationship layer: topics/operating-rituals.md (live-cron weekly cadence), topics/inspiration-aesthetic.md (taste profile + Shanepedia palette/type stack from build_site.py), entities/openclaw.md (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use). **2026-05-03 - expand: personality, voice, and the chickens - Shane Test, anti-roadmap, voice guide, and the flock.** Added wiki/topics/the-shane-test.md (six-question fit checklist + decision rules + worked examples), wiki/topics/anti-roadmap.md (nine things Shane should not build, each with a \"do this instead\" pointer), wiki/topics/voice-and-style.md (canonical voice reference: openers, rhythm, agreement/disagreement, banned phrases), and wiki/entities/the-chickens.md (the 8 hens get their own entity page - proof users for OpenCluck, anchor for ground truth). Cron work to notice **ElSalKB autoresearch** (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Parent-owned lane loop ran and wrote a log. Random page to consider updating *Backyard Chickens - Oregon Keeper Notes.** Practical reference for keeping 8 egg-laying hens in the Portland/Gresham area on borrowed farmland. This covers what actually matters for a small flock in the Source hint: topics/backyard-chickens-oregon.md Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored? Pages that may need attention ../topics/agentic-business-studio.md - Agentic business studio (23 days stale) ../topics/llm-wiki-pattern.md - LLM wiki pattern (23 days stale) ../sources/llm-wiki-pattern-2026-04-10.md - LLM wiki pattern 2026-04-10 (23 days stale) YouTube Spark *Public YouTube rabbit-hole spark.** Pick one public maker, vending, small-business, Bitcoin education, or travel-operator video and ask which Shanepedia page it should improve. Query/Channel hint: topics/youtube-randomness-shanepedia-spark.md Use ../topics/youtube-randomness-shanepedia-spark.md to formalize this if the idea is worth keeping.",
+    "tags": [
+      "daily-feed",
+      "cron",
+      "shanepedia"
+    ],
+    "lane": "",
+    "created": "2026-05-03",
+    "last_updated": "2026-05-03",
+    "surface_date": "2026-05-03",
+    "status": "active",
+    "type": "daily",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia Daily Feed - 2026-05-04",
@@ -72,8 +97,8 @@
     "path": "daily/2026-05-04-shanepedia-feed.md",
     "group": "daily",
     "group_label": "Daily",
-    "summary": "This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only s",
-    "text": "Shanepedia Daily Feed - 2026-05-04 This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message. Open this first ../dashboards/shane-feed.md - the stable front door for what matters now. ../dashboards/whats-cooking.md - active builds, stuck items, and the next thing to ship. ../dashboards/recent-activity.md - reverse-chronological movement from the wiki log. Work surfaced today **2026-05-04 - refine: Shane Feed + daily page cron contract.** Added dashboards/shane-feed.md as the new open-first feed surface, added scripts/wiki/create_daily_feed_page.py so the Shanepedia Daily Page cron can create one durable wiki/daily/ page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site. **2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.** Fixed orphans (entities/the-chickens.md, topics/inspiration-aesthetic.md, topics/voice-and-style.md) by adding inbound links from entities/opencluck.md, topics/backyard-chickens-oregon.md, topics/shane-design-and-ux-taste.md, and topics/agent-personality-design.md. Added 3 new pages: topics/agent-leverage-stack.md (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real openclaw.json and ~/.openclaw/skills/ contents), topics/cron-as-product.md (~800w argument for push-based AI), and entities/the-shanepedia-cron-system.md (~700w doc of the 4 active Shanepedia cron jobs from ~/.openclaw/cron/jobs.json). Updated 00_welcome.md with a \"Recently added\" section. **2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.** Expanded 5 thinnest non-stub pages past 500 words each: entities/punta-mango.md (146->704), entities/el-zonte.md (151->737), entities/victor-los-cobanos.md (166->718), topics/kids-activities-and-places.md (217->831), topics/founder-archetypes-and-needs.md (221->931); added 3 new pages adding the personal/relationship layer: topics/operating-rituals.md (live-cron weekly cadence), topics/inspiration-aesthetic.md (taste profile + Shanepedia palette/type stack from build_site.py), entities/openclaw.md (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use). **2026-05-03 - expand: personality, voice, and the chickens - Shane Test, anti-roadmap, voice guide, and the flock.** Added wiki/topics/the-shane-test.md (six-question fit checklist + decision rules + worked examples), wiki/topics/anti-roadmap.md (nine things Shane should not build, each with a \"do this instead\" pointer), wiki/topics/voice-and-style.md (canonical voice reference: openers, rhythm, agreement/disagreement, banned phrases), and wiki/entities/the-chickens.md (the 8 hens get their own entity page - proof users for OpenCluck, anchor for ground truth). Cron work to notice **ElSalKB autoresearch** (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Parent-owned lane loop ran and wrote a log. Random page to consider updating *Family fun tracker.** active Source hint: ops/family-fun-tracker.md Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored? Pages that may need attention ../topics/agentic-business-studio.md - Agentic business studio (23 days stale) ../topics/llm-wiki-pattern.md - LLM wiki pattern (23 days stale) ../sources/llm-wiki-pattern-2026-04-10.md - LLM wiki pattern 2026-04-10 (23 days stale) YouTube randomness prompt Use ../topics/youtube-randomness-shanepedia-spark.md to find one public YouTube idea via Gemini, then connect it to an existing page or create a small new page if the idea is worth keeping. Gemini restart result Gemini was tried after restart, but it still returned capacity errors. The bounded fallback produced a useful public-safe direction: vending and food cart permit friction. That became ../topics/oregon-vending-food-cart-permit-stack.md, with official Portland, Washington County, and Oregon food-safety sources. Today's question: before buying the hot sauce machine, should Shane ask Multnomah County Environmental Health about the sealed-food vending / storage scenario?",
+    "summary": "Added dashboards/shane-feed.md as the new open-first feed surface, added `scripts/wiki/create_daily_feed_page.py` so the Shanepedia Daily Page cron can create o",
+    "text": "Shanepedia Daily Feed - 2026-05-04 This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message. Open this first ../dashboards/shane-feed.md - the stable front door for what matters now. ../dashboards/whats-cooking.md - active builds, stuck items, and the next thing to ship. ../dashboards/recent-activity.md - reverse-chronological movement from the wiki log. Work surfaced today **2026-05-04 - refine: Shane Feed + daily page cron contract.** Added dashboards/shane-feed.md as the new open-first feed surface, added scripts/wiki/create_daily_feed_page.py so the Shanepedia Daily Page cron can create one durable wiki/daily/ page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site. **2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.** Fixed orphans (entities/the-chickens.md, topics/inspiration-aesthetic.md, topics/voice-and-style.md) by adding inbound links from entities/opencluck.md, topics/backyard-chickens-oregon.md, topics/shane-design-and-ux-taste.md, and topics/agent-personality-design.md. Added 3 new pages: topics/agent-leverage-stack.md (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real openclaw.json and ~/.openclaw/skills/ contents), topics/cron-as-product.md (~800w argument for push-based AI), and entities/the-shanepedia-cron-system.md (~700w doc of the 4 active Shanepedia cron jobs from ~/.openclaw/cron/jobs.json). Updated 00_welcome.md with a \"Recently added\" section. **2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.** Expanded 5 thinnest non-stub pages past 500 words each: entities/punta-mango.md (146->704), entities/el-zonte.md (151->737), entities/victor-los-cobanos.md (166->718), topics/kids-activities-and-places.md (217->831), topics/founder-archetypes-and-needs.md (221->931); added 3 new pages adding the personal/relationship layer: topics/operating-rituals.md (live-cron weekly cadence), topics/inspiration-aesthetic.md (taste profile + Shanepedia palette/type stack from build_site.py), entities/openclaw.md (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use). **2026-05-03 - expand: personality, voice, and the chickens - Shane Test, anti-roadmap, voice guide, and the flock.** Added wiki/topics/the-shane-test.md (six-question fit checklist + decision rules + worked examples), wiki/topics/anti-roadmap.md (nine things Shane should not build, each with a \"do this instead\" pointer), wiki/topics/voice-and-style.md (canonical voice reference: openers, rhythm, agreement/disagreement, banned phrases), and wiki/entities/the-chickens.md (the 8 hens get their own entity page - proof users for OpenCluck, anchor for ground truth). Cron work to notice **ElSalKB autoresearch** (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Parent-owned lane loop ran and wrote a log. Random page to consider updating *Founder archetypes and needs.** If Shanepedia is going to help launch businesses agentically - not just describe them - it needs a working model of who those businesses are for. The useful seg Source hint: topics/founder-archetypes-and-needs.md Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored? Pages that may need attention ../topics/agentic-business-studio.md - Agentic business studio (24 days stale) ../topics/llm-wiki-pattern.md - LLM wiki pattern (24 days stale) ../sources/llm-wiki-pattern-2026-04-10.md - LLM wiki pattern 2026-04-10 (24 days stale) YouTube Sparks The automatic hoop always goes in A concrete robotics build that can sharpen Shanepedia notes about field demos, practical hardware, and explaining weird tools clearly. YouTube URL: https://www.youtube.com/watch?v=FycDx69px8U Query/Channel hint: maker robotics / Stuff Made Here How he turned a faceless channel into a full time business in 1 year A content-ops prompt for turning public artifacts into repeatable publishing systems without making the wiki feel like a generic content calendar. YouTube URL: https://www.youtube.com/watch?v=y7yXOTVrTRQ Query/Channel hint: content operations / YouTube business I bought a vending machine business A grounded vending prompt: location, maintenance, inventory, payment rails, and the gap between spreadsheet fantasy and operator reality. YouTube URL: https://www.youtube.com/watch?v=67815QLpwLA Query/Channel hint: vending machines / small business teardown Use ../topics/youtube-randomness-shanepedia-spark.md to formalize any one of these if the idea is worth keeping.",
     "tags": [
       "daily-feed",
       "cron",
@@ -84,7 +109,50 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "daily"
+    "type": "daily",
+    "youtube_url": "https://www.youtube.com/watch?v=FycDx69px8U"
+  },
+  {
+    "title": "Shanepedia Daily Feed - 2026-05-05",
+    "href": "/shanepedia-site/daily/2026-05-05-shanepedia-feed.html",
+    "path": "daily/2026-05-05-shanepedia-feed.md",
+    "group": "daily",
+    "group_label": "Daily",
+    "summary": "Added dashboards/shane-feed.md as the new open-first feed surface, added `scripts/wiki/create_daily_feed_page.py` so the Shanepedia Daily Page cron can create o",
+    "text": "Shanepedia Daily Feed - 2026-05-05 This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message. Open this first ../dashboards/shane-feed.md - the stable front door for what matters now. ../dashboards/whats-cooking.md - active builds, stuck items, and the next thing to ship. ../dashboards/recent-activity.md - reverse-chronological movement from the wiki log. Work surfaced today **2026-05-04 - refine: Shane Feed + daily page cron contract.** Added dashboards/shane-feed.md as the new open-first feed surface, added scripts/wiki/create_daily_feed_page.py so the Shanepedia Daily Page cron can create one durable wiki/daily/ page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site. **2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.** Fixed orphans (entities/the-chickens.md, topics/inspiration-aesthetic.md, topics/voice-and-style.md) by adding inbound links from entities/opencluck.md, topics/backyard-chickens-oregon.md, topics/shane-design-and-ux-taste.md, and topics/agent-personality-design.md. Added 3 new pages: topics/agent-leverage-stack.md (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real openclaw.json and ~/.openclaw/skills/ contents), topics/cron-as-product.md (~800w argument for push-based AI), and entities/the-shanepedia-cron-system.md (~700w doc of the 4 active Shanepedia cron jobs from ~/.openclaw/cron/jobs.json). Updated 00_welcome.md with a \"Recently added\" section. **2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.** Expanded 5 thinnest non-stub pages past 500 words each: entities/punta-mango.md (146->704), entities/el-zonte.md (151->737), entities/victor-los-cobanos.md (166->718), topics/kids-activities-and-places.md (217->831), topics/founder-archetypes-and-needs.md (221->931); added 3 new pages adding the personal/relationship layer: topics/operating-rituals.md (live-cron weekly cadence), topics/inspiration-aesthetic.md (taste profile + Shanepedia palette/type stack from build_site.py), entities/openclaw.md (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use). **2026-05-03 - expand: personality, voice, and the chickens - Shane Test, anti-roadmap, voice guide, and the flock.** Added wiki/topics/the-shane-test.md (six-question fit checklist + decision rules + worked examples), wiki/topics/anti-roadmap.md (nine things Shane should not build, each with a \"do this instead\" pointer), wiki/topics/voice-and-style.md (canonical voice reference: openers, rhythm, agreement/disagreement, banned phrases), and wiki/entities/the-chickens.md (the 8 hens get their own entity page - proof users for OpenCluck, anchor for ground truth). Cron work to notice **ElSalKB autoresearch** (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Parent-owned lane loop ran and wrote a log. Random page to consider updating *Gresham Vending Ops - Running a Machine in East Portland.** The operational layer for Shane's vending machine work in the Portland/Gresham market. The concept and hardware live in ../topics/hot-sauce-vending-machine.m Source hint: topics/gresham-vending-ops.md Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored? Pages that may need attention [[../topics/agentic-business-studio.md - Agentic business studio (25 days stale) ../topics/llm-wiki-pattern.md - LLM wiki pattern (25 days stale) ../sources/llm-wiki-pattern-2026-04-10.md - LLM wiki pattern 2026-04-10 (25 days stale) YouTube Sparks The Bitcoin Beach Whitepaper Good source fuel for local-merchant, Bitcoin adoption, and El Salvador pages because it turns a big idea into repeatable operating steps. YouTube URL: https://www.youtube.com/watch?v=uQyalVOkkEs Query/Channel hint: bitcoin circular economy / El Salvador Digital Transformation: Too Many Tools, Not Enough Results A useful operator prompt for OpenClaw and Shanepedia: which tools reduce work, which just create another queue, and what should be automated next. YouTube URL: https://www.youtube.com/watch?v=S0LBKpbtsmk Query/Channel hint: small business operator systems God Bless Bitcoin | Full Movie Useful raw material for the Bitcoin education lane: money narrative, public-safe framing, and what belongs in a non-private explainer page. YouTube URL: https://www.youtube.com/watch?v=oksraL7wN6Q Query/Channel hint: bitcoin education / public documentary` Use ../topics/youtube-randomness-shanepedia-spark.md to formalize any one of these if the idea is worth keeping.",
+    "tags": [
+      "daily-feed",
+      "cron",
+      "shanepedia"
+    ],
+    "lane": "",
+    "created": "2026-05-05",
+    "last_updated": "2026-05-05",
+    "surface_date": "2026-05-05",
+    "status": "active",
+    "type": "daily",
+    "youtube_url": "https://www.youtube.com/watch?v=uQyalVOkkEs"
+  },
+  {
+    "title": "Shanepedia Daily Feed - 2026-05-06",
+    "href": "/shanepedia-site/daily/2026-05-06-shanepedia-feed.html",
+    "path": "daily/2026-05-06-shanepedia-feed.md",
+    "group": "daily",
+    "group_label": "Daily",
+    "summary": "Added dashboards/shane-feed.md as the new open-first feed surface, added `scripts/wiki/create_daily_feed_page.py` so the Shanepedia Daily Page cron can create o",
+    "text": "Shanepedia Daily Feed - 2026-05-06 This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message. Open this first ../dashboards/shane-feed.md - the stable front door for what matters now. ../dashboards/whats-cooking.md - active builds, stuck items, and the next thing to ship. ../dashboards/recent-activity.md - reverse-chronological movement from the wiki log. Work surfaced today **2026-05-04 - refine: Shane Feed + daily page cron contract.** Added dashboards/shane-feed.md as the new open-first feed surface, added scripts/wiki/create_daily_feed_page.py so the Shanepedia Daily Page cron can create one durable wiki/daily/ page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site. **2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.** Fixed orphans (entities/the-chickens.md, topics/inspiration-aesthetic.md, topics/voice-and-style.md) by adding inbound links from entities/opencluck.md, topics/backyard-chickens-oregon.md, topics/shane-design-and-ux-taste.md, and topics/agent-personality-design.md. Added 3 new pages: topics/agent-leverage-stack.md (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real openclaw.json and ~/.openclaw/skills/ contents), topics/cron-as-product.md (~800w argument for push-based AI), and entities/the-shanepedia-cron-system.md (~700w doc of the 4 active Shanepedia cron jobs from ~/.openclaw/cron/jobs.json). Updated 00_welcome.md with a \"Recently added\" section. **2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.** Expanded 5 thinnest non-stub pages past 500 words each: entities/punta-mango.md (146->704), entities/el-zonte.md (151->737), entities/victor-los-cobanos.md (166->718), topics/kids-activities-and-places.md (217->831), topics/founder-archetypes-and-needs.md (221->931); added 3 new pages adding the personal/relationship layer: topics/operating-rituals.md (live-cron weekly cadence), topics/inspiration-aesthetic.md (taste profile + Shanepedia palette/type stack from build_site.py), entities/openclaw.md (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use). **2026-05-03 - expand: personality, voice, and the chickens - Shane Test, anti-roadmap, voice guide, and the flock.** Added wiki/topics/the-shane-test.md (six-question fit checklist + decision rules + worked examples), wiki/topics/anti-roadmap.md (nine things Shane should not build, each with a \"do this instead\" pointer), wiki/topics/voice-and-style.md (canonical voice reference: openers, rhythm, agreement/disagreement, banned phrases), and wiki/entities/the-chickens.md (the 8 hens get their own entity page - proof users for OpenCluck, anchor for ground truth). Cron work to notice **ElSalKB autoresearch** (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7. **ElSalKB autoresearch** (2026-04-05): Parent-owned lane loop ran and wrote a log. Random page to consider updating *Shanepedia roadmap.** active Source hint: ops/shanepedia-roadmap.md Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored? Pages that may need attention ../topics/agentic-business-studio.md - Agentic business studio (26 days stale) ../topics/llm-wiki-pattern.md - LLM wiki pattern (26 days stale) ../sources/llm-wiki-pattern-2026-04-10.md - LLM wiki pattern 2026-04-10 (26 days stale) YouTube Sparks God Bless Bitcoin | Full Movie Useful raw material for the Bitcoin education lane: money narrative, public-safe framing, and what belongs in a non-private explainer page. YouTube URL: https://www.youtube.com/watch?v=oksraL7wN6Q Query/Channel hint: bitcoin education / public documentary The automatic hoop always goes in A concrete robotics build that can sharpen Shanepedia notes about field demos, practical hardware, and explaining weird tools clearly. YouTube URL: https://www.youtube.com/watch?v=FycDx69px8U Query/Channel hint: maker robotics / Stuff Made Here How he turned a faceless channel into a full time business in 1 year A content-ops prompt for turning public artifacts into repeatable publishing systems without making the wiki feel like a generic content calendar. YouTube URL: https://www.youtube.com/watch?v=y7yXOTVrTRQ Query/Channel hint: content operations / YouTube business Use ../topics/youtube-randomness-shanepedia-spark.md to formalize any one of these if the idea is worth keeping.",
+    "tags": [
+      "daily-feed",
+      "cron",
+      "shanepedia"
+    ],
+    "lane": "",
+    "created": "2026-05-06",
+    "last_updated": "2026-05-06",
+    "surface_date": "2026-05-06",
+    "status": "active",
+    "type": "daily",
+    "youtube_url": "https://www.youtube.com/watch?v=oksraL7wN6Q"
   },
   {
     "title": "Founder Dashboard",
@@ -103,7 +171,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Open Loops Dashboard",
@@ -122,7 +191,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Open Questions",
@@ -142,7 +212,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Projects Dashboard",
@@ -161,7 +232,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Public Offer Cards",
@@ -182,7 +254,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Recent Activity",
@@ -202,7 +275,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Shane Feed",
@@ -211,7 +285,7 @@
     "group": "dashboards",
     "group_label": "Dashboards",
     "summary": "This is the \"open first\" surface. It should answer three questions quickly: what is interesting right now, what moved today, and what should Shane be asked to u",
-    "text": "Shane Feed This is the \"open first\" surface. It should answer three questions quickly: what is interesting right now, what moved today, and what should Shane be asked to update next. Open now whats-cooking.md - the current state of the world: active builds, stuck items, recent wins, and the next thing to ship. recent-activity.md - what changed recently without reading the full log. public-offer-cards.md - public-safe ideas that can become posts, landing pages, client offers, or demos. ../topics/the-shane-test.md - the filter for whether something belongs in the system. ../topics/anti-roadmap.md - good ways to avoid wasting Shane time. Obviously relevant right now ../topics/gresham-vending-ops.md and ../topics/vending-machine-location-pitch.md - get one food cart pod handshake before buying hardware. ../topics/oregon-vending-food-cart-permit-stack.md - before buying the hot sauce machine, verify the sealed-food vending and storage rules with the county. ../entities/opencluck.md and ../topics/backyard-chickens-oregon.md - deploy the smallest chicken monitor before making it fancy. ../topics/agent-leverage-stack.md and ../topics/cron-as-product.md - make agents feel like useful daily infrastructure, not long chat transcripts. ../topics/youtube-randomness-shanepedia-spark.md - use public YouTube randomness as a spark, then write the durable part back to the wiki. What crons should add Every daily Shanepedia cron should leave one durable page behind. A Telegram note is useful, but the site should also grow by one small page each day: a daily feed page under wiki/daily/ a link from this dashboard's archive a top-of-homepage card in the generated New daily section rebuilt local site output rebuilt public artifact for GitHub Pages Daily page archive <!-- daily-feed:start --> ../daily/2026-05-04-shanepedia-feed.md - Shanepedia Daily Feed - 2026-05-04 <!-- daily-feed:end --> Better daily prompt shape The cron should not say \"here is a random page\" and stop. It should say: what page or idea surfaced why it is interesting now what changed today in the wiki or cron system one direct question: add to it, update it, productize it, or ignore it? Kill boring feed items If a card is generic, too long, or repeats yesterday, it should be demoted. The feed earns its place by being concrete: vending target, chicken sensor, Bitcoin merchant, public offer, travel operator, local family idea, or agent/tooling improvement.",
+    "text": "Shane Feed This is the \"open first\" surface. It should answer three questions quickly: what is interesting right now, what moved today, and what should Shane be asked to update next. Open now whats-cooking.md - the current state of the world: active builds, stuck items, recent wins, and the next thing to ship. recent-activity.md - what changed recently without reading the full log. public-offer-cards.md - public-safe ideas that can become posts, landing pages, client offers, or demos. ../topics/the-shane-test.md - the filter for whether something belongs in the system. ../topics/anti-roadmap.md - good ways to avoid wasting Shane time. Obviously relevant right now ../topics/gresham-vending-ops.md and ../topics/vending-machine-location-pitch.md - get one food cart pod handshake before buying hardware. ../topics/oregon-vending-food-cart-permit-stack.md - before buying the hot sauce machine, verify the sealed-food vending and storage rules with the county. ../entities/opencluck.md and ../topics/backyard-chickens-oregon.md - deploy the smallest chicken monitor before making it fancy. ../topics/agent-leverage-stack.md and ../topics/cron-as-product.md - make agents feel like useful daily infrastructure, not long chat transcripts. ../topics/youtube-randomness-shanepedia-spark.md - use public YouTube randomness as a spark, then write the durable part back to the wiki. What crons should add Every daily Shanepedia cron should leave one durable page behind. A Telegram note is useful, but the site should also grow by one small page each day: a daily feed page under wiki/daily/ a link from this dashboard's archive a top-of-homepage card in the generated New daily section rebuilt local site output rebuilt public artifact for GitHub Pages Daily page archive <!-- daily-feed:start --> ../daily/2026-05-06-shanepedia-feed.md - Shanepedia Daily Feed - 2026-05-06 ../daily/2026-05-05-shanepedia-feed.md - Shanepedia Daily Feed - 2026-05-05 ../daily/2026-05-04-shanepedia-feed.md - Shanepedia Daily Feed - 2026-05-04 ../daily/2026-05-03-shanepedia-feed.md - Shanepedia Daily Feed - 2026-05-03 <!-- daily-feed:end --> Better daily prompt shape The cron should not say \"here is a random page\" and stop. It should say: what page or idea surfaced why it is interesting now what changed today in the wiki or cron system one direct question: add to it, update it, productize it, or ignore it? Kill boring feed items If a card is generic, too long, or repeats yesterday, it should be demoted. The feed earns its place by being concrete: vending target, chicken sensor, Bitcoin merchant, public offer, travel operator, local family idea, or agent/tooling improvement.",
     "tags": [
       "feed",
       "dashboard",
@@ -222,7 +296,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Today Dashboard",
@@ -242,7 +317,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "What's Cooking",
@@ -262,7 +338,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "dashboard"
+    "type": "dashboard",
+    "youtube_url": ""
   },
   {
     "title": "Cash for Clankers \u2014 GitHub Org",
@@ -284,7 +361,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "entity"
+    "type": "entity",
+    "youtube_url": ""
   },
   {
     "title": "El Zonte",
@@ -305,7 +383,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "place"
+    "type": "place",
+    "youtube_url": ""
   },
   {
     "title": "Isla Bella (Portland)",
@@ -321,7 +400,8 @@
     "last_updated": "2026-04-26",
     "surface_date": "2026-04-26",
     "status": "",
-    "type": "place"
+    "type": "place",
+    "youtube_url": ""
   },
   {
     "title": "Los Cobanos",
@@ -337,7 +417,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "place"
+    "type": "place",
+    "youtube_url": ""
   },
   {
     "title": "OpenClaw",
@@ -359,7 +440,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "entity"
+    "type": "entity",
+    "youtube_url": ""
   },
   {
     "title": "OpenCluck \u2014 Chicken Coop IoT Monitor",
@@ -383,7 +465,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "research",
-    "type": "entity"
+    "type": "entity",
+    "youtube_url": ""
   },
   {
     "title": "Portland / Gresham Home Base",
@@ -399,7 +482,8 @@
     "last_updated": "2026-04-26",
     "surface_date": "2026-04-26",
     "status": "",
-    "type": "place"
+    "type": "place",
+    "youtube_url": ""
   },
   {
     "title": "Punta Mango / Oriente Salvaje",
@@ -420,7 +504,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "place"
+    "type": "place",
+    "youtube_url": ""
   },
   {
     "title": "Ruta de las Flores highlands",
@@ -436,7 +521,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "place"
+    "type": "place",
+    "youtube_url": ""
   },
   {
     "title": "Shane Neeley",
@@ -452,7 +538,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "person"
+    "type": "person",
+    "youtube_url": ""
   },
   {
     "title": "The Chickens",
@@ -477,7 +564,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "entity"
+    "type": "entity",
+    "youtube_url": ""
   },
   {
     "title": "The Shanepedia Cron System",
@@ -502,7 +590,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "entity"
+    "type": "entity",
+    "youtube_url": ""
   },
   {
     "title": "Victor (Los Cobanos guide)",
@@ -523,7 +612,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "person"
+    "type": "person",
+    "youtube_url": ""
   },
   {
     "title": "Wiki Log",
@@ -539,7 +629,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "log"
+    "type": "log",
+    "youtube_url": ""
   },
   {
     "title": "Founder Map",
@@ -555,7 +646,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "",
-    "type": "map"
+    "type": "map",
+    "youtube_url": ""
   },
   {
     "title": "Ops Map",
@@ -571,7 +663,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "",
-    "type": "map"
+    "type": "map",
+    "youtube_url": ""
   },
   {
     "title": "Project Map",
@@ -587,7 +680,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "",
-    "type": "map"
+    "type": "map",
+    "youtube_url": ""
   },
   {
     "title": "Codex Obsidian LLM wiki loop",
@@ -608,7 +702,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Daily Random Spark Loop",
@@ -629,7 +724,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "ElSalKB automation status",
@@ -645,7 +741,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Family fun tracker",
@@ -661,7 +758,8 @@
     "last_updated": "2026-04-14",
     "surface_date": "2026-04-14",
     "status": "active",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Future El Salvador trip program",
@@ -677,7 +775,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Obsidian Workflow",
@@ -693,7 +792,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Photo ingest execution loop",
@@ -709,7 +809,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia agent runtime",
@@ -729,7 +830,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia founder portfolio system",
@@ -745,7 +847,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia research flywheel",
@@ -761,7 +864,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia roadmap",
@@ -781,7 +885,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Source ingest pipeline",
@@ -801,7 +906,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "ops"
+    "type": "ops",
+    "youtube_url": ""
   },
   {
     "title": "Research and Synthesis Before Build",
@@ -817,7 +923,8 @@
     "last_updated": "2026-04-26",
     "surface_date": "2026-04-26",
     "status": "",
-    "type": "pattern"
+    "type": "pattern",
+    "youtube_url": ""
   },
   {
     "title": "ElSalKB",
@@ -833,7 +940,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "project"
+    "type": "project",
+    "youtube_url": ""
   },
   {
     "title": "Operator site rescue (first business)",
@@ -849,7 +957,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "project"
+    "type": "project",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia Public Site",
@@ -869,7 +978,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "project"
+    "type": "project",
+    "youtube_url": ""
   },
   {
     "title": "Shanepedia Studio",
@@ -889,7 +999,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "project"
+    "type": "project",
+    "youtube_url": ""
   },
   {
     "title": "Gemini Shanepedia ideation 2026-04-05",
@@ -905,7 +1016,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "source"
+    "type": "source",
+    "youtube_url": ""
   },
   {
     "title": "LLM wiki pattern 2026-04-10",
@@ -925,7 +1037,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "source"
+    "type": "source",
+    "youtube_url": ""
   },
   {
     "title": "Los Cobanos Tours site",
@@ -941,7 +1054,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "source-summary"
+    "type": "source-summary",
+    "youtube_url": ""
   },
   {
     "title": "Shane San Salvador trip corpus",
@@ -957,7 +1071,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "source-summary"
+    "type": "source-summary",
+    "youtube_url": ""
   },
   {
     "title": "ShaneNeeley.com and public profile",
@@ -973,7 +1088,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "source-summary"
+    "type": "source-summary",
+    "youtube_url": ""
   },
   {
     "title": "Stay at Bitcoin Beach homepage",
@@ -989,7 +1105,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "source-summary"
+    "type": "source-summary",
+    "youtube_url": ""
   },
   {
     "title": "Telegram photo batches (2026-04-04)",
@@ -1005,7 +1122,8 @@
     "last_updated": "",
     "surface_date": "",
     "status": "",
-    "type": "source-summary"
+    "type": "source-summary",
+    "youtube_url": ""
   },
   {
     "title": "Agent Leverage Stack \u2014 How Shane Actually Uses AI",
@@ -1031,7 +1149,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Agent Personality Design",
@@ -1055,7 +1174,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Agentic business studio",
@@ -1075,7 +1195,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Anti-Roadmap \u2014 Things Shane Should Not Build",
@@ -1097,7 +1218,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Backyard Chickens \u2014 Oregon Keeper Notes",
@@ -1121,7 +1243,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Bitcoin Circular Economy \u2014 News and Research Signals",
@@ -1137,7 +1260,8 @@
     "last_updated": "2026-04-26",
     "surface_date": "2026-04-26",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Bitcoin Circular Economy \u2014 Portland / Gresham / Happy Valley",
@@ -1162,7 +1286,8 @@
     "last_updated": "",
     "surface_date": "2026-04-18",
     "status": "active-research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Bitcoin commerce map",
@@ -1178,7 +1303,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Bitcoin Toy Store \u2014 Retail Concept",
@@ -1205,7 +1331,8 @@
     "last_updated": "",
     "surface_date": "2026-04-19",
     "status": "active-research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Bitcoin travel onboarding",
@@ -1221,7 +1348,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Bitcoin Vending Machine \u2014 Real Examples",
@@ -1247,7 +1375,8 @@
     "last_updated": "",
     "surface_date": "2026-04-19",
     "status": "active-research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Coffee route agritourism products",
@@ -1263,7 +1392,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Cron as Product \u2014 Push-Based AI Beats Pull-Based AI",
@@ -1288,7 +1418,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Dual-audience offer design (public + operator)",
@@ -1304,7 +1435,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "El Salvador business idea lanes",
@@ -1320,7 +1452,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "El Salvador tourism landscape 2026",
@@ -1336,7 +1469,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Founder archetypes and needs",
@@ -1357,7 +1491,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Founder Pi Briefcase",
@@ -1378,7 +1513,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "seed",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Gresham Vending Ops \u2014 Running a Machine in East Portland",
@@ -1402,7 +1538,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Home Recipes",
@@ -1418,7 +1555,8 @@
     "last_updated": "2026-04-12",
     "surface_date": "2026-04-12",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Hot Sauce Vending Machine",
@@ -1442,7 +1580,8 @@
     "last_updated": "",
     "surface_date": "2026-04-18",
     "status": "research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Inspiration and aesthetic",
@@ -1463,7 +1602,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Kids activities and places",
@@ -1484,7 +1624,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Kids Sats Toy Vending",
@@ -1510,7 +1651,8 @@
     "last_updated": "",
     "surface_date": "2026-04-18",
     "status": "active-research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Lateral Bets \u2014 Hot Takes and Open Questions",
@@ -1532,7 +1674,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "LLM wiki pattern",
@@ -1552,7 +1695,8 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Los Cobanos marine products",
@@ -1568,7 +1712,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Mac Agent Dev Stack",
@@ -1584,7 +1729,8 @@
     "last_updated": "2026-04-26",
     "surface_date": "2026-04-26",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Micro-site factory",
@@ -1600,7 +1746,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Niche experience products",
@@ -1616,7 +1763,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "OpenClaw AI Gateway",
@@ -1632,7 +1780,8 @@
     "last_updated": "2026-04-26",
     "surface_date": "2026-04-26",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Operating rituals",
@@ -1653,7 +1802,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Oregon Food Cart Pods \u2014 Operator's Read",
@@ -1677,7 +1827,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Oregon vending and food cart permit stack",
@@ -1700,7 +1851,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active-research",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Shane design and UX taste",
@@ -1716,7 +1868,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Shane founder operating principles",
@@ -1732,7 +1885,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Shane trip preferences",
@@ -1748,7 +1902,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "The Shane Test",
@@ -1770,7 +1925,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Vending Machine Location Pitch \u2014 Finding and Winning Placements",
@@ -1796,7 +1952,8 @@
     "last_updated": "",
     "surface_date": "2026-04-19",
     "status": "active-research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Vending Machine Terminal Technology \u2014 Lightning + Credit Card",
@@ -1822,7 +1979,8 @@
     "last_updated": "",
     "surface_date": "2026-04-18",
     "status": "research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Vending Terminal Buyers Guide \u2014 Lightning QR Feasibility Matrix",
@@ -1850,7 +2008,8 @@
     "last_updated": "",
     "surface_date": "2026-04-19",
     "status": "active-research",
-    "type": "page"
+    "type": "page",
+    "youtube_url": ""
   },
   {
     "title": "Voice and Style \u2014 How Shane Sounds",
@@ -1874,7 +2033,8 @@
     "last_updated": "2026-05-03",
     "surface_date": "2026-05-03",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "WhatsApp booking funnels",
@@ -1890,7 +2050,8 @@
     "last_updated": "2026-04-05",
     "surface_date": "2026-04-05",
     "status": "",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "YouTube randomness to Shanepedia spark",
@@ -1911,7 +2072,8 @@
     "last_updated": "2026-05-04",
     "surface_date": "2026-05-04",
     "status": "active",
-    "type": "topic"
+    "type": "topic",
+    "youtube_url": ""
   },
   {
     "title": "Memorial Day Weekend Oregon Coast Stays (2026)",
@@ -1931,6 +2093,7 @@
     "last_updated": "2026-04-10",
     "surface_date": "2026-04-10",
     "status": "reference",
-    "type": "travel"
+    "type": "travel",
+    "youtube_url": ""
   }
 ]

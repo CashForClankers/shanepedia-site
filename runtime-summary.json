@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T02:51:31Z",
+  "generated_at": "2026-05-06T18:04:17Z",
   "fresh_ideas": [
     {
       "title": "Whale Weekend Trust Funnel",
@@ -117,7 +117,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -126,7 +126,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -135,7 +135,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -144,7 +144,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -153,7 +153,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -162,7 +162,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -171,7 +171,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -180,7 +180,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "23",
+      "stale_days": "26",
       "summary": ""
     },
     {
@@ -189,7 +189,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-14",
-      "stale_days": "19",
+      "stale_days": "22",
       "summary": ""
     },
     {
@@ -198,7 +198,7 @@
       "status": "active-research",
       "lane": "bitcoin-commerce-map",
       "surface_date": "2026-04-18",
-      "stale_days": "15",
+      "stale_days": "18",
       "summary": ""
     },
     {
@@ -207,7 +207,7 @@
       "status": "research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "15",
+      "stale_days": "18",
       "summary": ""
     },
     {
@@ -216,7 +216,7 @@
       "status": "active-research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "15",
+      "stale_days": "18",
       "summary": ""
     }
   ],

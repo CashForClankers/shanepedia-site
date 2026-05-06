@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Start Here — Shanepedia</title>
+  <title>Shanepedia Daily Feed - 2026-05-05 — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -200,79 +200,51 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">guide</span><span class="meta-note">Updated 2026-05-04</span></div><section class="related"><h2>Related</h2><ul><li><a href="00_overview.html">Shanepedia Overview</a></li><li><a href="dashboards/shane-feed.html">Shane Feed</a></li><li><a href="dashboards/whats-cooking.html">What&#x27;s Cooking</a></li><li><a href="dashboards/recent-activity.html">Recent Activity</a></li><li><a href="entities/shane-neeley.html">Shane Neeley</a></li><li><a href="ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li></ul></section><header><p class="eyebrow">guide</p><h1>Start Here</h1></header>
-<p>This is the operator entrypoint for Shanepedia. It should feel like a current feed, not a file cabinet.</p>
-<h2>If you are Shane</h2>
-<p>Open these first:</p>
+      <div class="meta-row"><span class="badge">daily</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-05</span></div><div class="tag-pills"><span class="tag-pill">daily-feed</span><span class="tag-pill">cron</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li></ul></section><header><p class="eyebrow">daily</p><h1>Shanepedia Daily Feed - 2026-05-05</h1></header>
+<p>This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message.</p>
+<h2>Open this first</h2>
 <ul>
-<li><a href="dashboards/shane-feed.html">Shane Feed</a> - the current &quot;what should I care about now&quot; feed.</li>
-<li><a href="dashboards/whats-cooking.html">What&#x27;s Cooking</a> - active builds, stuck items, recent wins, and the next thing to ship.</li>
-<li><a href="dashboards/recent-activity.html">Recent Activity</a> - what moved lately without reading the whole log.</li>
-<li><a href="dashboards/public-offer-cards.html">Public Offer Cards</a> - public-safe ideas that can turn into posts, pages, offers, or demos.</li>
-<li><a href="topics/the-shane-test.html">The Shane Test</a> - the filter for whether something belongs here.</li>
+<li><a href="../dashboards/shane-feed.html">Shane Feed</a> - the stable front door for what matters now.</li>
+<li><a href="../dashboards/whats-cooking.html">What&#x27;s Cooking</a> - active builds, stuck items, and the next thing to ship.</li>
+<li><a href="../dashboards/recent-activity.html">Recent Activity</a> - reverse-chronological movement from the wiki log.</li>
 </ul>
-<p>Fast paths:</p>
+<h2>Work surfaced today</h2>
 <ul>
-<li>vending / local operator lane -&gt; <a href="topics/gresham-vending-ops.html">Gresham Vending Ops — Running a Machine in East Portland</a></li>
-<li>chicken monitor lane -&gt; <a href="entities/opencluck.html">OpenCluck — Chicken Coop IoT Monitor</a></li>
-<li>Bitcoin Portland lane -&gt; <a href="topics/bitcoin-circular-economy-portland.html">Bitcoin Circular Economy — Portland / Gresham / Happy Valley</a></li>
-<li>agent leverage lane -&gt; <a href="topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li>
-<li>daily cron/site lane -&gt; <a href="entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li>
-<li>public site lane -&gt; <a href="projects/shanepedia-public-site.html">Shanepedia Public Site</a></li>
+<li><strong>2026-05-04 - refine: Shane Feed + daily page cron contract.</strong> Added dashboards/shane-feed.md as the new open-first feed surface, added <code>scripts/wiki/create_daily_feed_page.py</code> so the Shanepedia Daily Page cron can create one durable <code>wiki/daily/</code> page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site.</li>
+<li><strong>2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.</strong> Fixed orphans (<code>entities/the-chickens.md</code>, <code>topics/inspiration-aesthetic.md</code>, <code>topics/voice-and-style.md</code>) by adding inbound links from <code>entities/opencluck.md</code>, <code>topics/backyard-chickens-oregon.md</code>, <code>topics/shane-design-and-ux-taste.md</code>, and <code>topics/agent-personality-design.md</code>. Added 3 new pages: <code>topics/agent-leverage-stack.md</code> (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real <code>openclaw.json</code> and <code>~/.openclaw/skills/</code> contents), <code>topics/cron-as-product.md</code> (~800w argument for push-based AI), and <code>entities/the-shanepedia-cron-system.md</code> (~700w doc of the 4 active Shanepedia cron jobs from <code>~/.openclaw/cron/jobs.json</code>). Updated <code>00_welcome.md</code> with a &quot;Recently added&quot; section.</li>
+<li><strong>2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.</strong> Expanded 5 thinnest non-stub pages past 500 words each: <code>entities/punta-mango.md</code> (146-&gt;704), <code>entities/el-zonte.md</code> (151-&gt;737), <code>entities/victor-los-cobanos.md</code> (166-&gt;718), <code>topics/kids-activities-and-places.md</code> (217-&gt;831), <code>topics/founder-archetypes-and-needs.md</code> (221-&gt;931); added 3 new pages adding the personal/relationship layer: <code>topics/operating-rituals.md</code> (live-cron weekly cadence), <code>topics/inspiration-aesthetic.md</code> (taste profile + Shanepedia palette/type stack from <code>build_site.py</code>), <code>entities/openclaw.md</code> (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use).</li>
+<li><strong>2026-05-03 - expand: personality, voice, and the chickens - Shane Test, anti-roadmap, voice guide, and the flock.</strong> Added <code>wiki/topics/the-shane-test.md</code> (six-question fit checklist + decision rules + worked examples), <code>wiki/topics/anti-roadmap.md</code> (nine things Shane should not build, each with a &quot;do this instead&quot; pointer), <code>wiki/topics/voice-and-style.md</code> (canonical voice reference: openers, rhythm, agreement/disagreement, banned phrases), and <code>wiki/entities/the-chickens.md</code> (the 8 hens get their own entity page - proof users for OpenCluck, anchor for ground truth).</li>
 </ul>
-<h2>What should be interesting now</h2>
+<h2>Cron work to notice</h2>
 <ul>
-<li>Can we get one real food cart pod handshake before buying a hot sauce vending machine?</li>
-<li>Can OpenCluck ship as one boring sensor + Telegram alert before a camera or dashboard exists?</li>
-<li>Can the daily Shanepedia cron add one durable page to the site every day instead of only sending a chat note?</li>
-<li>Can one public YouTube find become a useful page update rather than a distraction?</li>
-<li>Can public offer cards make the wiki legible to someone outside Shane&#x27;s private context?</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-05): Parent-owned lane loop ran and wrote a log.</li>
 </ul>
-<h2>If you are an agent</h2>
-<p>Read in this order:</p>
-<ol>
-<li><a href="dashboards/shane-feed.html">Shane Feed</a></li>
-<li><a href="dashboards/whats-cooking.html">What&#x27;s Cooking</a></li>
-<li><a href="00_overview.html">Shanepedia Overview</a></li>
-<li><a href="entities/shane-neeley.html">Shane Neeley</a></li>
-<li><a href="ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li>
-<li><a href="entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li>
-<li>the most relevant project, topic, entity, or source pages for the task</li>
-</ol>
-<p>Operating rules:</p>
+<h2>Random page to consider updating</h2>
+<p><strong>Gresham Vending Ops - Running a Machine in East Portland.</strong> The operational layer for Shane&#x27;s vending machine work in the Portland/Gresham market. The concept and hardware live in `[[../topics/hot-sauce-vending-machine.m</p>
+<p>Source hint: <code>topics/gresham-vending-ops.md</code></p>
+<p>Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored?</p>
+<h2>Pages that may need attention</h2>
 <ul>
-<li>prefer the parent wiki before child lanes</li>
-<li>write generalized lessons back into Shanepedia</li>
-<li>keep links explicit and reusable</li>
-<li>do not let one active project swallow the whole map</li>
-<li>if a cron or agent surfaces something worth keeping, add or update a page</li>
+<li><a href="../topics/agentic-business-studio.html">Agentic business studio</a> - Agentic business studio (25 days stale)</li>
+<li><a href="../topics/llm-wiki-pattern.html">LLM wiki pattern</a> - LLM wiki pattern (25 days stale)</li>
+<li><a href="../sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a> - LLM wiki pattern 2026-04-10 (25 days stale)</li>
 </ul>
-<h2>Main maps</h2>
-<ul>
-<li>founder map -&gt; <a href="maps/founder-map.html">Founder Map</a></li>
-<li>project map -&gt; <a href="maps/project-map.html">Project Map</a></li>
-<li>operations map -&gt; <a href="maps/ops-map.html">Ops Map</a></li>
-</ul>
-<h2>Dashboards</h2>
-<ul>
-<li><a href="dashboards/shane-feed.html">Shane Feed</a></li>
-<li><a href="dashboards/whats-cooking.html">What&#x27;s Cooking</a></li>
-<li><a href="dashboards/recent-activity.html">Recent Activity</a></li>
-<li><a href="dashboards/public-offer-cards.html">Public Offer Cards</a></li>
-<li><a href="dashboards/founder-dashboard.html">Founder Dashboard</a></li>
-<li><a href="dashboards/projects-dashboard.html">Projects Dashboard</a></li>
-<li><a href="dashboards/open-loops-dashboard.html">Open Loops Dashboard</a></li>
-<li><a href="ops/obsidian-workflow.html">Obsidian Workflow</a></li>
-<li><a href="ops/source-ingest-pipeline.html">Source ingest pipeline</a></li>
-<li><a href="ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li>
-</ul>
-<h2>Visual navigation</h2>
-<ul>
-<li><a href="#missing-link">shanepedia-navigation</a></li>
-</ul>
+<h2>YouTube Sparks</h2>
+<h3>1. The Bitcoin Beach Whitepaper</h3>
+<p>Good source fuel for local-merchant, Bitcoin adoption, and El Salvador pages because it turns a big idea into repeatable operating steps. YouTube URL: <a href="https://www.youtube.com/watch?v=uQyalVOkkEs">https://www.youtube.com/watch?v=uQyalVOkkEs</a></p>
+<p>Query/Channel hint: <code>bitcoin circular economy / El Salvador</code></p>
+<h3>2. Digital Transformation: Too Many Tools, Not Enough Results</h3>
+<p>A useful operator prompt for OpenClaw and Shanepedia: which tools reduce work, which just create another queue, and what should be automated next. YouTube URL: <a href="https://www.youtube.com/watch?v=S0LBKpbtsmk">https://www.youtube.com/watch?v=S0LBKpbtsmk</a></p>
+<p>Query/Channel hint: <code>small business operator systems</code></p>
+<h3>3. God Bless Bitcoin | Full Movie</h3>
+<p>Useful raw material for the Bitcoin education lane: money narrative, public-safe framing, and what belongs in a non-private explainer page. YouTube URL: <a href="https://www.youtube.com/watch?v=oksraL7wN6Q">https://www.youtube.com/watch?v=oksraL7wN6Q</a></p>
+<p>Query/Channel hint: <code>bitcoin education / public documentary</code></p>
+<p>Use <a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a> to formalize any one of these if the idea is worth keeping.</p>
     </main>
   </div>
-  <script>window.SHANEPEDIA_ROOT_PREFIX = "";</script>
+  <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
   <script src="/shanepedia-site/assets/search.js"></script>
 </body>
 </html>
