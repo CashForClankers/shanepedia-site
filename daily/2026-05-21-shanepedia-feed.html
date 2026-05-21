@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLM wiki pattern 2026-04-10 — Shanepedia</title>
+  <title>Shanepedia Daily Feed - 2026-05-21 — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -207,38 +207,48 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">source</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-04-10</span></div><div class="tag-pills"><span class="tag-pill">source</span><span class="tag-pill">methodology</span><span class="tag-pill">llm-wiki</span></div><section class="related"><h2>Related</h2><ul><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../ops/obsidian-workflow.html">Obsidian Workflow</a></li><li><a href="../ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a></li><li><a href="../topics/agentic-business-studio.html">Agentic business studio</a></li><li><a href="../topics/shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="../projects/shanepedia-studio.html">Shanepedia Studio</a></li></ul></section><header><p class="eyebrow">source</p><h1>LLM wiki pattern 2026-04-10</h1></header>
-<p>This source articulates the core pattern Shanepedia should embody: not RAG over raw documents at query time, but an incrementally compiled wiki maintained by the LLM over time.</p>
-<h2>Core thesis</h2>
-<p>The central idea is that knowledge should be compiled once into a durable markdown wiki and then continuously maintained. New sources should update existing pages, enrich synthesis, flag contradictions, and improve cross-links rather than forcing the model to rediscover everything from scratch on every query.</p>
-<h2>Key pattern elements</h2>
+      <div class="meta-row"><span class="badge">daily</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-21</span></div><div class="tag-pills"><span class="tag-pill">daily-feed</span><span class="tag-pill">cron</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li></ul></section><header><p class="eyebrow">daily</p><h1>Shanepedia Daily Feed - 2026-05-21</h1></header>
+<p>This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message.</p>
+<h2>Open this first</h2>
 <ul>
-<li>raw sources remain immutable source-of-truth inputs</li>
-<li>the wiki is the maintained synthesis layer</li>
-<li>an agent instruction file governs ingest, query, and maintenance workflows</li>
-<li>useful analyses should be written back into the wiki instead of lost in chat history</li>
-<li>health checks should look for contradictions, stale claims, orphans, and missing concepts</li>
+<li><a href="../dashboards/shane-feed.html">Shane Feed</a> - the stable front door for what matters now.</li>
+<li><a href="../dashboards/whats-cooking.html">What&#x27;s Cooking</a> - active builds, stuck items, and the next thing to ship.</li>
+<li><a href="../dashboards/recent-activity.html">Recent Activity</a> - reverse-chronological movement from the wiki log.</li>
 </ul>
-<h2>Why it matters for Shanepedia</h2>
-<p>This source is unusually aligned with the repo&#x27;s current direction. It effectively describes Shanepedia itself as a pattern: Obsidian as the browsing IDE, the LLM as the maintainer, markdown as durable memory, and source ingestion as a compounding process.</p>
-<h2>Why it matters for Codex specifically</h2>
-<p>This source maps cleanly onto a Codex workflow. Codex should be treated as the maintainer that updates the compiled markdown layer while Shane uses Obsidian to inspect, navigate, and pressure-test the results. The right comparison is not &quot;better chat with files attached.&quot; It is &quot;an agent maintaining a codebase whose language is markdown knowledge.&quot;</p>
-<h2>Practical implications</h2>
-<ol>
-<li>Shanepedia should optimize for wiki maintenance, not just query-time retrieval.</li>
-<li>Important conversations and synthesized answers should become durable pages, dashboards, canvases, or briefs.</li>
-<li>Raw source, wiki, and agent-schema layers should stay explicit.</li>
-<li>Obsidian UX matters because it is the human interface to the compiled knowledge layer.</li>
-<li>Local search and lint tools matter more as the wiki grows.</li>
-</ol>
-<h2>Best write-backs triggered by this source</h2>
+<h2>Work surfaced today</h2>
 <ul>
-<li>strengthen the repo&#x27;s maintainer contract around ingest and health-check workflows</li>
-<li>make dashboards and maps first-class, because valuable queries should become persistent artifacts</li>
-<li>keep log and index maintenance central</li>
-<li>favor small local tools that help the agent maintain the wiki as scale grows</li>
-<li>encode the Codex + Obsidian loop explicitly so future agents do not treat Shanepedia like ordinary RAG</li>
+<li><strong>2026-05-17 - operate: GPT-5.5 routing + feedback absorber.</strong> Updated OpenClaw routing so the main agent, heartbeat, named agents, subagents, and cron payloads use <code>openai/gpt-5.5</code> as the primary model with the existing Codex fallbacks retained.</li>
+<li><strong>2026-05-04 - refine: Shane Feed + daily page cron contract.</strong> Added dashboards/shane-feed.md as the new open-first feed surface, added <code>scripts/wiki/create_daily_feed_page.py</code> so the Shanepedia Daily Page cron can create one durable <code>wiki/daily/</code> page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site.</li>
+<li><strong>2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.</strong> Fixed orphans (<code>entities/the-chickens.md</code>, <code>topics/inspiration-aesthetic.md</code>, <code>topics/voice-and-style.md</code>) by adding inbound links from <code>entities/opencluck.md</code>, <code>topics/backyard-chickens-oregon.md</code>, <code>topics/shane-design-and-ux-taste.md</code>, and <code>topics/agent-personality-design.md</code>. Added 3 new pages: <code>topics/agent-leverage-stack.md</code> (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real <code>openclaw.json</code> and <code>~/.openclaw/skills/</code> contents), <code>topics/cron-as-product.md</code> (~800w argument for push-based AI), and <code>entities/the-shanepedia-cron-system.md</code> (~700w doc of the 4 active Shanepedia cron jobs from <code>~/.openclaw/cron/jobs.json</code>). Updated <code>00_welcome.md</code> with a &quot;Recently added&quot; section.</li>
+<li><strong>2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.</strong> Expanded 5 thinnest non-stub pages past 500 words each: <code>entities/punta-mango.md</code> (146-&gt;704), <code>entities/el-zonte.md</code> (151-&gt;737), <code>entities/victor-los-cobanos.md</code> (166-&gt;718), <code>topics/kids-activities-and-places.md</code> (217-&gt;831), <code>topics/founder-archetypes-and-needs.md</code> (221-&gt;931); added 3 new pages adding the personal/relationship layer: <code>topics/operating-rituals.md</code> (live-cron weekly cadence), <code>topics/inspiration-aesthetic.md</code> (taste profile + Shanepedia palette/type stack from <code>build_site.py</code>), <code>entities/openclaw.md</code> (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use).</li>
 </ul>
+<h2>Cron work to notice</h2>
+<ul>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-05): Parent-owned lane loop ran and wrote a log.</li>
+</ul>
+<h2>Random page to consider updating</h2>
+<p><strong>Bitcoin Circular Economy - Portland / Gresham / Happy Valley.</strong> Goal: find businesses in Gresham, Portland, and Happy Valley that accept Bitcoin / Lightning, so Shane can spend sats locally and support a circular bitcoin eco</p>
+<p>Source hint: <code>topics/bitcoin-circular-economy-portland.md</code></p>
+<p>Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored?</p>
+<h2>Pages that may need attention</h2>
+<ul>
+<li><a href="../topics/agentic-business-studio.html">Agentic business studio</a> - Agentic business studio (41 days stale)</li>
+<li><a href="../topics/llm-wiki-pattern.html">LLM wiki pattern</a> - LLM wiki pattern (41 days stale)</li>
+<li><a href="../sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a> - LLM wiki pattern 2026-04-10 (41 days stale)</li>
+</ul>
+<h2>YouTube Sparks</h2>
+<h3>1. How he turned a faceless channel into a full time business in 1 year</h3>
+<p>A content-ops prompt for turning public artifacts into repeatable publishing systems without making the wiki feel like a generic content calendar. YouTube URL: <a href="https://www.youtube.com/watch?v=y7yXOTVrTRQ">https://www.youtube.com/watch?v=y7yXOTVrTRQ</a></p>
+<p>Query/Channel hint: <code>content operations / YouTube business</code></p>
+<h3>2. I bought a vending machine business</h3>
+<p>A grounded vending prompt: location, maintenance, inventory, payment rails, and the gap between spreadsheet fantasy and operator reality. YouTube URL: <a href="https://www.youtube.com/watch?v=67815QLpwLA">https://www.youtube.com/watch?v=67815QLpwLA</a></p>
+<p>Query/Channel hint: <code>vending machines / small business teardown</code></p>
+<h3>3. The Bitcoin Beach Whitepaper</h3>
+<p>Good source fuel for local-merchant, Bitcoin adoption, and El Salvador pages because it turns a big idea into repeatable operating steps. YouTube URL: <a href="https://www.youtube.com/watch?v=uQyalVOkkEs">https://www.youtube.com/watch?v=uQyalVOkkEs</a></p>
+<p>Query/Channel hint: <code>bitcoin circular economy / El Salvador</code></p>
+<p>Use <a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a> to formalize any one of these if the idea is worth keeping.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
