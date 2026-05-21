@@ -186,7 +186,7 @@
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
 <details class="nav-group" data-group="daily">
-<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">10</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/daily/2026-05-03-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-03</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
@@ -197,6 +197,7 @@
 <li><a href="/shanepedia-site/daily/2026-05-09-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-09</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-10-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-10</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-11-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-11</a></li>
+<li><a href="/shanepedia-site/daily/2026-05-12-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-12</a></li>
 </ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
@@ -206,6 +207,13 @@
     </aside>
     <main class="content">
       <div class="meta-row"><span class="badge">log</span></div><header><p class="eyebrow">log</p><h1>Wiki Log</h1></header>
+<h2>[2026-05-17] operate | GPT-5.5 routing + feedback absorber</h2>
+<ul>
+<li>Updated OpenClaw routing so the main agent, heartbeat, named agents, subagents, and cron payloads use <code>openai/gpt-5.5</code> as the primary model with the existing Codex fallbacks retained.</li>
+<li>Enabled Shanepedia-aware memory search by adding <code>wiki/</code> and <code>state/ideation/</code> to OpenClaw&#x27;s QMD paths.</li>
+<li>Added the <code>Shanepedia Feedback Absorber</code> operating contract: a quiet frequent cron that turns concrete Shane feedback, preferences, and business ideas into durable wiki or ideation state, then rebuilds and lints locally.</li>
+<li>Updated <code>wiki/entities/the-shanepedia-cron-system.md</code>, <code>wiki/ops/daily-random-spark-loop.md</code>, and <code>wiki/topics/agent-leverage-stack.md</code> so future agents see the current model and write-back loop.</li>
+</ul>
 <h2>[2026-05-04] refine | Shane Feed + daily page cron contract</h2>
 <ul>
 <li>Added <a href="dashboards/shane-feed.html">Shane Feed</a> as the new open-first feed surface, added <code>scripts/wiki/create_daily_feed_page.py</code> so the Shanepedia Daily Page cron can create one durable <code>wiki/daily/</code> page per day, and reworked <a href="START_HERE.html">Start Here</a> plus <a href="ops/codex-obsidian-llm-wiki-loop.html">Codex Obsidian LLM wiki loop</a> around crons that write back to the site.</li>

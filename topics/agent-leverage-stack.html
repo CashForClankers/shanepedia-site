@@ -186,7 +186,7 @@
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
 <details class="nav-group" data-group="daily">
-<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">10</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/daily/2026-05-03-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-03</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
@@ -197,6 +197,7 @@
 <li><a href="/shanepedia-site/daily/2026-05-09-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-09</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-10-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-10</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-11-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-11</a></li>
+<li><a href="/shanepedia-site/daily/2026-05-12-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-12</a></li>
 </ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
@@ -205,13 +206,13 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">agents</span><span class="tag-pill">openclaw</span><span class="tag-pill">leverage</span><span class="tag-pill">models</span><span class="tag-pill">skills</span><span class="tag-pill">cron</span><span class="tag-pill">channels</span><span class="tag-pill">personality</span><span class="tag-pill">stack</span></div><section class="related"><h2>Related</h2><ul><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="agent-personality-design.html">Agent Personality Design</a></li><li><a href="../entities/openclaw.html">OpenClaw</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="operating-rituals.html">Operating rituals</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Agent Leverage Stack — How Shane Actually Uses AI</h1></header>
+      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-17</span></div><div class="tag-pills"><span class="tag-pill">agents</span><span class="tag-pill">openclaw</span><span class="tag-pill">leverage</span><span class="tag-pill">models</span><span class="tag-pill">skills</span><span class="tag-pill">cron</span><span class="tag-pill">channels</span><span class="tag-pill">personality</span><span class="tag-pill">stack</span></div><section class="related"><h2>Related</h2><ul><li><a href="openclaw-ai-gateway.html">OpenClaw AI Gateway</a></li><li><a href="mac-agent-dev-stack.html">Mac Agent Dev Stack</a></li><li><a href="agent-personality-design.html">Agent Personality Design</a></li><li><a href="../entities/openclaw.html">OpenClaw</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="operating-rituals.html">Operating rituals</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Agent Leverage Stack — How Shane Actually Uses AI</h1></header>
 <p>This is the actual leverage stack — not a wishlist. Every piece below is wired into Shane&#x27;s machine right now and earns its place by being used. The goal is to map <em>what is actually getting work done</em>, so the next time someone asks &quot;what&#x27;s your AI setup&quot;, there is a single page to point at, and so future pruning decisions have something concrete to argue against.</p>
 <h2>Layer 1 — Model routing</h2>
 <p>OpenClaw exposes a fleet of models as aliases in <code>~/.openclaw/openclaw.json</code>. The point of routing is to avoid burning frontier-model time on jobs that any decent model can do, and to keep one model in primary so behavior is predictable.</p>
 <ul>
-<li><strong>codex</strong> (<code>openai-codex/gpt-5.4</code>) — daily driver. Primary model for the Best Robot main agent and most cron jobs that need real reasoning. The default for &quot;do this thing well.&quot;</li>
-<li><strong>codex53</strong> (<code>openai-codex/gpt-5.3-codex</code>) — fallback and the model that runs the 2-hour heartbeat. Cheaper, still strong on code and structured tasks.</li>
+<li><strong>codex55</strong> (<code>openai-codex/gpt-5.5</code>) — daily driver. Primary model for the Best Robot main agent, heartbeat, subagents, and cron jobs that need real reasoning. The default for &quot;do this thing well.&quot;</li>
+<li><strong>codex53</strong> (<code>openai-codex/gpt-5.3-codex</code>) — fallback. Cheaper, still strong on code and structured tasks.</li>
 <li><strong>codex-mini</strong> (<code>openai-codex/gpt-5.1-codex-mini</code>) — small jobs, summarization, classification. The &quot;don&#x27;t waste tokens&quot; lane.</li>
 <li><strong>flash</strong> (<code>openrouter/google/gemini-3-flash-preview</code>) — grounded search, public web research, the YouTube spark candidate fetcher. When the answer needs to come from outside the machine, route through Gemini.</li>
 <li><strong>sonnet</strong> (<code>openrouter/anthropic/claude-sonnet-4.6</code>) — long-form prose, writing voice, anything that has to read well at human-paragraph length. Used by the wiki-gen and Shanepedia daily-page paths when they need to <em>write</em>, not just plan.</li>
@@ -240,6 +241,7 @@
 <li><strong>Shanepedia Daily Page</strong> (11:00 daily) — random wiki page + Gemini YouTube find + ask for updates.</li>
 <li><strong>Shanepedia Random Spark</strong> (12:30 daily) — broader cross-interest spark.</li>
 <li><strong>Shanepedia One Bet</strong> (14:37 Tue/Thu/Sat) — single business bet with proof step.</li>
+<li><strong>Shanepedia Feedback Absorber</strong> (every three hours during the active day) — silently absorbs concrete feedback and ideas into the wiki.</li>
 <li><strong>OpenCluck Weekly Hardware Spark</strong> (10:00 Wed) — one concrete coop-build action.</li>
 <li><strong>Shanepedia Weekly Roundup</strong> (19:00 Sun) — what changed, what&#x27;s open.</li>
 <li><strong>Weekly Reset Brief</strong> (20:00 Sun) — kept / dropped / next.</li>

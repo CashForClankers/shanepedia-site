@@ -186,7 +186,7 @@
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
 <details class="nav-group" data-group="daily">
-<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">10</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/daily/2026-05-03-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-03</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
@@ -197,6 +197,7 @@
 <li><a href="/shanepedia-site/daily/2026-05-09-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-09</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-10-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-10</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-11-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-11</a></li>
+<li><a href="/shanepedia-site/daily/2026-05-12-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-12</a></li>
 </ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
@@ -205,45 +206,55 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">entity</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-04</span></div><div class="tag-pills"><span class="tag-pill">shanepedia</span><span class="tag-pill">cron</span><span class="tag-pill">agents</span><span class="tag-pill">telegram</span><span class="tag-pill">openclaw</span><span class="tag-pill">runtime</span><span class="tag-pill">daily-page</span><span class="tag-pill">weekly-roundup</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../topics/cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a></li><li><a href="../topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li><li><a href="openclaw.html">OpenClaw</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li><li><a href="../topics/operating-rituals.html">Operating rituals</a></li></ul></section><header><p class="eyebrow">entity</p><h1>The Shanepedia Cron System</h1></header>
-<p>The Shanepedia-specific cron stack as it stands on 2026-05-04. Four jobs, four different shapes, all delivering to Telegram from <code>~/.openclaw/cron/jobs.json</code> via the OpenClaw gateway. Together they keep the wiki <em>alive in Shane&#x27;s head</em> without him having to open it.</p>
+      <div class="meta-row"><span class="badge">entity</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-17</span></div><div class="tag-pills"><span class="tag-pill">shanepedia</span><span class="tag-pill">cron</span><span class="tag-pill">agents</span><span class="tag-pill">telegram</span><span class="tag-pill">openclaw</span><span class="tag-pill">runtime</span><span class="tag-pill">daily-page</span><span class="tag-pill">weekly-roundup</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../topics/cron-as-product.html">Cron as Product — Push-Based AI Beats Pull-Based AI</a></li><li><a href="../topics/agent-leverage-stack.html">Agent Leverage Stack — How Shane Actually Uses AI</a></li><li><a href="openclaw.html">OpenClaw</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../ops/daily-random-spark-loop.html">Daily Random Spark Loop</a></li><li><a href="../topics/operating-rituals.html">Operating rituals</a></li></ul></section><header><p class="eyebrow">entity</p><h1>The Shanepedia Cron System</h1></header>
+<p>The Shanepedia-specific cron stack as it stands on 2026-05-17. Five jobs, five different shapes, routed through OpenClaw and GPT-5.5. Together they keep the wiki <em>alive in Shane&#x27;s head</em> without him having to open it, and they now include a quiet write-back loop for Shane&#x27;s feedback and ideas.</p>
 <p>The newest rule: the daily page cron must also leave a durable page behind. A useful Telegram nudge should become a <code>wiki/daily/</code> page, show up in <a href="../dashboards/shane-feed.html">Shane Feed</a>, and rebuild the public site.</p>
 <p>This page documents what each one does, why it exists at the time and shape it does, and what would cause it to be killed.</p>
-<h2>1. Shanepedia Daily Page</h2>
+<h2>1. Shanepedia Feedback Absorber</h2>
+<ul>
+<li><strong>Schedule:</strong> every three hours during the active day.</li>
+<li><strong>Skill:</strong> inline cron prompt using the <code>wiki</code> and Shanepedia runtime contracts.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.5</code>, light context.</li>
+<li><strong>Job to be done:</strong> read recent workspace memory, Shanepedia ideation state, and the live wiki; absorb concrete Shane feedback, preferences, and business ideas into the right existing page or ideation log; rebuild and lint after edits.</li>
+<li><strong>Why it exists:</strong> Shane often gives high-signal direction in short Telegram messages. The absorber is the safety net that turns those messages into durable wiki state instead of hoping a future chat can find them.</li>
+<li><strong>What makes it different:</strong> it is silent by default. The job is not to text Shane; the job is to update Shanepedia when there is something worth preserving.</li>
+<li><strong>Kill signal:</strong> it starts making speculative edits from weak signals. The correct behavior for ambiguous input is <code>NO_CHANGE</code>.</li>
+</ul>
+<h2>2. Shanepedia Daily Page</h2>
 <ul>
 <li><strong>Schedule:</strong> <code>0 11 * * *</code> — 11:00 daily, America/Los_Angeles.</li>
 <li><strong>Skill:</strong> <code>~/setup-mac/.agents/skills/shanepedia-daily-page/SKILL.md</code>.</li>
-<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code> (codex), light context, 180s timeout.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.5</code>, light context, 300s timeout.</li>
 <li><strong>Job to be done:</strong> create or refresh one daily feed page, surface a wiki page or spark, pair it with one bounded Gemini-fetched YouTube find when available, rebuild/publish the public artifact, and ask Shane whether to add, update, productize, or ignore.</li>
 <li><strong>Why it exists:</strong> the wiki has ~100 pages. Without active surfacing, most of them go cold. The daily page rotation is the cheapest mechanism that keeps the corpus circulating in working memory.</li>
 <li><strong>What makes it different:</strong> the only Shanepedia cron that has a hard write-back contract: one <code>wiki/daily/YYYY-MM-DD-shanepedia-feed.md</code> page per day, linked from the feed archive.</li>
 <li><strong>Kill signal:</strong> Shane starts saying &quot;ignore&quot; to it three days in a row. Means either the random selection is wrong (fix the picker) or the wiki itself isn&#x27;t producing anything worth surfacing (fix the wiki).</li>
 </ul>
-<h2>2. Shanepedia Random Spark</h2>
+<h2>3. Shanepedia Random Spark</h2>
 <ul>
 <li><strong>Schedule:</strong> <code>30 12 * * *</code> — 12:30 daily, America/Los_Angeles.</li>
 <li><strong>Skill:</strong> runs inline from the cron prompt, calls <code>scripts/wiki/random_spark_candidates.py</code> with <code>--include-youtube --gemini-timeout 18</code>.</li>
-<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code>, light context, 150s timeout, no thinking.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.5</code>, light context, 150s timeout, no thinking.</li>
 <li><strong>Job to be done:</strong> broader cross-interest curiosity nudge. The candidate may be wiki-native or a public YouTube/Gemini-fetched item. One thing only, under 80 words, ends with one question (add / update / ignore).</li>
 <li><strong>Why it exists:</strong> the Daily Page is structured around the wiki <em>as it currently is</em>. The Random Spark is structured around what could <em>enter</em> the wiki next. It&#x27;s the input pipeline counterpart to the Daily Page&#x27;s maintenance pipeline.</li>
 <li><strong>What makes it different:</strong> explicitly grounded in the public web (Gemini + YouTube) rather than the wiki, while still routed through Shane&#x27;s actual interests via the runtime summary. It&#x27;s the most &quot;outward facing&quot; of the Shanepedia crons.</li>
 <li><strong>Kill signal:</strong> Gemini sparks stop landing as relevant — means the candidate-generation logic needs tightening, not that the slot is wrong.</li>
 </ul>
-<h2>3. Shanepedia One Bet</h2>
+<h2>4. Shanepedia One Bet</h2>
 <ul>
 <li><strong>Schedule:</strong> <code>37 14 * * 2,4,6</code> — 14:37 Tue/Thu/Sat, America/Los_Angeles.</li>
 <li><strong>Skill:</strong> runs inline from the cron prompt, reads <code>state/ideation/ideation-log.jsonl</code>, <code>state/ideation/preferences.jsonl</code>, the roadmap, and the topic index.</li>
-<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code>, light context, 180s timeout.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.5</code>, light context, 180s timeout.</li>
 <li><strong>Job to be done:</strong> propose <em>one</em> business bet — not three. Specific title, named buyer, why-now grounded in a wiki/recent signal, one proof step, one kill test. 140 words max. Must be materially different from the last 10 ideas.</li>
 <li><strong>Why it exists:</strong> Shane&#x27;s portfolio of bets needs ongoing pressure-testing without becoming an idea-dump firehose. The three-times-weekly cadence is the frequency at which a new bet feels fresh but doesn&#x27;t crowd out execution.</li>
 <li><strong>What makes it different:</strong> the only Shanepedia cron with a strict &quot;buyer + proof step&quot; contract. It refuses to deliver a bet that isn&#x27;t testable. It&#x27;s the wiki&#x27;s mechanism for staying <em>commercial</em>, not just curatorial.</li>
 <li><strong>Kill signal:</strong> the bets repeat themselves or the proof steps stop being executable in a week. Means the recent-history filter is failing.</li>
 </ul>
-<h2>4. Shanepedia Weekly Roundup</h2>
+<h2>5. Shanepedia Weekly Roundup</h2>
 <ul>
 <li><strong>Schedule:</strong> <code>0 19 * * 0</code> — Sunday 19:00, America/Los_Angeles.</li>
 <li><strong>Skill:</strong> <code>~/setup-mac/.agents/skills/shanepedia-weekly-roundup/SKILL.md</code>.</li>
-<li><strong>Model:</strong> <code>openai-codex/gpt-5.4</code>, light context, 90s timeout.</li>
+<li><strong>Model:</strong> <code>openai-codex/gpt-5.5</code>, light context, 90s timeout.</li>
 <li><strong>Job to be done:</strong> Sunday-evening digest of what changed in the wiki that week, what&#x27;s still open, one suggestion for next week.</li>
 <li><strong>Why it exists:</strong> the three daily/weekly slots above are about <em>moves</em>. The Roundup is about <em>state</em>. Without it, the daily slots can feel like a stream with no sense of accumulation. The Roundup makes the week visible as a unit.</li>
 <li><strong>What makes it different:</strong> the only Shanepedia cron that explicitly looks at log.md and reports on the wiki <em>as a system</em>, rather than asking for input. It&#x27;s the closest thing to a chief-of-staff Sunday report.</li>
@@ -252,6 +263,7 @@
 <h2>How the four work together</h2>
 <p>Read as a set, the rhythm is:</p>
 <ul>
+<li><strong>Every three hours during the day</strong> — absorb concrete feedback and ideas.</li>
 <li><strong>Daily 11:00</strong> — keep an existing page warm.</li>
 <li><strong>Daily 12:30</strong> — surface a possibly-new thing from outside.</li>
 <li><strong>Tue/Thu/Sat 14:37</strong> — pressure-test a commercial bet.</li>

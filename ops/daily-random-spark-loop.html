@@ -186,7 +186,7 @@
 <li><a href="/shanepedia-site/sources/telegram_photo_batches_2026-04-04.html">Telegram photo batches (2026-04-04)</a></li>
 </ul></details>
 <details class="nav-group" data-group="daily">
-<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">9</span></div><span class="nav-chevron">&#9654;</span></summary>
+<summary><div class="nav-label-inner"><h3>Daily</h3><span class="badge">10</span></div><span class="nav-chevron">&#9654;</span></summary>
 <ul>
 <li><a href="/shanepedia-site/daily/2026-05-03-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-03</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-04-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-04</a></li>
@@ -197,6 +197,7 @@
 <li><a href="/shanepedia-site/daily/2026-05-09-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-09</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-10-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-10</a></li>
 <li><a href="/shanepedia-site/daily/2026-05-11-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-11</a></li>
+<li><a href="/shanepedia-site/daily/2026-05-12-shanepedia-feed.html">Shanepedia Daily Feed - 2026-05-12</a></li>
 </ul></details>
 <details class="nav-group" data-group="patterns">
 <summary><div class="nav-label-inner"><h3>Patterns</h3><span class="badge">1</span></div><span class="nav-chevron">&#9654;</span></summary>
@@ -205,9 +206,10 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">ops</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-04</span></div><div class="tag-pills"><span class="tag-pill">automation</span><span class="tag-pill">cron</span><span class="tag-pill">telegram</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../dashboards/public-offer-cards.html">Public Offer Cards</a></li><li><a href="../projects/shanepedia-public-site.html">Shanepedia Public Site</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li><li><a href="shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li></ul></section><header><p class="eyebrow">ops</p><h1>Daily Random Spark Loop</h1></header>
+      <div class="meta-row"><span class="badge">ops</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-17</span></div><div class="tag-pills"><span class="tag-pill">automation</span><span class="tag-pill">cron</span><span class="tag-pill">telegram</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../dashboards/public-offer-cards.html">Public Offer Cards</a></li><li><a href="../projects/shanepedia-public-site.html">Shanepedia Public Site</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li><li><a href="shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li></ul></section><header><p class="eyebrow">ops</p><h1>Daily Random Spark Loop</h1></header>
 <p>The random spark loop is a daily Telegram nudge that should mine Shanepedia itself, not generic web trivia.</p>
 <p>The sibling <code>Shanepedia Daily Page</code> cron now has the durable write-back job: one <code>wiki/daily/</code> page per day, linked from <a href="../dashboards/shane-feed.html">Shane Feed</a>, rebuilt into the local site, and published to the public artifact when changed.</p>
+<p>The sibling <code>Shanepedia Feedback Absorber</code> cron is the quiet write-back safety net. It runs several times per day, reads recent OpenClaw memory and Shanepedia ideation state, and only edits the wiki when Shane has given concrete feedback, preferences, or business ideas that should become durable state.</p>
 <h2>Job</h2>
 <ul>
 <li><strong>Cron name:</strong> <code>Shanepedia Random Spark</code></li>
@@ -226,6 +228,16 @@
 <li>a public YouTube idea that could improve a specific page</li>
 </ul>
 <p>It should not send a generic list. It should send one compact text and ask whether to add, update, or ignore it.</p>
+<h2>Feedback absorber contract</h2>
+<p>The feedback absorber is intentionally quieter than the random spark:</p>
+<ul>
+<li><strong>Cadence:</strong> every three hours during the active day.</li>
+<li><strong>Destination:</strong> no routine Telegram delivery.</li>
+<li><strong>Source of truth:</strong> current and previous workspace memory notes, <code>MEMORY.md</code>, Shanepedia <code>state/ideation/*.jsonl</code>, <code>wiki/log.md</code>, and the live wiki.</li>
+<li><strong>Action rule:</strong> search first, then update the most relevant existing page or append one structured ideation record. Create a new page only when the idea is clearly durable and does not fit an existing page.</li>
+<li><strong>Verification:</strong> rebuild index, lint, runtime summary, and local site after edits.</li>
+<li><strong>No-op rule:</strong> if there is no concrete new feedback or idea, make no file changes and output <code>NO_CHANGE</code>.</li>
+</ul>
 <h2>Output contract</h2>
 <p>Under 80 words:</p>
 <blockquote>Found this in Shanepedia: [specific thing]. [Why it matters now.] Should I add this, update an existing page, or ignore it?</blockquote>
@@ -234,7 +246,7 @@
 <h2>Gemini guardrail</h2>
 <p>Gemini should be treated as a bounded source of playful public randomness, not a dependency. The job should try it briefly, never expose private viewing history, and fall back to wiki-native candidates if Gemini is rate-limited, unauthenticated, slow, or unavailable.</p>
 <h2>Why this matters</h2>
-<p>Shanepedia gets more valuable when random browsing becomes durable improvement. The cron is the daily hook that turns one interesting thing into a maintenance question before it disappears back into chat.</p>
+<p>Shanepedia gets more valuable when random browsing and Shane&#x27;s fast Telegram feedback both become durable improvement. The spark cron asks the question; the absorber cron makes sure good answers and concrete ideas do not disappear back into chat.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
