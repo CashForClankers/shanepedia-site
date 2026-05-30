@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open Loops Dashboard — Shanepedia</title>
+  <title>Shanepedia Daily Feed - 2026-05-30 — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -208,18 +208,48 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">dashboard</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-04-10</span></div><div class="tag-pills"><span class="tag-pill">dashboard</span><span class="tag-pill">tasks</span></div><section class="related"><h2>Related</h2><ul><li><a href="../START_HERE.html">Start Here</a></li><li><a href="../maps/ops-map.html">Ops Map</a></li><li><a href="../ops/obsidian-workflow.html">Obsidian Workflow</a></li></ul></section><header><p class="eyebrow">dashboard</p><h1>Open Loops Dashboard</h1></header>
-<p>Use this page in Obsidian with Tasks and Dataview enabled.</p>
-<h2>Unfinished tasks</h2>
-<pre><code>not done
-path includes wiki
-sort by path
-sort by due</code></pre>
-<h2>Active notes by status</h2>
-<pre><code>TABLE type, area, last_updated
-FROM &quot;wiki&quot;
-WHERE status = &quot;active&quot;
-SORT file.name asc</code></pre>
+      <div class="meta-row"><span class="badge">daily</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-30</span></div><div class="tag-pills"><span class="tag-pill">daily-feed</span><span class="tag-pill">cron</span><span class="tag-pill">shanepedia</span></div><section class="related"><h2>Related</h2><ul><li><a href="../dashboards/shane-feed.html">Shane Feed</a></li><li><a href="../dashboards/today-dashboard.html">Today Dashboard</a></li><li><a href="../entities/the-shanepedia-cron-system.html">The Shanepedia Cron System</a></li><li><a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a></li></ul></section><header><p class="eyebrow">daily</p><h1>Shanepedia Daily Feed - 2026-05-30</h1></header>
+<p>This page is the daily proof that the wiki is alive. It gives the cron a durable page to add to the site, then asks what Shane wants to change instead of only sending another chat message.</p>
+<h2>Open this first</h2>
+<ul>
+<li><a href="../dashboards/shane-feed.html">Shane Feed</a> - the stable front door for what matters now.</li>
+<li><a href="../dashboards/whats-cooking.html">What&#x27;s Cooking</a> - active builds, stuck items, and the next thing to ship.</li>
+<li><a href="../dashboards/recent-activity.html">Recent Activity</a> - reverse-chronological movement from the wiki log.</li>
+</ul>
+<h2>Work surfaced today</h2>
+<ul>
+<li><strong>2026-05-17 - operate: GPT-5.5 routing + feedback absorber.</strong> Updated OpenClaw routing so the main agent, heartbeat, named agents, subagents, and cron payloads use <code>openai/gpt-5.5</code> as the primary model with the existing Codex fallbacks retained.</li>
+<li><strong>2026-05-04 - refine: Shane Feed + daily page cron contract.</strong> Added dashboards/shane-feed.md as the new open-first feed surface, added <code>scripts/wiki/create_daily_feed_page.py</code> so the Shanepedia Daily Page cron can create one durable <code>wiki/daily/</code> page per day, and reworked START_HERE.md plus ops/codex-obsidian-llm-wiki-loop.md around crons that write back to the site.</li>
+<li><strong>2026-05-03 - expand: agent leverage map + cron-as-product + Shanepedia cron system entity.</strong> Fixed orphans (<code>entities/the-chickens.md</code>, <code>topics/inspiration-aesthetic.md</code>, <code>topics/voice-and-style.md</code>) by adding inbound links from <code>entities/opencluck.md</code>, <code>topics/backyard-chickens-oregon.md</code>, <code>topics/shane-design-and-ux-taste.md</code>, and <code>topics/agent-personality-design.md</code>. Added 3 new pages: <code>topics/agent-leverage-stack.md</code> (~1000w map of model routing, skills, crons, personality stack, channels - grounded in real <code>openclaw.json</code> and <code>~/.openclaw/skills/</code> contents), <code>topics/cron-as-product.md</code> (~800w argument for push-based AI), and <code>entities/the-shanepedia-cron-system.md</code> (~700w doc of the 4 active Shanepedia cron jobs from <code>~/.openclaw/cron/jobs.json</code>). Updated <code>00_welcome.md</code> with a &quot;Recently added&quot; section.</li>
+<li><strong>2026-05-03 - expand: thinnest-page beef-up + people/relationship layer.</strong> Expanded 5 thinnest non-stub pages past 500 words each: <code>entities/punta-mango.md</code> (146-&gt;704), <code>entities/el-zonte.md</code> (151-&gt;737), <code>entities/victor-los-cobanos.md</code> (166-&gt;718), <code>topics/kids-activities-and-places.md</code> (217-&gt;831), <code>topics/founder-archetypes-and-needs.md</code> (221-&gt;931); added 3 new pages adding the personal/relationship layer: <code>topics/operating-rituals.md</code> (live-cron weekly cadence), <code>topics/inspiration-aesthetic.md</code> (taste profile + Shanepedia palette/type stack from <code>build_site.py</code>), <code>entities/openclaw.md</code> (OpenClaw as first-class entity - agent zoo, personality stack, cron rhythm, daily use).</li>
+</ul>
+<h2>Cron work to notice</h2>
+<ul>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-06): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-05): Applied 0 updates. 10/10 topic matches. Avg confidence 8.7.</li>
+<li><strong>ElSalKB autoresearch</strong> (2026-04-05): Parent-owned lane loop ran and wrote a log.</li>
+</ul>
+<h2>Random page to consider updating</h2>
+<p><strong>Projects Dashboard.</strong> active</p>
+<p>Source hint: <code>dashboards/projects-dashboard.md</code></p>
+<p>Ask Shane: should this page be expanded, linked somewhere better, turned into an offer card, or ignored?</p>
+<h2>Pages that may need attention</h2>
+<ul>
+<li><a href="../topics/agentic-business-studio.html">Agentic business studio</a> - Agentic business studio (50 days stale)</li>
+<li><a href="../topics/llm-wiki-pattern.html">LLM wiki pattern</a> - LLM wiki pattern (50 days stale)</li>
+<li><a href="../sources/llm-wiki-pattern-2026-04-10.html">LLM wiki pattern 2026-04-10</a> - LLM wiki pattern 2026-04-10 (50 days stale)</li>
+</ul>
+<h2>YouTube Sparks</h2>
+<h3>1. The automatic hoop always goes in</h3>
+<p>A concrete robotics build that can sharpen Shanepedia notes about field demos, practical hardware, and explaining weird tools clearly. YouTube URL: <a href="https://www.youtube.com/watch?v=FycDx69px8U">https://www.youtube.com/watch?v=FycDx69px8U</a></p>
+<p>Query/Channel hint: <code>maker robotics / Stuff Made Here</code></p>
+<h3>2. How he turned a faceless channel into a full time business in 1 year</h3>
+<p>A content-ops prompt for turning public artifacts into repeatable publishing systems without making the wiki feel like a generic content calendar. YouTube URL: <a href="https://www.youtube.com/watch?v=y7yXOTVrTRQ">https://www.youtube.com/watch?v=y7yXOTVrTRQ</a></p>
+<p>Query/Channel hint: <code>content operations / YouTube business</code></p>
+<h3>3. I bought a vending machine business</h3>
+<p>A grounded vending prompt: location, maintenance, inventory, payment rails, and the gap between spreadsheet fantasy and operator reality. YouTube URL: <a href="https://www.youtube.com/watch?v=67815QLpwLA">https://www.youtube.com/watch?v=67815QLpwLA</a></p>
+<p>Query/Channel hint: <code>vending machines / small business teardown</code></p>
+<p>Use <a href="../topics/youtube-randomness-shanepedia-spark.html">YouTube randomness to Shanepedia spark</a> to formalize any one of these if the idea is worth keeping.</p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
