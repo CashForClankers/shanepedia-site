@@ -1,6 +1,15 @@
 {
-  "generated_at": "2026-05-30T16:44:52Z",
+  "generated_at": "2026-06-27T18:01:46Z",
   "fresh_ideas": [
+    {
+      "title": "Rainy Day Kids Map",
+      "lane": "local-family-activity-products",
+      "date": "2026-05-30",
+      "feasibility": "high",
+      "revenue_model": "$9 local guide, $39 birthday pack, or sponsor slots from kids venues",
+      "summary": "$9 local guide, $39 birthday pack, or sponsor slots from kids venues. Lens: pick one business bet materially different from recent operator/founder/bitcoin funnel ideas",
+      "preferred": "true"
+    },
     {
       "title": "Whale Weekend Trust Funnel",
       "lane": "marine operator and whale-season products",
@@ -99,15 +108,6 @@
       "revenue_model": "$79-199/month per hotel or operator",
       "summary": "$79-199/month per hotel or operator. Lens: design a content or education product from wiki knowledge someone would subscribe to",
       "preferred": "true"
-    },
-    {
-      "title": "Highland Arc Launch Page",
-      "lane": "mountain and finca discovery products",
-      "date": "2026-04-21",
-      "feasibility": "high",
-      "revenue_model": "$500 setup per operator cluster + referral/commission on booked add-ons",
-      "summary": "$500 setup per operator cluster + referral/commission on booked add-ons. Lens: find a gap in the wiki that IS a business opportunity",
-      "preferred": "true"
     }
   ],
   "stale_active_pages": [
@@ -117,7 +117,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -126,7 +126,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -135,7 +135,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -144,7 +144,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -153,7 +153,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -162,7 +162,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -171,7 +171,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -180,16 +180,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "50",
-      "summary": ""
-    },
-    {
-      "path": "ops/family-fun-tracker.md",
-      "title": "Family fun tracker",
-      "status": "active",
-      "lane": "",
-      "surface_date": "2026-04-14",
-      "stale_days": "46",
+      "stale_days": "78",
       "summary": ""
     },
     {
@@ -198,7 +189,7 @@
       "status": "active-research",
       "lane": "bitcoin-commerce-map",
       "surface_date": "2026-04-18",
-      "stale_days": "42",
+      "stale_days": "70",
       "summary": ""
     },
     {
@@ -207,7 +198,7 @@
       "status": "research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "42",
+      "stale_days": "70",
       "summary": ""
     },
     {
@@ -216,7 +207,16 @@
       "status": "active-research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "42",
+      "stale_days": "70",
+      "summary": ""
+    },
+    {
+      "path": "topics/vending-machine-terminal-tech.md",
+      "title": "Vending Machine Terminal Technology \u2014 Lightning + Credit Card",
+      "status": "research",
+      "lane": "product-hardware",
+      "surface_date": "2026-04-18",
+      "stale_days": "70",
       "summary": ""
     }
   ],
@@ -263,8 +263,8 @@
     }
   ],
   "ideation": {
-    "latest_date": "2026-05-03",
-    "entry_count": 19,
+    "latest_date": "2026-05-30",
+    "entry_count": 20,
     "preference_count": 1,
     "preferred_lanes": [
       "marine-operator-products"
