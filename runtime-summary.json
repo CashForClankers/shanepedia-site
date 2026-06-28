@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T18:01:46Z",
+  "generated_at": "2026-06-28T18:00:38Z",
   "fresh_ideas": [
     {
       "title": "Rainy Day Kids Map",
@@ -117,7 +117,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -126,7 +126,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -135,7 +135,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -144,7 +144,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -153,7 +153,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -162,7 +162,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -171,7 +171,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -180,7 +180,7 @@
       "status": "active",
       "lane": "",
       "surface_date": "2026-04-10",
-      "stale_days": "78",
+      "stale_days": "79",
       "summary": ""
     },
     {
@@ -189,7 +189,7 @@
       "status": "active-research",
       "lane": "bitcoin-commerce-map",
       "surface_date": "2026-04-18",
-      "stale_days": "70",
+      "stale_days": "71",
       "summary": ""
     },
     {
@@ -198,7 +198,7 @@
       "status": "research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "70",
+      "stale_days": "71",
       "summary": ""
     },
     {
@@ -207,7 +207,7 @@
       "status": "active-research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "70",
+      "stale_days": "71",
       "summary": ""
     },
     {
@@ -216,7 +216,7 @@
       "status": "research",
       "lane": "product-hardware",
       "surface_date": "2026-04-18",
-      "stale_days": "70",
+      "stale_days": "71",
       "summary": ""
     }
   ],

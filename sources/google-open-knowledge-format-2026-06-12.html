@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Founder archetypes and needs — Shanepedia</title>
+  <title>Google Open Knowledge Format announcement and spec — Shanepedia</title>
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -211,66 +211,51 @@
 </ul></details>
     </aside>
     <main class="content">
-      <div class="meta-row"><span class="badge">topic</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-05-03</span></div><div class="tag-pills"><span class="tag-pill">topic</span><span class="tag-pill">strategy</span><span class="tag-pill">buyers</span><span class="tag-pill">product</span></div><section class="related"><h2>Related</h2><ul><li><a href="agentic-business-studio.html">Agentic business studio</a></li><li><a href="shane-founder-operating-principles.html">Shane founder operating principles</a></li><li><a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li><li><a href="micro-site-factory.html">Micro-site factory</a></li><li><a href="whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li><li><a href="dual-audience-offer-design.html">Dual-audience offer design (public + operator)</a></li><li><a href="../entities/shane-neeley.html">Shane Neeley</a></li><li><a href="../ops/shanepedia-roadmap.html">Shanepedia roadmap</a></li></ul></section><header><p class="eyebrow">topic</p><h1>Founder archetypes and needs</h1></header>
-<p>If Shanepedia is going to help launch businesses agentically — not just describe them — it needs a working model of who those businesses are for. The useful segmentation is not demographics, industry, or revenue band. It is operating pain. Two founders with identical revenue can need wildly different help; two founders in completely different industries can need the same three things.</p>
-<p>This page names the four archetypes the corpus keeps returning to and what each one actually buys.</p>
-<h2>The overloaded solo operator</h2>
-<p>This person has real work and weak systems. Bookings come in via text and email and Instagram DM and a stale contact form on a six-year-old WordPress site, and they manage all of it from their phone between actual jobs. They are not under-skilled; they are under-supported.</p>
-<p>Real-world examples in the corpus: massage therapists, photographers, fitness coaches, residential service trades, single-truck contractors, independent consultants, the long tail of &quot;person who is the business.&quot;</p>
-<p>What they buy:</p>
+      <div class="meta-row"><span class="badge">source</span><span class="meta-note">active</span><span class="meta-note">Updated 2026-06-27</span></div><div class="tag-pills"><span class="tag-pill">source</span><span class="tag-pill">okf</span><span class="tag-pill">llm-wiki</span><span class="tag-pill">methodology</span></div><section class="related"><h2>Related</h2><ul><li><a href="../topics/llm-wiki-pattern.html">LLM wiki pattern</a></li><li><a href="../ops/shanepedia-agent-runtime.html">Shanepedia agent runtime</a></li><li><a href="../SCHEMA.html">Schema</a></li></ul></section><header><p class="eyebrow">source</p><h1>Google Open Knowledge Format announcement and spec</h1></header>
+<p>Google Cloud introduced Open Knowledge Format (OKF) on 2026-06-12 as a draft open specification for representing agent-readable organizational knowledge as a directory of Markdown files with YAML frontmatter.</p>
+<p>The important point for Shanepedia is not that Google invented the LLM wiki pattern. Shanepedia already follows that shape. The useful point is that OKF gives the pattern a small interoperability contract: concept files, frontmatter, index files, log files, standard Markdown links, and source citations.</p>
+<h2>What OKF standardizes</h2>
 <ul>
-<li>clearer offers — three to five productized packages instead of &quot;we do whatever you need&quot;</li>
-<li>simpler intake — one form or one WhatsApp number that actually replies</li>
-<li>lightweight follow-up — the difference between a 30% no-show rate and a 10% no-show rate</li>
-<li>less admin drag — invoice templates, calendar links, automated reminder texts</li>
-<li>a website that loads fast on a phone, says one thing clearly, and books a job</li>
+<li>A knowledge bundle is a directory tree of Markdown files.</li>
+<li>Each non-reserved Markdown file is a concept.</li>
+<li>The concept ID is the file path without <code>.md</code>.</li>
+<li>Every concept needs parseable YAML frontmatter with a non-empty <code>type</code> field.</li>
+<li>Recommended frontmatter includes <code>title</code>, <code>description</code>, <code>resource</code>, <code>tags</code>, and <code>timestamp</code>.</li>
+<li><code>index.md</code> is reserved for progressive disclosure and directory listings.</li>
+<li><code>log.md</code> is reserved for update history.</li>
+<li>Concepts link to each other with normal Markdown links.</li>
+<li>Claims from external material should be backed by a <code># Citations</code> section.</li>
+<li>Consumers should tolerate unknown fields, unknown types, broken links, and missing optional metadata.</li>
 </ul>
-<p>What they will not buy: a CRM project, a six-month rebrand, anything called &quot;platform.&quot;</p>
-<h2>The place-based guide or host</h2>
-<p>This person has local knowledge and weak packaging. They are exactly the buyer described in <a href="../entities/victor-los-cobanos.html">Victor (Los Cobanos guide)</a> and many of the operators surfaced in the <a href="el-salvador-business-idea-lanes.html">El Salvador business idea lanes</a> corpus. The core service is excellent; the funnel from &quot;interested traveller in another country&quot; to &quot;guest on the boat&quot; is leaky.</p>
-<p>What they buy:</p>
+<h2>Shanepedia fit</h2>
+<p>Shanepedia is already close:</p>
 <ul>
-<li>cleaner product framing (named experiences, fixed durations, transparent pricing)</li>
-<li>stronger trust signals (real photos, named guide, recent reviews, owner bio)</li>
-<li>better English copy or bilingual layouts that respect both audiences</li>
-<li>WhatsApp-first lead handling — see <a href="whatsapp-booking-funnels.html">WhatsApp booking funnels</a></li>
-<li>simple payment options including cash and Bitcoin where it fits the customer base</li>
+<li>It uses one Markdown file per concept under <code>wiki/</code>.</li>
+<li>Most meaningful pages already carry YAML frontmatter.</li>
+<li><code>wiki/index.md</code> is generated as an entrypoint.</li>
+<li><code>wiki/log.md</code> records changes.</li>
+<li>The wiki is versionable, human-readable, Obsidian-friendly, and agent-maintained.</li>
 </ul>
-<p>What they will not buy: anything that replaces the WhatsApp conversation with a calendar widget. The conversation is the value.</p>
-<h2>The fast-moving founder</h2>
-<p>This person can build, but their context is scattered across chats, notes, screenshots, and half-finished experiments. They run multiple lanes in parallel and lose more to context fragmentation than to lack of skill or capital. This is the buyer Shanepedia itself is built for — Shane is one of them — and it is the buyer most likely to pay for an operating system rather than a single deliverable.</p>
-<p>What they buy:</p>
+<p>The biggest gap is not structure. The gap is consistency:</p>
 <ul>
-<li>a durable memory layer that survives across sessions, agents, and devices</li>
-<li>decision support that compounds rather than evaporating into chat history</li>
-<li>agent-readable context so the next AI run starts with full grounding</li>
-<li>a clean control surface that does not require remembering where things live</li>
-<li>the <a href="llm-wiki-pattern.html">LLM wiki pattern</a> applied to their actual operation</li>
+<li>Some pages do not include a one-line <code>description</code>.</li>
+<li>Shanepedia uses Obsidian wikilinks heavily, while OKF recommends standard Markdown links for portable consumers.</li>
+<li>The existing <code>last_updated</code> field is useful locally, but OKF&#x27;s recommended field is <code>timestamp</code>.</li>
+<li>Source-backed claims are usually grounded in source pages, but not every page has a clear <code># Citations</code> section when it uses fresh external research.</li>
 </ul>
-<p>What they will not buy: another note-taking app, another dashboard, anything with a freemium tier.</p>
-<h2>The taste-driven creator</h2>
-<p>This person has a point of view and weak execution systems. They make things people care about — writing, design, video, music, software — but the surrounding apparatus (web presence, mailing list, store, scheduling) is either non-existent or visibly off-brand. They are unusually sensitive to design quality and will reject a perfectly functional solution if it feels generic.</p>
-<p>What they buy:</p>
+<h2>Adoptable ideas</h2>
 <ul>
-<li>a crisp web presence that matches their voice</li>
-<li>reusable content patterns so publishing is not a per-post project</li>
-<li>simple shipping and store paths that do not look like Shopify out of the box</li>
-<li>packaging that feels intentional rather than templated</li>
-<li>the look-and-feel discipline described in <a href="shane-design-and-ux-taste.html">Shane design and UX taste</a></li>
+<li>Treat <code>wiki/</code> as an OKF-like bundle without breaking Obsidian.</li>
+<li>Keep <code>type</code> non-empty on every first-class wiki page.</li>
+<li>Add <code>description</code> to high-value pages because generated indexes, agents, and search snippets benefit from it.</li>
+<li>Keep <code>last_updated</code> for local convention, but allow <code>timestamp</code> on pages that need OKF export or external exchange.</li>
+<li>Preserve unknown frontmatter keys when agents edit pages.</li>
+<li>Add source summaries for important external references instead of burying research in chat.</li>
+<li>Prefer ordinary Markdown structure: headings, lists, tables, and fenced code blocks.</li>
+<li>For public or cross-tool export, generate a companion OKF view that converts wikilinks to Markdown links rather than forcing the authoring wiki to abandon Obsidian links.</li>
 </ul>
-<p>What they will not buy: a Squarespace template, a generic Linktree, a Stripe Pricing Table dropped on a marketing page.</p>
-<h2>Why this belongs in Shanepedia</h2>
-<p>These four archetypes map directly to the offers Shanepedia Studio is closest to shipping:</p>
-<ul>
-<li><strong>operator site rescue</strong> for the overloaded solo operator</li>
-<li><strong>founder operating systems</strong> for the fast-moving founder</li>
-<li><strong>productized research and place-based microsites</strong> for the place-based guide or host</li>
-<li><strong>taste-driven build sprints</strong> for the creator</li>
-</ul>
-<p>Crucially, all four buyers have one thing in common: they are not buying technology. They are buying the removal of a specific operating pain. The archetype list exists so that any new offer can be tested against a real person profile before it gets built. If a proposed product cannot be matched to one of these four patterns, it probably should not be the next thing Shanepedia ships.</p>
-<h2>Stance</h2>
-<p>The wrong way to use archetypes is to treat them as marketing personas — names, ages, fictional bios, mood-board photos. The right way is to treat them as constraint sets. Each archetype tells you what to put in, what to leave out, and which adjacent good idea to refuse this quarter. The discipline of refusing well-fit-for-someone-else ideas is most of what makes a small studio survive its first three years.</p>
-<p>When in doubt, ask which of the four archetypes the buyer is, and which of the others they are not. The &quot;not&quot; answer is usually the more useful one.</p>
+<h2>Citations</h2>
+<p>[1] <a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing">Google Cloud: Introducing the Open Knowledge Format</a> [2] <a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md">GoogleCloudPlatform knowledge-catalog OKF spec</a></p>
     </main>
   </div>
   <script>window.SHANEPEDIA_ROOT_PREFIX = "../";</script>
